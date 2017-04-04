@@ -35,8 +35,8 @@ key_f7 "key 288"
 key_f8 "key 289" 
 key_f9 "key 290" 
 key_f10 "key 291" 
-key_f11 "key 292" 
-key_f12 "key 293" 
+key_f11 
+key_f12 
 key_grave "key 96" 
 key_1 "key 49" 
 key_2 "key 50" 
@@ -174,7 +174,7 @@ jhat_0_0_0
 jhat_0_0_3 
 jhat_0_0_2 
 jhat_0_0_1 
-mod_1 "key 306" "key 305" 
-mod_2 "key 308" "key 307" 
+mod_1 "key 305" "key 306" 
+mod_2 "key 307" "key 308" 
 mod_3 
 hand_caprawopl 
