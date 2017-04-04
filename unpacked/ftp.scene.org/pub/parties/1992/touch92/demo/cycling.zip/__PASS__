@@ -1,0 +1,4 @@
+Demo music can cut out at random, except that possibly a pointer
+wanders off since after an unspecified amount of time random
+instruments will play. Can happen on real hardware too.
+
