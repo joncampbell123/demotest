@@ -1,0 +1,12 @@
+The demo demands that you remove HIMEM.SYS and EMM386.EXE from memory. It uses
+it's own protected mode handler.
+
+The demo seems to have graphical glitches in DOSBox unless machine=svga_et4000.
+
+Sound Blaster music playback glitches out between some parts.
+
+Previous testing experience says that this demo MIGHT run from an MS-DOS 6.x
+bootdisk and will definitely NOT run from a Windows 95/98 (MS-DOS 7.x) bootdisk.
+Running it from an MS-DOS 5.x bootdisk seems to greatly improve the chances of
+running the demo.
+
