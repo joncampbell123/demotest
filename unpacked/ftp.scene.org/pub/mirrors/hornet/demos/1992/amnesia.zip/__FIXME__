@@ -1,0 +1,7 @@
+Frame rate issues... I thought a demo of this age would at least
+try to update the screen once per vertical retrace? Analysis with DOSBox-X
+shows that the scrolling text, animations, and such are not drawn
+every frame, nor every other frame, but at an irregular interval.
+
+Is DOSBox-X doing something wrong?
+
