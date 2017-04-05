@@ -1,0 +1,10 @@
+There are two parts where I suspect the demo is not working right:
+
+The "flash" after part 6 (text rising out of a boiling pot), where
+what probably should be an image is garbage data.
+
+The rotating textured cube, that flickers slightly, and more so when
+fading out.
+
+The credits section, where GUS music cuts out entirely.
+

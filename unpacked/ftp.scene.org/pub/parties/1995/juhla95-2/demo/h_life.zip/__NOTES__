@@ -1,0 +1,6 @@
+- Demo goes into an infinite loop at the end.
+  Will allow passing if that is what it does on real hardware.
+
+- MIDAS crashes to DOS with "heap corrupted" message.
+  Will allow passing if that is what it does on real hardware.
+

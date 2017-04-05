@@ -1,0 +1,5 @@
+Gravis Ultrasound support doesn't work. Hangs.
+
+Sound Blaster 16 support works *if* you tell it to use SB16, and then give it the base I/O, IRQ, and high DMA channel number (usually 5).
+Will not work with the low DMA channel (1).
+

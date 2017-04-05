@@ -1,0 +1,7 @@
+- Sound Blaster Pro support does NOT work. Do not use!
+
+  TODO: Does the same crash happen on real hardware?
+
+- The demo will get stuck at the fractal part if you
+  enable music playback at 32KHz or higher.
+

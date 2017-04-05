@@ -1,0 +1,6 @@
+Demo doesn't respond to keystrokes during the credits.
+It's impossible to exit.
+
+Will remove __FAIL__ status if demo has the same problem
+on real hardware.
+

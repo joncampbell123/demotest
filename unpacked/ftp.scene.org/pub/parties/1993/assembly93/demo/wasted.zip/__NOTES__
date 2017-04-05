@@ -1,0 +1,7 @@
+Credits part seems to create a very short wide VGA mode.
+Is that intentional, or an error? If intentional, I will
+consider this __PASS__ not __FAIL__.
+
+Sound Blaster support stops rendering after credits but
+leaves DMA and SB running, causing the stutter you hear.
+

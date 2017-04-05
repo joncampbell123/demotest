@@ -1,0 +1,4 @@
+The only reason for failure, is the failure of the demo
+to set the VGA palette when showing SVGA text (making it
+unreadable).
+

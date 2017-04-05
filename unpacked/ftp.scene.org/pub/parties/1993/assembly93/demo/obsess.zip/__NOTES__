@@ -1,0 +1,5 @@
+Sound Blaster:
+  Demo Sound Blaster routines are buggy. They work, but there is audible repeating, as if the music
+  routine can't keep up or something. CPU selection doesn't appear to fix the issue. Asking DOSBox
+  to unmask the SB IRQ on startup doesn't help.
+

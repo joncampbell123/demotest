@@ -1,0 +1,11 @@
+- Horrible demo! (on purpose?)
+
+- Here's a big gotcha about the Sound Blaster menu:
+
+  It expects you to type in the whole port number. Not just the middle
+  digit like most demos, and not just "220" because that becomes decimal.
+  No, you must enter the port number like "$220" (Turbo Pascal version of
+  hexadecimal). The program does not range-check the port number, so if
+  you enter say "$170" you can direct Sound Blaster output at your secondary
+  IDE controller :)
+

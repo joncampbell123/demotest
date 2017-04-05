@@ -1,0 +1,5 @@
+Bugs:
+
+   Visible flickering in the 3D world part. Flickering only happens when CPU
+   cycle count is high enough to allow a smooth frame rate.
+

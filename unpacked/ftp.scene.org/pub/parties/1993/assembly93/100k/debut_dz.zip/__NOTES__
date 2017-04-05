@@ -1,0 +1,14 @@
+Sound:
+  Despite asking for GUS port demo can't seem to run music unless
+  you set gusbase=220 and sbtype=none. Will pass if the demo makes
+  the same mistake on real hardware.
+
+Video:
+  The graphics flicker horribly, as if the demo is trying to page
+  flip but not doing it right, during the "dot cloud" parts.
+  Will pass if the demo makes the same mistake on real hardware.
+
+Release:
+  This looks like an earlier release. A later, stable, working
+  version of this demo can be found in ../dzdebcde.zip/
+

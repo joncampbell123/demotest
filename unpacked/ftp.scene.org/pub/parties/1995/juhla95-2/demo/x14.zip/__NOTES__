@@ -1,0 +1,3 @@
+- Crashes after credits, does not exit to DOS.
+  Will mark as passing if it does the same on real hardware.
+

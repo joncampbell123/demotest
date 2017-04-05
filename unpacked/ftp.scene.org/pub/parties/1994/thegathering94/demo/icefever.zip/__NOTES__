@@ -1,0 +1,2 @@
+Fails to initialize Gravis Ultrasound in DOSBox.
+However it passes, because it also fails to initialize the Gravis Ultrasound on real hardware too.

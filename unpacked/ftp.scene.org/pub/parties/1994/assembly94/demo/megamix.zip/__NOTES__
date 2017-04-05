@@ -1,0 +1,11 @@
+Gravis Ultrasound support DOES NOT WORK
+
+May crash during wavy rotating graphic if less than 610-620K-ish of RAM.
+
+VERY picky about the amount of available memory! Less than 615KB or so and some parts fail outright.
+More than 620KB risks the effects inherent in running DOS applications too low in memory.
+
+Unstable demo code.
+
+Killed the keyboard on return to DOS??
+

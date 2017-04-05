@@ -1,0 +1,4 @@
+- Uses undocumented Sound Blaster DSP command 45h
+
+- 3D objects flicker
+
