@@ -1,3 +1,4 @@
 - Crashes after credits, does not exit to DOS.
-  Will mark as passing if it does the same on real hardware.
+  But, it passes, because this demo has a reputation for crashing
+  at the end anyway.
 
