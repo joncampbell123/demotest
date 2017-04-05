@@ -1,16 +1,18 @@
 Demo requires EMS.
 It also requires an FPU for some reason (PowerBasic doesn't emulate one??)
 
+The demo is marked as FAILED because Gravis ultrasound music stops working
+during the transition from the first part to the animation loop (buildings
+and a helicopter, zooming into a satellite dish). The music stops and the
+demo never leaves the animation loop. Strange, considering I had no problems
+with this demo back in 2007 running it under DOSBox 0.72.
+
+Fixed:
+
 The glitching out on the title screen is the demo using PKUNZIP on DIT.DAT
 to unpack it's files. The reason it glitches is because it attempts to use
 CTTY to redirect the console to NUL (which doesn't work in DOSBox) and then
 PKUNZIP prints text to the console (now one of the VGA planes in mode 0x13
 320x200x256) and that makes the distortion you see. The fix: Implement CTTY
 so the demo's CON redirection works.
-
-The demo is marked as FAILED because Gravis ultrasound music stops working
-during the transition from the first part to the animation loop (buildings
-and a helicopter, zooming into a satellite dish). The music stops and the
-demo never leaves the animation loop. Strange, considering I had no problems
-with this demo back in 2007 running it under DOSBox 0.72.
 
