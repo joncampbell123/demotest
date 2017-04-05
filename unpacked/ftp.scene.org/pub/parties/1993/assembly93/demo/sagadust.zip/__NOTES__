@@ -1,7 +1,8 @@
 Sound Blaster issues
  - Some popping and crackling is always going to happen. There's nothing you can
    do about it. It does it on real hardware too. The settings provided in dosbox.conf
-   do much to mitigate most of it though.
+   do much to mitigate most of it though. Some of the audible "pops" in the audio
+   appear to be artifacts related to how the demo uses the FM synthesizer.
 
  - Don't run with sbtype=sb16 or run on Sound Blaster 16. It will work, but you will
    hear static inbetween demo parts. The demo leaves DMA playback running while
