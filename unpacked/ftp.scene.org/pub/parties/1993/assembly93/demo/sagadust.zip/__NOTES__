@@ -1,0 +1,20 @@
+Sound Blaster issues
+ - Some popping and crackling is always going to happen. There's nothing you can
+   do about it. It does it on real hardware too. The settings provided in dosbox.conf
+   do much to mitigate most of it though.
+
+ - Don't run with sbtype=sb16 or run on Sound Blaster 16. It will work, but you will
+   hear static inbetween demo parts. The demo leaves DMA playback running while
+   loading the next part and it assumes it can use "disable speaker" and "enable speaker"
+   to hide it between parts, which works with SB Pro but not SB16.
+
+"Shit bobs" speed issues
+ - On real hardware the shit bobs run a lot slower. In DOSBox-X they go really fast,
+   unless you add video RAM delay.
+
+Fixed issues?
+ - At one point during DOSBox-X the demo would eventually hang having read the I/O port
+   from some unrelated segment (usually VGA RAM!) and then get stuck reading whatever
+   random I/O port it got. As of April 2017 that doesn't seem to happen anymore!
+   So far, the CS == DS IRQ hack is no longer needed.
+
