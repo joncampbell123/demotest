@@ -1,0 +1,8 @@
+PC speaker output works! (but, I did once hear an odd variation in volume).
+
+Demo is VERY TOUCHY about sensing the space bar. Tap it very lightly, or the demo will skip through many parts at once and dump back to DOS.
+
+This demo also proudly shows a schematic to a stereo LPT DAC output for your parallel port.
+
+You can hit SPACEBAR during the initial prompt for the PC speaker, or type "378" <ENTER> to hear LPT DAC music.
+
