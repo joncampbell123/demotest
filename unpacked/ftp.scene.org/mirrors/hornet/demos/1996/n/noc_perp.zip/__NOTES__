@@ -1,0 +1,5 @@
+- Demo soundcard autodetection doesn't work.
+  Is that DOSBox-X's problem, or the demo's problem?
+  But, you can manually (with /s) specify Gravis Ultrasound
+  and it works.
+
