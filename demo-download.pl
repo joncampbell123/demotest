@@ -17,6 +17,8 @@ while ($i < @dirs) {
     $i++;
 }
 
+$relpath =~ s/\/pub\//\//;
+
 $baseurl = "http://files.scene.org/get";
 
 $url = $baseurl . $relpath;
