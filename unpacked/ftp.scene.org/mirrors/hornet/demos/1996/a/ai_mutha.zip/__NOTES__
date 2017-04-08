@@ -1,0 +1,6 @@
+- Scribbles on the VGA BIOS, then crashes executing the 0xFF's that take it's place (somewhere like C2FF:0300)
+
+- Scribbles over memory somewhere at the 16MB boundary at startup.
+
+- Other than that, demo is pretty cool.
+
