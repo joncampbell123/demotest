@@ -1,2 +1,5 @@
 You will need to copy HEADACHE.DAT from ../headache.zip to run this version.
 
+If the demo runs, but is stuck looping at the initial effect with no text,
+it means you forgot to copy over HEADACHE.COW. The demo needs it's music.
+
