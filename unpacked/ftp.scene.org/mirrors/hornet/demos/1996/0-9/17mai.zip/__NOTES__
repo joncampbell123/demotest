@@ -1,2 +1,6 @@
-- Hangs at startup in an infinite loop
+- Hangs at startup in an infinite loop without LOADFIX
+
+- Crashes during credits, invalid opcode exception
+
+- This demo is utter shit
 
