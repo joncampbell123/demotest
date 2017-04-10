@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- There's a MOD music file in the directory that suggests there should be music,
+  but the demo doesn't play anything.
+
