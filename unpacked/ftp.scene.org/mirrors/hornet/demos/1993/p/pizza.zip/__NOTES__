@@ -1,0 +1,5 @@
+Why the demo failed the test:
+- Demo works, however if the demo autodetects the card
+  and you accept without going into the sound card settings,
+  the demo has a terrible time keeping audio playback going.
+
