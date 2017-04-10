@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- It tries to do a sound effect at startup, but fails.

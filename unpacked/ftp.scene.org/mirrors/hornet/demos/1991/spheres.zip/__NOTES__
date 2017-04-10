@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Attempts to play SB DMA while leaving it masked.
+
