@@ -27,6 +27,9 @@ run() {
     $emu
 }
 
+PS1="\s-\v demo test>> "
+
+export PS1
 export emu
 export -f run
 export -f pass
