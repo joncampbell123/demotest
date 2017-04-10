@@ -1,5 +1,7 @@
 #!/bin/bash
 
+emu="/usr/src/dosbox-x/src/dosbox-x --debug"
+
 pass() {
     rm -f __FAIL__
     echo >__PASS__
@@ -21,6 +23,12 @@ fail() {
     commit
 }
 
+run() {
+    $emu
+}
+
+export emu
+export -f run
 export -f pass
 export -f fail
 export -f commit
