@@ -1,6 +1,0 @@
-Why the demo failed the test:
-- Demo hangs, stuck in some loop where apparently it assumes AL != 0:
-
-l1:       SHR      AL,1
-          jnc      l1
-
