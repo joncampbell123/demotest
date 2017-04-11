@@ -1,2 +1,6 @@
 Crashes in an infinite loop.
 
+Just dug deeper into the code. There are two levels of decompression (decryption?)
+and apparently, if something doesn't check out, an explicit instruction to
+jmp to F000:FFF0!
+
