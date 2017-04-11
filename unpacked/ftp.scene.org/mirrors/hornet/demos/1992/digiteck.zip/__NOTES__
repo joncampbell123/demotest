@@ -1,3 +1,5 @@
 Why the demo failed the test:
 - Sound blaster support crashes with invalid opcode
+- Demo appears to initialize sound, then allocate the DMA buffer
+  and render audio right over it's own IRQ 0 and IRQ 7 handlers! Why??
 
