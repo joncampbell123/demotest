@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo crashes (JMPs or CALLs to 0000:0000)
+
