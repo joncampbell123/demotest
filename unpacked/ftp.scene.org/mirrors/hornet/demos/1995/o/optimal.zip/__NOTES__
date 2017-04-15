@@ -1,0 +1,5 @@
+Demo will crash at 3D landscape, when the overlay begins to zoom in and away,
+if the cycle count is too high. If you want a high cycle count capture, you
+will need to quickly reduce the cycle count for that part. You can ramp up
+the cycle count when the overlay starts moving.
+
