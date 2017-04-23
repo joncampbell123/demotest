@@ -1,6 +1,6 @@
 #!/bin/bash
 
-emu="/usr/src/dosbox-x/src/dosbox-x --debug"
+emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
 
 pass() {
     rm -f __FAIL__
