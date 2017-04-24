@@ -1,0 +1,3 @@
+Why do Beanix demos suck at playing sound? They seem to have consistent issues with
+masking IRQs and then expecting the DOS or BIOS to unmask what is needed.
+
