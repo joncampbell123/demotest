@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Uses (banked?) SVGA mode in a way that does not display correctly
+  and scribbles on VGA BIOS
+
