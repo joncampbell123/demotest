@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo doesn't probe VBE modes, it just assumes you use UNIVBE. Bleh.
+
