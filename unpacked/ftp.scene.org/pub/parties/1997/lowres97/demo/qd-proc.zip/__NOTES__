@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Despite VESA BIOS extensions it cannot find 320x240x16 even though it's there, asks for UNIVBE.
