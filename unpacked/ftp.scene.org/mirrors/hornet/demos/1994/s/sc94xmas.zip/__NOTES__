@@ -1,0 +1,5 @@
+Why the demo failed the test:
+- Demo doesn't seem to respond to keyboard during
+  main part and therefore there doesn't seem to be
+  a way to exit to DOS.
+
