@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo crashes on shutdown trying to execute an invalid opcode (0Fh 0Fh??)
