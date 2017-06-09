@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Demo is very responsive to the keyboard.
+  So much so that after DOSBox-X boot it immediately exits.
+
