@@ -10,6 +10,9 @@ while (my $path = <X>) {
     # TEMP: we only want 1994 and earlier demos
     next unless $path =~ m/\/199[0-4]\//;
 
+    # skip Amiga demos, we can't run them
+    next if $path =~ m/\/amiga\//;
+
     # skip if it already has __PASS__ or __FAIL__
     next if ( -f "$path/__PASS__" || -f "$path/__FAIL__" );
 
