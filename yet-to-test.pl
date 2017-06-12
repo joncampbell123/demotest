@@ -11,7 +11,7 @@ while (my $path = <X>) {
     next unless $path =~ m/\/199[0-4]\//;
 
     # skip Amiga demos, we can't run them
-    next if $path =~ m/\/amiga\//;
+    next if $path =~ m/\/amiga\/demo\//;
 
     # skip if it already has __PASS__ or __FAIL__
     next if ( -f "$path/__PASS__" || -f "$path/__FAIL__" );
