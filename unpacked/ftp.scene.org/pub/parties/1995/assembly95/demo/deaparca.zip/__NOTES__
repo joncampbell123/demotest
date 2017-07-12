@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- GUS playback causes jerky animation, and DOSBox-X warnings about PIT timer reprogramming without control word
