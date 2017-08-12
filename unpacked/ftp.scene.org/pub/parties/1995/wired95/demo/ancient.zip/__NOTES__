@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- There's a lot of time-specific bugs in this demo, where the cycles count has an effect.
+  It's entirely possible for some parts to miss their "cue" and get stuck.
+
