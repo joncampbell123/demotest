@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo has some kind of timing problem. It will very quickly get stuck even though music continues to play. Pressing a key dislogdes it, but then the demo exits.
