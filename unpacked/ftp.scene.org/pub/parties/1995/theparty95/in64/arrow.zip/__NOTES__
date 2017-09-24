@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Demo will get stuck at some point, waiting for keyboard input.
+  You can proceed by tapping any key, but the point is, you shouldn't need to do that.
+
