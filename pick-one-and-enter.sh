@@ -10,7 +10,7 @@ fi
 
 pass() {
     rm -f __FAIL__
-    echo >__PASS__
+    echo $gitcommit >__PASS__
     commit
 }
 
@@ -23,7 +23,7 @@ commit() {
 
 fail() {
     rm -f __PASS__
-    echo >__FAIL__
+    echo $gitcommit >__FAIL__
     if [ -e __NOTES__ ]; then true; else echo 'Why the demo failed the test:' >__NOTES__; fi
     vi __NOTES__
     commit
