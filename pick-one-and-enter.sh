@@ -6,6 +6,7 @@ gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
 if [ -x $gitcommit_sh ]; then
     gitcommit=`$gitcommit_sh`
     echo "DOSBox-X commit is $gitcommit"
+    export $gitcommit
 fi
 
 pass() {
