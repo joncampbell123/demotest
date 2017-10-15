@@ -4,7 +4,8 @@ emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
 gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
 
 if [ -x $gitcommit_sh ]; then
-    gitcommit=`$gitcommit_sh`
+    x=`dirname $gitcommit_sh`
+    gitcommit=`cd $x && $gitcommit_sh`
     echo "DOSBox-X commit is $gitcommit"
     export gitcommit
 fi
