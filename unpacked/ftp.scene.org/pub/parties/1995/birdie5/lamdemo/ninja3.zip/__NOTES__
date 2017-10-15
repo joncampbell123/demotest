@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Can't figure out how to get GUS music working
+- Demo reboots after last segment. This might be a good reason to add a "exit on reboot" option to DOSBox-X.
+
