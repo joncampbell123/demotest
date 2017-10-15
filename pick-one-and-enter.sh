@@ -1,6 +1,12 @@
 #!/bin/bash
 
 emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
+gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
+
+if [ -x $gitcommit_sh ]; then
+    gitcommit=`$gitcommit_sh`
+    echo "DOSBox-X commit is $gitcommit"
+fi
 
 pass() {
     rm -f __FAIL__
