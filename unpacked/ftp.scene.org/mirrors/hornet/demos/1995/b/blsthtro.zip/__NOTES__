@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- The new codepage conversion code is breaking this demo
