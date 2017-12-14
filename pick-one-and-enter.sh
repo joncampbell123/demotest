@@ -1,6 +1,11 @@
 #!/bin/bash
 
-emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
+if [ -x /home/jon/src/dosbox-x/src/dosbox-x ]; then
+	emu="/home/jon/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
+else
+	emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
+fi
+
 gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
 
 if [ -x $gitcommit_sh ]; then
