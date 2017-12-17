@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Acts as if keyboard key is down, advancing steps
