@@ -1,0 +1,5 @@
+Why the demo failed the test:
+- Don't know if this is a problem with DOSBox-X but the demo's music playback is broken.
+  GUS audio sounds choppy as if it's trying to play music but it's only at half speed.
+  Sound Blaster audio sounds like it's trying to play music but missing every other interrupt.
+
