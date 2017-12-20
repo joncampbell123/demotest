@@ -6,6 +6,10 @@ else
 	emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
 fi
 
+if [ -x /home/jon/src/dosbox-x-sdl2/src/dosbox-x ]; then
+	emu="/home/jon/src/dosbox-x-sdl2/src/dosbox-x --debug --showrt --showcycles"
+fi	
+
 gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
 
 if [ -x $gitcommit_sh ]; then
