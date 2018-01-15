@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- One color palette snafu seen during the "giant" logo pan.
+  Will mark as passed if the same snafu appears on real hardware.
