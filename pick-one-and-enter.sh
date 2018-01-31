@@ -59,6 +59,7 @@ cp -vn mapper-0.801.map "$x/mapper-0.801.map" || exit 1
 cp -vn mapper-0.801.map "$x/mapper-0.81.map" || exit 1
 cp -vn mapper-0.801.map "$x/mapper-0.82.map" || exit 1
 cp -vn mapper-0.801.map "$x/mapper-0.82.1.map" || exit 1
+cp -vn mapper-0.801.map "$x/mapper-0.82.2.map" || exit 1
 
 (cd "$x" && echo "I entered the directory by running your shell again. Type 'exit' to exit out of it." && bash) || exit 1
 
