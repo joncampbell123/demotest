@@ -1,3 +1,10 @@
-Why the demo failed the test:
-- Garbled graphics
+The contents of the demo in this ZIP are corrupted.
+
+The garbled background graphics are intentional (?) apparently.
+
+The OBJ unzips with bad CRC.
+
+The "Alice in Chains" PCX does not unpack from the ZIP.
+
+You may want to fill in missing files from the Hornet Archive version of this demo.
 
