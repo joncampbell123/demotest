@@ -1,2 +1,4 @@
-Why the demo failed the test:
-- Mountain part glitches at some point depending on CPU cycles
+- Most parts of the demo run fine at any speed, however the 3D mountains
+  can glitch out and render garbage if the sequence is allowed to run too
+  fast before the music triggers the next part.
+
