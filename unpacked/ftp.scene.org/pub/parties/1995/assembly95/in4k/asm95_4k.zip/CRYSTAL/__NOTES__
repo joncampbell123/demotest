@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Polygon rendering is UGLY! Will mark as PASS if this is what it actually does on hardware.
+
