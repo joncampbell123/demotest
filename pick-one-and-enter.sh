@@ -70,7 +70,7 @@ export -f pass
 export -f fail
 export -f commit
 
-x=`./pick-one.sh`
+x=`./pick-one.sh $what`
 if [ "$x" == "" ]; then echo "nothing picked"; exit 1; fi
 echo "I picked: $x"
 
