@@ -1,8 +1,9 @@
 #!/bin/bash
 
 what=
+filesuffix=
 
-if [[ "$1" == "svn" ]]; then what=svn; fi
+if [[ "$1" == "svn" ]]; then what=svn; filesuffix="_SVN"; fi
 
 if [[ "$what" == "svn" ]]; then
     if [ -x /home/jon/src/dosbox-svn/src/dosbox-svn ]; then
@@ -37,24 +38,26 @@ else
     fi
 fi
 
+export filesuffix
+
 pass() {
-    rm -f __FAIL__
-    echo $gitcommit >__PASS__
+    rm -f "__FAIL"$filesuffix"__"
+    echo $gitcommit >"__PASS"$filesuffix"__"
     commit
 }
 
 commit() {
     git add *.conf *.map
-    if [ -f __PASS__ ]; then git add __PASS__; fi
-    if [ -f __FAIL__ ]; then git add __FAIL__; fi
-    if [ -f __NOTES__ ]; then git add __NOTES__; fi
+    if [ -f "__PASS"$filesuffix"__" ]; then git add "__PASS"$filesuffix"__"; fi
+    if [ -f "__FAIL"$filesuffix"__" ]; then git add "__FAIL"$filesuffix"__"; fi
+    if [ -f "__NOTES"$filesuffix"__" ]; then git add "__NOTES"$filesuffix"__"; fi
 }
 
 fail() {
-    rm -f __PASS__
-    echo $gitcommit >__FAIL__
-    if [ -e __NOTES__ ]; then true; else echo 'Why the demo failed the test:' >__NOTES__; fi
-    vi __NOTES__
+    rm -f "__PASS"$filesuffix"__"
+    echo $gitcommit >"__FAIL"$filesuffix"__"
+    if [ -e "__NOTES"$filesuffix"__" ]; then true; else echo 'Why the demo failed the test:' >"__NOTES"$filesuffix"__"; fi
+    vi "__NOTES"$filesuffix"__"
     commit
 }
 
