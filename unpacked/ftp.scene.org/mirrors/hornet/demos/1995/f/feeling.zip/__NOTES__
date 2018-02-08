@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- GUS driver gets stuck in a loop waiting for bit 0 of some register to set
+
