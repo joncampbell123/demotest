@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- DOSBox-SVN does not implement upper "reserved" bits in VGA status, which the demo requires in order not to hang
+- DOSBox-SVN does not emulate VGA scanline "warping" trick
