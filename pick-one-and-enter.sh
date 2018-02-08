@@ -13,14 +13,10 @@ if [[ "$what" == "svn" ]]; then
     fi
 
     emu="$dosbox_root/src/dosbox --debug"
-    gitcommit_sh="`pwd`/dosbox-svn-git-commit-version.pl \"$dosbox_root\""
-
-    if [ -x $gitcommit_sh ]; then
-        x=`dirname $gitcommit_sh`
-        gitcommit=`cd $x && $gitcommit_sh`
-        echo "DOSBox-SVN commit is $gitcommit"
-        export gitcommit
-    fi
+    gitcommit_sh="`pwd`/dosbox-svn-git-commit-version.pl $dosbox_root"
+    gitcommit=`cd $x && $gitcommit_sh`
+    echo "DOSBox-SVN commit is $gitcommit"
+    export gitcommit
 else
     if [ -x /home/jon/src/dosbox-x/src/dosbox-x ]; then
         emu="/home/jon/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
