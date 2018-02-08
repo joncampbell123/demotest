@@ -1,18 +1,40 @@
 #!/bin/bash
 
-if [ -x /home/jon/src/dosbox-x/src/dosbox-x ]; then
-	emu="/home/jon/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
+what=
+
+if [[ "$1" == "svn" ]]; then what=svn; fi
+
+if [[ "$what" == "svn" ]]; then
+    if [ -x /home/jon/src/dosbox-svn/src/dosbox-svn ]; then
+        dosbox_root="/home/jon/src/dosbox-svn"
+    else
+        dosbox_root="/usr/src/dosbox-svn"
+    fi
+
+    emu="$dosbox_root/src/dosbox --debug"
+    gitcommit_sh="`pwd`/dosbox-svn-git-commit-version.pl \"$dosbox_root\""
+
+    if [ -x $gitcommit_sh ]; then
+        x=`dirname $gitcommit_sh`
+        gitcommit=`cd $x && $gitcommit_sh`
+        echo "DOSBox-SVN commit is $gitcommit"
+        export gitcommit
+    fi
 else
-	emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
-fi
+    if [ -x /home/jon/src/dosbox-x/src/dosbox-x ]; then
+        emu="/home/jon/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
+    else
+        emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
+    fi
 
-gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
+    gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
 
-if [ -x $gitcommit_sh ]; then
-    x=`dirname $gitcommit_sh`
-    gitcommit=`cd $x && $gitcommit_sh`
-    echo "DOSBox-X commit is $gitcommit"
-    export gitcommit
+    if [ -x $gitcommit_sh ]; then
+        x=`dirname $gitcommit_sh`
+        gitcommit=`cd $x && $gitcommit_sh`
+        echo "DOSBox-X commit is $gitcommit"
+        export gitcommit
+    fi
 fi
 
 pass() {
