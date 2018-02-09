@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- DOSBox SVN doesn't emulate undocumented flags behavior of INT 16h AH=1 that this demo requires

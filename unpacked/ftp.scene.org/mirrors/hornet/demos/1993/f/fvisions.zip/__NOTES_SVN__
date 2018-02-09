@@ -1,0 +1,6 @@
+Why the demo failed the test:
+- Sound Blaster playback is pure noise
+
+However:
+- DOSBox SVN is able to do GUS music with this demo.
+
