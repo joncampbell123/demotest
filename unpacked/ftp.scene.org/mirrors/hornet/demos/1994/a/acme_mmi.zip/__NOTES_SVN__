@@ -1,2 +1,3 @@
 Why the demo failed the test:
 - GUS music sounds very sparse, usually one instrument over and over, which doesn't sound right. Will mark PASS if behavior matches REAL HARDWARE.
+- "GET GOING" overdraws The Tick when it should scroll over with transparency
