@@ -9,6 +9,7 @@ print H "<title>Demoscene compat testing chart</title>\n";
 print H "<style>\n";
 print H ".passfail_PASS { background-color: #7FFF7F; }\n";
 print H ".passfail_FAIL { background-color: #FF7F7F; }\n";
+print H ".testing_header { background-color: #BFBFBF; }\n";
 print H "</style>\n";
 print H "</head>\n";
 print H "<body>\n";
@@ -17,7 +18,7 @@ print H "DOSBox demoscene compat testing chart<br>\n";
 print H "Ref: <a href=\"ftp://ftp.scene.org\">ftp://ftp.scene.org</a><br>\n";
 
 print H "<table>\n";
-print H "<thead>\n";
+print H "<thead class=\"testing_header\">\n";
 print H "<tr>\n";
 print H "<td>DOSBox-X</td>";
 print H "<td>DOSBox-SVN</td>";
@@ -61,7 +62,7 @@ while ($line = <S>) {
 
         print H "</tbody>\n";
 
-        print H "<thead>\n";
+        print H "<thead class=\"testing_header\">\n";
         print H "<tr>\n";
         print H "<td>DOSBox-X</td>";
         print H "<td>DOSBox-SVN</td>";
