@@ -27,8 +27,11 @@ open(S,"find -type d | sort |") || die;
 while ($line = <S>) {
     chomp $line;
 
+    $line =~ s/^\.\///;
+    $disp_line = $line;
+    next unless $disp_line =~ s/^unpacked\///;
+
     my $pass_dosbox_x = undef;
-    my $pass_dosbox_svn = undef;
 
     $pass_dosbox_x = "PASS" if ( -f "$line/__PASS__" );
     $pass_dosbox_x = "FAIL" if ( -f "$line/__FAIL__" );
@@ -40,7 +43,12 @@ while ($line = <S>) {
         close(X);
     }
 
-    next unless defined($pass_dosbox_x);
+    my $pass_dosbox_svn = undef;
+
+    $pass_dosbox_svn = "PASS" if ( -f "$line/__PASS_SVN__" );
+    $pass_dosbox_svn = "FAIL" if ( -f "$line/__FAIL_SVN__" );
+
+    next unless defined($pass_dosbox_x) || defined($pass_dosbox_svn);
 
     print H "<tr>\n";
 
@@ -55,6 +63,20 @@ while ($line = <S>) {
     else {
         print H "<td>---</td>";
     }
+
+    if (defined($pass_dosbox_svn)) {
+        my $style = "";
+
+        $style = "background-color: #7FFF7F;" if $pass_dosbox_svn eq "PASS";
+        $style = "background-color: #FF7F7F;" if $pass_dosbox_svn eq "FAIL";
+
+        print H "<td style=\"$style\">$pass_dosbox_svn</td>";
+    }
+    else {
+        print H "<td>---</td>";
+    }
+
+    print H "<td>$disp_line</td>";
 
     print H "</tr>\n";
 }
