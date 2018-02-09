@@ -46,9 +46,23 @@ while ($line = <S>) {
     next unless $disp_line =~ s/^unpacked\///;
 
     my $pass_dosbox_x = undef;
+    my $pass_dosbox_x_rev = undef;
+    my $pass_dosbox_x_rev_file = undef;
 
-    $pass_dosbox_x = "PASS" if ( -f "$line/__PASS__" );
-    $pass_dosbox_x = "FAIL" if ( -f "$line/__FAIL__" );
+    if ( -f "$line/__PASS__" ) {
+        $pass_dosbox_x = "PASS";
+        $pass_dosbox_x_rev_file = "$line/__PASS__";
+    }
+    if ( -f "$line/__FAIL__" ) {
+        $pass_dosbox_x = "FAIL";
+        $pass_dosbox_x_rev_file = "$line/__FAIL__";
+    }
+    if (defined($pass_dosbox_x_rev_file) && -f $pass_dosbox_x_rev_file ) {
+        open(R,"<",$pass_dosbox_x_rev_file) || die;
+        $pass_dosbox_x_rev_file = <R>;
+        chomp $pass_dosbox_x_rev_file;
+        close(R);
+    }
 
     my $notes_dosbox_x = undef;
     if ( -f "$line/__NOTES__" ) {
@@ -70,9 +84,23 @@ while ($line = <S>) {
     }
 
     my $pass_dosbox_svn = undef;
+    my $pass_dosbox_svn_rev = undef;
+    my $pass_dosbox_svn_rev_file = undef;
 
-    $pass_dosbox_svn = "PASS" if ( -f "$line/__PASS_SVN__" );
-    $pass_dosbox_svn = "FAIL" if ( -f "$line/__FAIL_SVN__" );
+    if ( -f "$line/__PASS_SVN__" ) {
+        $pass_dosbox_svn = "PASS";
+        $pass_dosbox_svn_rev_file = "$line/__PASS_SVN__";
+    }
+    if ( -f "$line/__FAIL_SVN__" ) {
+        $pass_dosbox_svn = "FAIL";
+        $pass_dosbox_svn_rev_file = "$line/__FAIL_SVN__";
+    }
+    if (defined($pass_dosbox_svn_rev_file) && -f $pass_dosbox_svn_rev_file ) {
+        open(R,"<",$pass_dosbox_svn_rev_file) || die;
+        $pass_dosbox_svn_rev_file = <R>;
+        chomp $pass_dosbox_svn_rev_file;
+        close(R);
+    }
 
     my $notes_dosbox_svn = undef;
     if ( -f "$line/__NOTES_SVN__" ) {
