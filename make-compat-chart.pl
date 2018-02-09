@@ -69,6 +69,25 @@ while ($line = <S>) {
     $pass_dosbox_svn = "PASS" if ( -f "$line/__PASS_SVN__" );
     $pass_dosbox_svn = "FAIL" if ( -f "$line/__FAIL_SVN__" );
 
+    my $notes_dosbox_svn = undef;
+    if ( -f "$line/__NOTES_SVN__" ) {
+        my $nline="",$pline,$res="",$ncount=0;
+
+        open(X,"<","$line/__NOTES_SVN__") || die;
+        while ($nline = <X>) {
+            $pline = $nline;
+            chomp $nline;
+            $nline =~ s/^[ \t]+//;
+            $nline =~ s/[ \t]+$//;
+            next if $nline eq "";
+            $res .= "\n" if $ncount > 0;
+            $res .= "$nline";
+            $ncount++;
+        }
+        close(X);
+        $notes_dosbox_svn = $res;
+    }
+
     next unless defined($pass_dosbox_x) || defined($pass_dosbox_svn);
 
     $count++;
@@ -104,11 +123,16 @@ while ($line = <S>) {
         print H "<td class=\"passfail_NA\">---</td>";
     }
 
-    my $more = "";
+    my $more = "<br>";
 
     if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
-        $more .= "<br><br>";
+        $more .= "<br>";
         $more .= "DOSBox-X NOTES: <pre style=\"padding: 0px; margin: 0px;\">$notes_dosbox_x</pre>";
+    }
+
+    if (defined($notes_dosbox_svn) && $notes_dosbox_svn ne "") {
+        $more .= "<br>";
+        $more .= "DOSBox-SVN NOTES: <pre style=\"padding: 0px; margin: 0px;\">$notes_dosbox_svn</pre>";
     }
 
     if ($disp_line =~ s/^ftp\.scene\.org\///) {
