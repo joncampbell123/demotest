@@ -322,7 +322,9 @@ The following bugs are NOT DOSBox SVN's fault and do not count as failure:
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/s/sp_bbs.zip">mirrors/hornet/demos/1993/s/sp_bbs.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/s/ssaft.zip">mirrors/hornet/demos/1993/s/ssaft.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/s/star_int.zip">mirrors/hornet/demos/1993/s/star_int.zip</a><br></td></tr>
-<tr><td class="passfail_FAIL">FAIL</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/s/symbolog.zip">mirrors/hornet/demos/1993/s/symbolog.zip</a><br><br>DOSBox-X NOTES: <pre>Keyboard input does not respond.</pre></td></tr>
+<tr><td class="passfail_FAIL"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/cf142387b7108d61666c99f9b8bd7bee5f054284">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">FAIL</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/s/symbolog.zip">mirrors/hornet/demos/1993/s/symbolog.zip</a><br><br>DOSBox-X NOTES: <pre>Why the demo failed the test:
+- Does not respond to keyboard (polls I/O port 64h with interrupts enabled, which means BIOS keyboard handler takes care of it before it can see it)</pre><br>DOSBox-SVN NOTES: <pre>Why the demo failed the test:
+- Does not respond to keyboard (polls I/O port 64h with interrupts enabled, which means BIOS keyboard handler takes care of it before it can see it)</pre></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/s/symptoms.zip">mirrors/hornet/demos/1993/s/symptoms.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/t/tdt1993.zip">mirrors/hornet/demos/1993/t/tdt1993.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/t/tic10113.zip">mirrors/hornet/demos/1993/t/tic10113.zip</a><br></td></tr>
@@ -352,14 +354,13 @@ therefore, it passes.</pre></td></tr>
 </thead>
 <tbody>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/x/xmas_93.zip">mirrors/hornet/demos/1993/x/xmas_93.zip</a><br></td></tr>
-<tr><td class="passfail_FAIL">FAIL</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/x/xmas93.zip">mirrors/hornet/demos/1993/x/xmas93.zip</a><br><br>DOSBox-X NOTES: <pre>Why the demo failed the test:
-- There's a MOD music file in the directory that suggests there should be music,
-but the demo doesn't play anything.</pre></td></tr>
+<tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/cf142387b7108d61666c99f9b8bd7bee5f054284">PASS</a></td><td class="passfail_PASS"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">PASS</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/x/xmas93.zip">mirrors/hornet/demos/1993/x/xmas93.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/x/xmas_hmr.zip">mirrors/hornet/demos/1993/x/xmas_hmr.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1994/0-9/1infect.zip">mirrors/hornet/demos/1994/0-9/1infect.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1994/0-9/1_under.zip">mirrors/hornet/demos/1994/0-9/1_under.zip</a><br></td></tr>
-<tr><td class="passfail_FAIL">FAIL</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1994/0-9/2cents.zip">mirrors/hornet/demos/1994/0-9/2cents.zip</a><br><br>DOSBox-X NOTES: <pre>Why the demo failed the test:
-- Not sure? if demo exits uncleanly or crashes to DOS</pre></td></tr>
+<tr><td class="passfail_FAIL"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/cf142387b7108d61666c99f9b8bd7bee5f054284">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">FAIL</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1994/0-9/2cents.zip">mirrors/hornet/demos/1994/0-9/2cents.zip</a><br><br>DOSBox-X NOTES: <pre>Why the demo failed the test:
+- Does not exit cleanly to DOS, leaves stuck notes. Will mark as PASS if same error occurs on REAL HARDWARE.</pre><br>DOSBox-SVN NOTES: <pre>Why the demo failed the test:
+- Does not exit cleanly to DOS, leaves stuck notes. Will mark as PASS if same error occurs on REAL HARDWARE.</pre></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1994/0-9/2ndpatch.zip">mirrors/hornet/demos/1994/0-9/2ndpatch.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1994/0-9/3461.zip">mirrors/hornet/demos/1994/0-9/3461.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1994/0-9/3940.zip">mirrors/hornet/demos/1994/0-9/3940.zip</a><br></td></tr>
