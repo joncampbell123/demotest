@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- "Goldplay mode", along with DSP "nagging" and polling DSP cycle for stoppage not supported by SVN

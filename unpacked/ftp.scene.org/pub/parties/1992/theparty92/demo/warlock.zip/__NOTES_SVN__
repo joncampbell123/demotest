@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Blanking overlap causes misrender of the final part
+- Scroll down fails to render properly at the bottom

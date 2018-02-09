@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- "High res" part 3 is renderded 1024 pixels high instead of stopping at the blanking interval.
+
