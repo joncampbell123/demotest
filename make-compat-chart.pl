@@ -18,11 +18,13 @@ print H "<body>\n";
 print H "DOSBox demoscene compat testing chart<br>\n";
 print H "Ref: <a href=\"ftp://ftp.scene.org\">ftp://ftp.scene.org</a><br>\n";
 
+print H "<br>\n";
+
 print H "<table cellpadding=0 cellspacing=0>\n";
 print H "<thead class=\"testing_header\">\n";
 print H "<tr>\n";
-print H "<td>DOSBox-X</td>";
-print H "<td>DOSBox-SVN</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
 print H "<td>Demo</td>";
 print H "</tr>\n";
 print H "</thead>\n";
@@ -65,8 +67,8 @@ while ($line = <S>) {
 
         print H "<thead class=\"testing_header\">\n";
         print H "<tr>\n";
-        print H "<td>DOSBox-X</td>";
-        print H "<td>DOSBox-SVN</td>";
+        print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X</td>";
+        print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
         print H "<td>Demo</td>";
         print H "</tr>\n";
         print H "</thead>\n";
