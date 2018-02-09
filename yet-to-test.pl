@@ -17,7 +17,7 @@ while (my $path = <X>) {
     next if ( -f "$path/__PASS__" || -f "$path/__FAIL__" );
 
     # skip unless it has an EXE or COM file
-    $x=`cd '$path' && ls *.EXE *.COM 2>/dev/null | head -n 1`; chomp $x;
+    $x=`cd '$path' && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
     next if $x eq "";
 
     print "$path\n";
