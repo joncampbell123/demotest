@@ -7,8 +7,9 @@ print H "<html>\n";
 print H "<head>\n";
 print H "<title>Demoscene compat testing chart</title>\n";
 print H "<style>\n";
-print H ".passfail_PASS { background-color: #7FFF7F; }\n";
-print H ".passfail_FAIL { background-color: #FF7F7F; }\n";
+print H ".passfail_PASS { background-color: #7FFF7F; text-align: center; }\n";
+print H ".passfail_FAIL { background-color: #FF7F7F; text-align: center; }\n";
+print H ".passfail_NA { background-color: #DFDFDF; text-align: center; }\n";
 print H ".testing_header { background-color: #BFBFBF; }\n";
 print H "</style>\n";
 print H "</head>\n";
@@ -17,7 +18,7 @@ print H "<body>\n";
 print H "DOSBox demoscene compat testing chart<br>\n";
 print H "Ref: <a href=\"ftp://ftp.scene.org\">ftp://ftp.scene.org</a><br>\n";
 
-print H "<table>\n";
+print H "<table cellpadding=0 cellspacing=0>\n";
 print H "<thead class=\"testing_header\">\n";
 print H "<tr>\n";
 print H "<td>DOSBox-X</td>";
@@ -79,14 +80,14 @@ while ($line = <S>) {
         print H "<td class=\"passfail_$pass_dosbox_x\">$pass_dosbox_x</td>";
     }
     else {
-        print H "<td>---</td>";
+        print H "<td class=\"passfail_NA\">---</td>";
     }
 
     if (defined($pass_dosbox_svn)) {
         print H "<td class=\"passfail_$pass_dosbox_svn\">$pass_dosbox_svn</td>";
     }
     else {
-        print H "<td>---</td>";
+        print H "<td class=\"passfail_NA\">---</td>";
     }
 
     if ($disp_line =~ s/^ftp\.scene\.org\///) {
