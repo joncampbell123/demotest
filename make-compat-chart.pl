@@ -23,6 +23,7 @@ print H "</thead>\n";
 
 print H "<tbody>\n";
 
+$count = 0;
 open(S,"find -type d | sort |") || die;
 while ($line = <S>) {
     chomp $line;
@@ -49,6 +50,23 @@ while ($line = <S>) {
     $pass_dosbox_svn = "FAIL" if ( -f "$line/__FAIL_SVN__" );
 
     next unless defined($pass_dosbox_x) || defined($pass_dosbox_svn);
+
+    $count++;
+    if ($count >= 24) {
+        $count = 0;
+
+        print H "</tbody>\n";
+
+        print H "<thead>\n";
+        print H "<tr>\n";
+        print H "<td>DOSBox-X</td>";
+        print H "<td>DOSBox-SVN</td>";
+        print H "<td>Demo</td>";
+        print H "</tr>\n";
+        print H "</thead>\n";
+
+        print H "<tbody>\n";
+    }
 
     print H "<tr>\n";
 
