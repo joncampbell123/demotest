@@ -59,6 +59,8 @@ while ($line = <S>) {
     }
     if (defined($pass_dosbox_x_rev_file) && -f $pass_dosbox_x_rev_file ) {
         open(R,"<",$pass_dosbox_x_rev_file) || die;
+        # 20180208-004727-cf142387b7108d61666c99f9b8bd7bee5f054284-develop
+        # yyyymmdd-hhmmss-commit-----------------------------------branch
         $pass_dosbox_x_rev = <R>;
         chomp $pass_dosbox_x_rev;
         close(R);
