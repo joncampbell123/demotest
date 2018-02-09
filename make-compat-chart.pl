@@ -152,7 +152,12 @@ while ($line = <S>) {
     print H "<tr>";
 
     if (defined($pass_dosbox_x)) {
-        print H "<td class=\"passfail_$pass_dosbox_x\">$pass_dosbox_x</td>";
+        if (defined($pass_dosbox_x_url) && $pass_dosbox_x_url ne "") {
+            print H "<td class=\"passfail_$pass_dosbox_x\"><a target=\"_blank\" href=\"$pass_dosbox_x_url\">$pass_dosbox_x</a></td>";
+        }
+        else {
+            print H "<td class=\"passfail_$pass_dosbox_x\">$pass_dosbox_x</td>";
+        }
     }
     else {
         print H "<td class=\"passfail_NA\">---</td>";
