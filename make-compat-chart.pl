@@ -141,6 +141,7 @@ while ($line = <S>) {
     }
 
     if ($disp_line =~ s/^ftp\.scene\.org\///) {
+        $disp_line =~ s/^pub\///;
         print H "<td><a href=\"http://files.scene.org/get/$disp_line\">$disp_line</a>$more</td>";
     }
     else {
