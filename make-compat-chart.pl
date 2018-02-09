@@ -59,8 +59,8 @@ while ($line = <S>) {
     }
     if (defined($pass_dosbox_x_rev_file) && -f $pass_dosbox_x_rev_file ) {
         open(R,"<",$pass_dosbox_x_rev_file) || die;
-        $pass_dosbox_x_rev_file = <R>;
-        chomp $pass_dosbox_x_rev_file;
+        $pass_dosbox_x_rev = <R>;
+        chomp $pass_dosbox_x_rev;
         close(R);
     }
 
@@ -97,8 +97,8 @@ while ($line = <S>) {
     }
     if (defined($pass_dosbox_svn_rev_file) && -f $pass_dosbox_svn_rev_file ) {
         open(R,"<",$pass_dosbox_svn_rev_file) || die;
-        $pass_dosbox_svn_rev_file = <R>;
-        chomp $pass_dosbox_svn_rev_file;
+        $pass_dosbox_svn_rev = <R>;
+        chomp $pass_dosbox_svn_rev;
         close(R);
     }
 
