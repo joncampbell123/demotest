@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Demo changes color palette rapidly during display of the "Jones" text, which is not emulated properly in SVN
