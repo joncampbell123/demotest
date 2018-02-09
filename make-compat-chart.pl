@@ -21,6 +21,10 @@ print H "Ref: <a href=\"ftp://ftp.scene.org\">ftp://ftp.scene.org</a><br>\n";
 
 print H "<br>\n";
 
+print H "DOSBox-X refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/\">DOSBox-X project</a><br>\n";
+print H "DOSBox-SVN refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a><br>\n";
+print H "<br>\n";
+
 print H "<table cellpadding=0 cellspacing=0>\n";
 print H "<thead class=\"testing_header\">\n";
 print H "<tr>\n";
