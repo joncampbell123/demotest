@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Does not emulate per-scanline color palette tricks
+- Not quite, palette changes are a bit jittery

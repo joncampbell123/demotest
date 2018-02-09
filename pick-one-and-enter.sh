@@ -6,6 +6,13 @@ filesuffix=
 
 if [[ "$1" == "svn" ]]; then what=svn; pext=" svn"; filesuffix="_SVN"; fi
 
+pick=
+
+if [[ -n "$2" ]]; then
+    pick="$2"
+    if [[ !( -d "$pick" ) ]]; then echo No such $pick; exit 1; fi
+fi
+
 if [[ "$what" == "svn" ]]; then
     if [ -x /home/jon/src/dosbox-svn/src/dosbox-svn ]; then
         dosbox_root="/home/jon/src/dosbox-svn"
@@ -71,7 +78,12 @@ export -f pass
 export -f fail
 export -f commit
 
-x=`./pick-one.sh $what`
+if [ -n "$pick" ]; then
+    x="$pick"
+else
+    x=`./pick-one.sh $what`
+fi
+
 if [ "$x" == "" ]; then echo "nothing picked"; exit 1; fi
 echo "I picked: $x"
 

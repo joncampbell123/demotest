@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- I can't get the demo to talk to the Sound Blaster, nor configure it to look for a Sound Blaster anywhere other than port $000
+- Garbled background
