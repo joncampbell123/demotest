@@ -109,6 +109,15 @@ while ($line = <S>) {
         $pass_dosbox_svn_rev = <R>;
         chomp $pass_dosbox_svn_rev;
         close(R);
+
+        my $x = $pass_dosbox_svn_rev;
+        $x =~ s/^git=[^ ]+ +//;
+        if ($x =~ s/^svn=r//) {
+            if ($x =~ m/^\d+ /) {
+                $x =~ s/ .*$//g;
+                $pass_dosbox_svn_url = "https://sourceforge.net/p/dosbox/code-0/".$x."/";
+            }
+        }
     }
 
     my $notes_dosbox_svn = undef;
@@ -164,7 +173,12 @@ while ($line = <S>) {
     }
 
     if (defined($pass_dosbox_svn)) {
-        print H "<td class=\"passfail_$pass_dosbox_svn\">$pass_dosbox_svn</td>";
+        if (defined($pass_dosbox_svn_url) && $pass_dosbox_svn_url ne "") {
+            print H "<td class=\"passfail_$pass_dosbox_svn\"><a target=\"_blank\" href=\"$pass_dosbox_svn_url\">$pass_dosbox_svn</a></td>";
+        }
+        else {
+            print H "<td class=\"passfail_$pass_dosbox_svn\">$pass_dosbox_svn</td>";
+        }
     }
     else {
         print H "<td class=\"passfail_NA\">---</td>";
