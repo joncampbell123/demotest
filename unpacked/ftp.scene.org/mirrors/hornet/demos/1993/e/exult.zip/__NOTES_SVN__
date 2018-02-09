@@ -1,2 +1,5 @@
 Why the demo failed the test:
-- Sound Blaster music stops after a bit (IRQ problem?)
+- SVN does not support "goldplay mode"
+
+The following bugs are NOT DOSBox SVN's fault and do not count as failure:
+- Demo does not unmask SB IRQ and doesn't bother to (Sound Blaster music stops after about one second).

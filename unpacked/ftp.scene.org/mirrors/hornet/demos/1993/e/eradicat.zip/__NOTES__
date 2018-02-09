@@ -1,9 +1,2 @@
 Why the demo failed the test:
-- Demo does not respond to keyboard input during credits [FIXED]
-
-Bugs:
-- If DOSBox-X allows keyboard exit to DOS, demo does not unhook it's
-  music routine. Music continues to play from the DOS prompt, and
-  when you run something else in DOS that overwrites that memory,
-  the system crashes.
-
+- Demo does not stop music and does not unhook music interrupt. Running anything after this point will crash DOS. Will mark as PASS if demo does the same thing on REAL HARDWARE.
