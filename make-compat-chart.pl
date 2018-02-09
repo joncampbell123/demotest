@@ -6,6 +6,10 @@ open(H,">compat-chart.html") || die;
 print H "<html>\n";
 print H "<head>\n";
 print H "<title>Demoscene compat testing chart</title>\n";
+print H "<style>\n";
+print H ".passfail_PASS { background-color: #7FFF7F; }\n";
+print H ".passfail_FAIL { background-color: #FF7F7F; }\n";
+print H "</style>\n";
 print H "</head>\n";
 print H "<body>\n";
 
@@ -68,27 +72,17 @@ while ($line = <S>) {
         print H "<tbody>\n";
     }
 
-    print H "<tr>\n";
+    print H "<tr>";
 
     if (defined($pass_dosbox_x)) {
-        my $style = "";
-
-        $style = "background-color: #7FFF7F;" if $pass_dosbox_x eq "PASS";
-        $style = "background-color: #FF7F7F;" if $pass_dosbox_x eq "FAIL";
-
-        print H "<td style=\"$style\">$pass_dosbox_x</td>";
+        print H "<td class=\"passfail_$pass_dosbox_x\">$pass_dosbox_x</td>";
     }
     else {
         print H "<td>---</td>";
     }
 
     if (defined($pass_dosbox_svn)) {
-        my $style = "";
-
-        $style = "background-color: #7FFF7F;" if $pass_dosbox_svn eq "PASS";
-        $style = "background-color: #FF7F7F;" if $pass_dosbox_svn eq "FAIL";
-
-        print H "<td style=\"$style\">$pass_dosbox_svn</td>";
+        print H "<td class=\"passfail_$pass_dosbox_svn\">$pass_dosbox_svn</td>";
     }
     else {
         print H "<td>---</td>";
