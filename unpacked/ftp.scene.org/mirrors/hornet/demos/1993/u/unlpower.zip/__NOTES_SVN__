@@ -1,2 +1,3 @@
 Why the demo failed the test:
 - Sound Blaster Pro output crashes (will mark as PASS if same crash occurs on REAL HARDWARE)
+- SVN does not emulate Goldplay
