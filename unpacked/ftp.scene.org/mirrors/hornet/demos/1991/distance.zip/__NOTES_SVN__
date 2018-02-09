@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Disney sound source emulation is broken
+- PC speaker emulation doesn't render "digital" audio correctly
