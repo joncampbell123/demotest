@@ -1,9 +1,10 @@
 #!/bin/bash
 
 what=
+pext=
 filesuffix=
 
-if [[ "$1" == "svn" ]]; then what=svn; filesuffix="_SVN"; fi
+if [[ "$1" == "svn" ]]; then what=svn; pext=" svn"; filesuffix="_SVN"; fi
 
 if [[ "$what" == "svn" ]]; then
     if [ -x /home/jon/src/dosbox-svn/src/dosbox-svn ]; then
@@ -61,7 +62,7 @@ run() {
     $emu
 }
 
-PS1="\s-\v demo test>> "
+PS1="\s-\v demo test$pext>> "
 
 export PS1
 export emu
