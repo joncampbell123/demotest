@@ -11,6 +11,7 @@ print H ".passfail_PASS { background-color: #7FFF7F; text-align: center; vertica
 print H ".passfail_FAIL { background-color: #FF7F7F; text-align: center; vertical-align: top; }\n";
 print H ".passfail_NA { background-color: #DFDFDF; text-align: center; vertical-align: top; }\n";
 print H ".testing_header { background-color: #BFBFBF; }\n";
+print H "td pre { white-space: pre-line; word-break: normal; word-wrap: normal; }\n";
 print H "td a { color: black; }\n";
 print H "pre { padding: 0px; margin: 0px; }\n";
 print H "</style>\n";
