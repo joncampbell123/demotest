@@ -77,7 +77,7 @@ while ($line = <S>) {
     }
 
     if ($disp_line =~ s/^ftp\.scene\.org\///) {
-        print H "<td><a href=\"ftp://ftp.scene.org/$disp_line\">$disp_line</a></td>";
+        print H "<td><a href=\"http://files.scene.org/get/$disp_line\">$disp_line</a></td>";
     }
     else {
         print H "<td>$disp_line</td>";
