@@ -8,7 +8,7 @@ while (my $path = <X>) {
     next if ($skip ne '' && (substr($path,0,length($skip)) eq $skip));
 
     # TEMP: we only want 1992 and earlier demos
-    next unless ($path =~ m/\/199[0-2]\// || $path =~ m/\/198[0-9]\//);
+    next unless ($path =~ m/\/199[0-3]\// || $path =~ m/\/198[0-9]\//);
 
     # skip Amiga demos, we can't run them
     next if $path =~ m/\/amiga\/demo\//;
