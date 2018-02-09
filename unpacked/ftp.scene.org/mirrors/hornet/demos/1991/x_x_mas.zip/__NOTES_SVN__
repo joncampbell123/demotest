@@ -1,2 +1,1 @@
-Why the demo failed the test:
-- Demo immediately exits
+Demo will exit if you touch ANY key, including the key you last pressed during the prompts if it was still held down when it started.
