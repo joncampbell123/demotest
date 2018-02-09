@@ -188,14 +188,22 @@ while ($line = <S>) {
 
     my $more = "<br>";
 
-    if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
+    if (defined($notes_dosbox_x) && $notes_dosbox_x ne "" &&
+        defined($notes_dosbox_svn) && $notes_dosbox_svn ne "" &&
+        $notes_dosbox_x eq $notes_dosbox_svn) {
         $more .= "<br>";
-        $more .= "DOSBox-X NOTES: <pre>$notes_dosbox_x</pre>";
+        $more .= "DOSBox-X &amp; DOSBox-SVN NOTES: <pre>$notes_dosbox_x</pre>";
     }
+    else {
+        if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
+            $more .= "<br>";
+            $more .= "DOSBox-X NOTES: <pre>$notes_dosbox_x</pre>";
+        }
 
-    if (defined($notes_dosbox_svn) && $notes_dosbox_svn ne "") {
-        $more .= "<br>";
-        $more .= "DOSBox-SVN NOTES: <pre>$notes_dosbox_svn</pre>";
+        if (defined($notes_dosbox_svn) && $notes_dosbox_svn ne "") {
+            $more .= "<br>";
+            $more .= "DOSBox-SVN NOTES: <pre>$notes_dosbox_svn</pre>";
+        }
     }
 
     if ($disp_line =~ s/^ftp\.scene\.org\///) {
