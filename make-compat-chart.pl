@@ -47,6 +47,7 @@ while ($line = <S>) {
 
     my $pass_dosbox_x = undef;
     my $pass_dosbox_x_rev = undef;
+    my $pass_dosbox_x_url = undef;
     my $pass_dosbox_x_rev_file = undef;
 
     if ( -f "$line/__PASS__" ) {
@@ -64,6 +65,12 @@ while ($line = <S>) {
         $pass_dosbox_x_rev = <R>;
         chomp $pass_dosbox_x_rev;
         close(R);
+
+        my $x = $pass_dosbox_x_rev;
+        if ($x =~ s/^\d+-\d+-//) {
+            $x =~ s/\-.*$//g;
+            $pass_dosbox_x_url = "https://github.com/joncampbell123/dosbox-x/commit/".$x;
+        }
     }
 
     my $notes_dosbox_x = undef;
