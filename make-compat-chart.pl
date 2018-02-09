@@ -7,9 +7,9 @@ print H "<html>\n";
 print H "<head>\n";
 print H "<title>Demoscene compat testing chart</title>\n";
 print H "<style>\n";
-print H ".passfail_PASS { background-color: #7FFF7F; text-align: center; }\n";
-print H ".passfail_FAIL { background-color: #FF7F7F; text-align: center; }\n";
-print H ".passfail_NA { background-color: #DFDFDF; text-align: center; }\n";
+print H ".passfail_PASS { background-color: #7FFF7F; text-align: center; vertical-align: top; }\n";
+print H ".passfail_FAIL { background-color: #FF7F7F; text-align: center; vertical-align: top; }\n";
+print H ".passfail_NA { background-color: #DFDFDF; text-align: center; vertical-align: top; }\n";
 print H ".testing_header { background-color: #BFBFBF; }\n";
 print H "</style>\n";
 print H "</head>\n";
@@ -107,8 +107,8 @@ while ($line = <S>) {
     my $more = "";
 
     if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
-        $more .= "<br>";
-        $more .= "<pre style=\"padding: 0px; margin: 0px;\">$notes_dosbox_x</pre>";
+        $more .= "<br><br>";
+        $more .= "DOSBox-X NOTES: <pre style=\"padding: 0px; margin: 0px;\">$notes_dosbox_x</pre>";
     }
 
     if ($disp_line =~ s/^ftp\.scene\.org\///) {
