@@ -47,9 +47,21 @@ while ($line = <S>) {
 
     my $notes_dosbox_x = undef;
     if ( -f "$line/__NOTES__" ) {
+        my $nline="",$pline,$res="",$ncount=0;
+
         open(X,"<","$line/__NOTES__") || die;
-        read(X,$notes_dosbox_x,65536);
+        while ($nline = <X>) {
+            $pline = $nline;
+            chomp $nline;
+            $nline =~ s/^[ \t]+//;
+            $nline =~ s/[ \t]+$//;
+            next if $nline eq "";
+            $res .= "\n" if $ncount > 0;
+            $res .= "$nline";
+            $ncount++;
+        }
         close(X);
+        $notes_dosbox_x = $res;
     }
 
     my $pass_dosbox_svn = undef;
@@ -92,11 +104,18 @@ while ($line = <S>) {
         print H "<td class=\"passfail_NA\">---</td>";
     }
 
+    my $more = "";
+
+    if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
+        $more .= "<br>";
+        $more .= "<pre style=\"padding: 0px; margin: 0px;\">$notes_dosbox_x</pre>";
+    }
+
     if ($disp_line =~ s/^ftp\.scene\.org\///) {
-        print H "<td><a href=\"http://files.scene.org/get/$disp_line\">$disp_line</a></td>";
+        print H "<td><a href=\"http://files.scene.org/get/$disp_line\">$disp_line</a>$more</td>";
     }
     else {
-        print H "<td>$disp_line</td>";
+        print H "<td>$disp_line$more</td>";
     }
 
     print H "</tr>\n";
