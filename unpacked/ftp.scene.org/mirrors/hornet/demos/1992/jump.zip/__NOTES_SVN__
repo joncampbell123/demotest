@@ -1,2 +1,1 @@
-Why the demo failed the test:
-- Sound blaster playback quits after one second
+- Sound Blaster output will halt after about one second, because the demo does not unmask the IRQ and doesn't bother to. This is not DOSBox-SVN's fault, and does not count as a failure.

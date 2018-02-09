@@ -1,2 +1,2 @@
-Why the demo failed the test:
+The demo does NOT work, but the following reasons do not count as a failure on SVN's part, because the demo would most likely fault the same on real hardware:
 - DOSBox-SVN does not implement upper "reserved" bits in VGA status, which the demo requires in order not to hang

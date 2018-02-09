@@ -1,4 +1,0 @@
-Gets stuck on last screen, calling INT 16h repeatedly.
-Termination condition is whether INT 16H AH=1 clears CF, which is odd
-considering that it's documented to set/clear ZF instead. [FIXED]
-
