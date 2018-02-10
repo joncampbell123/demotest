@@ -1,15 +1,22 @@
 #!/usr/bin/perl
 my $skip = '';
 my $writecache=0;
+my $suffix="";
+my $suffic="";
 
-if ( -f "pick-one.cache" ) {
+if ($ARGV[0] eq "svn") {
+    $suffix=".svn";
+    $suffic="_SVN";
+}
+
+if ( -f "pick-one$suffix.cache" ) {
     $writecache=0;
-    open(X,"<","pick-one.cache") || die;
+    open(X,"<","pick-one$suffix.cache") || die;
 }
 else {
     $writecache=1;
     open(X,"find -type d | sort |") || die;
-    open(C,">","pick-one.cache") || die;
+    open(C,">","pick-one$suffix.cache") || die;
 }
 
 while (my $path = <X>) {
@@ -27,8 +34,8 @@ while (my $path = <X>) {
     # skip if it already has __PASS__ or __FAIL__
     # 2018/02/09: we now require PASS/FAIL to indicate the commit!
     next if (
-        ( -f "$path/__PASS__" && ( -s "$path/__PASS__") > 4) ||
-        ( -f "$path/__FAIL__" && ( -s "$path/__FAIL__") > 4)
+        ( -f ("$path/__PASS$suffic"."__") && ( -s ("$path/__PASS$suffic"."__")) > 4) ||
+        ( -f ("$path/__FAIL$suffic"."__") && ( -s ("$path/__FAIL$suffic"."__")) > 4)
     );
 
     # skip unless it has an EXE or COM file
