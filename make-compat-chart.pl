@@ -52,6 +52,11 @@ while ($line = <S>) {
     my $pass_dosbox_x_url = undef;
     my $pass_dosbox_x_rev_file = undef;
 
+    die unless !defined($pass_dosbox_x);
+    die unless !defined($pass_dosbox_x_url);
+    die unless !defined($pass_dosbox_x_rev);
+    die unless !defined($pass_dosbox_x_rev_file);
+
     if ( -f "$line/__PASS__" ) {
         $pass_dosbox_x = "PASS";
         $pass_dosbox_x_rev_file = "$line/__PASS__";
@@ -97,6 +102,10 @@ while ($line = <S>) {
     my $pass_dosbox_svn = undef;
     my $pass_dosbox_svn_rev = undef;
     my $pass_dosbox_svn_rev_file = undef;
+
+    die unless !defined($pass_dosbox_svn);
+    die unless !defined($pass_dosbox_svn_rev);
+    die unless !defined($pass_dosbox_svn_rev_file);
 
     if ( -f "$line/__PASS_SVN__" ) {
         $pass_dosbox_svn = "PASS";
