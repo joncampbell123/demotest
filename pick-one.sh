@@ -6,7 +6,7 @@ x=$((($x%1000)+1))
 x=1
 
 suffix=
-if [[ "$1" == "svn" ]]; then suffix="-svn"; fi
+if [[ "$1" == "svn" ]]; then suffix="svn"; fi
 
-./yet-to-test$suffix.pl | head -n $x | tail -n 1
+./yet-to-test.pl $suffix | head -n $x | tail -n 1
 
