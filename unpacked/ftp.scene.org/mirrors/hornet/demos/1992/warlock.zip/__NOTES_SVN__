@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Blanking overlap cuts off first few scanlines
+- Panning down to skyline is not emulated correctly

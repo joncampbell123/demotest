@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Disney Sound Source / LPT DAC output doesn't work
+- Sound Blaster support appears to have problems reliably sending Direct DAC output (reports of unknown DSP commands)
