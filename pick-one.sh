@@ -9,7 +9,7 @@ suffix=
 csuffix=
 if [[ "$1" == "svn" ]]; then csuffix=".svn"; suffix="svn"; fi
 
-if [[ !( -f "pick-one$csuffix.cache" ) ]]; then ./yet-to-test.pl $suffix; fi
+if [[ !( -f "pick-one$csuffix.cache" ) ]]; then ./yet-to-test.pl $suffix >/dev/null; fi
 
 ./yet-to-test.pl $suffix | head -n $x | tail -n 1
 
