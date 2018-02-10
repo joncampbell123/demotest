@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo complains about EMS and exits, even though EMS has been turned off (lacks DOSBox-X fix where ems=false means not to set interrupt vector)
