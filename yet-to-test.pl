@@ -14,7 +14,11 @@ while (my $path = <X>) {
     next if $path =~ m/\/amiga\/demo\//;
 
     # skip if it already has __PASS__ or __FAIL__
-    next if ( -f "$path/__PASS__" || -f "$path/__FAIL__" );
+    # 2018/02/09: we now require PASS/FAIL to indicate the commit!
+    next if (
+        ( -f "$path/__PASS__" && ( -s "$path/__PASS__") > 4) ||
+        ( -f "$path/__FAIL__" && ( -s "$path/__FAIL__") > 4)
+    );
 
     # skip unless it has an EXE or COM file
     $x=`cd '$path' && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
