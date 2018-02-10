@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- SVN does not emulate "goldplay"
+- Demo does not unmask IRQ
+- LPT DAC output doesn't work
