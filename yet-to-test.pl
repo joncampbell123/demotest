@@ -1,6 +1,17 @@
 #!/usr/bin/perl
 my $skip = '';
-open(X,"find -type d |") || die;
+my $writecache=0;
+
+if ( -f "pick-one.cache" ) {
+    $writecache=0;
+    open(X,"<","pick-one.cache") || die;
+}
+else {
+    $writecache=1;
+    open(X,"find -type d | sort |") || die;
+    open(C,">","pick-one.cache") || die;
+}
+
 while (my $path = <X>) {
     chomp $path;
     next unless -d $path;
@@ -25,8 +36,10 @@ while (my $path = <X>) {
     next if $x eq "";
 
     print "$path\n";
+    print C "$path\n" if $writecache > 0;
 
     $skip = $path;
 }
+close(C) if $writecache > 0;
 close(X);
 
