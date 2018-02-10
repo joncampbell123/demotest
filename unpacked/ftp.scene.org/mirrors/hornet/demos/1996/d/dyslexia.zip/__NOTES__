@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- GUS and SB support? Where? I don't see any attempt at accessing either card.
+- Sound Blaster support crashes
+- Gravis Ultrasound support fails, attempting to access port 4Ch?
