@@ -1,3 +1,2 @@
 Why the demo failed the test:
 - Hangs on exit to DOS
-- VGA palette errors (on fade out)
