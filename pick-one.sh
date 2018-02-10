@@ -8,9 +8,5 @@ x=1
 suffix=
 if [[ "$1" == "svn" ]]; then suffix="-svn"; fi
 
-if [[ !( -f pick-one.cache ) ]]; then
-    (./yet-to-test$suffix.pl | sort >pick-one.cache) || exit 1
-fi
-
-cat pick-one.cache | head -n $x | tail -n 1
+./yet-to-test$suffix.pl | head -n $x | tail -n 1
 
