@@ -1818,10 +1818,8 @@ Not sure if the above has anything to do with the demo failing to run about
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1993/assembly93/demo/inconexi.zip">parties/1993/assembly93/demo/inconexi.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1993/assembly93/demo/mentalit.zip">parties/1993/assembly93/demo/mentalit.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1993/assembly93/demo/minus40.zip">parties/1993/assembly93/demo/minus40.zip</a><br></td></tr>
-<tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1993/assembly93/demo/obsess.zip">parties/1993/assembly93/demo/obsess.zip</a><br><br>DOSBox-X NOTES: <pre>Sound Blaster:
-Demo Sound Blaster routines are buggy. They work, but there is audible repeating, as if the music
-routine can't keep up or something. CPU selection doesn't appear to fix the issue. Asking DOSBox
-to unmask the SB IRQ on startup doesn't help.</pre></td></tr>
+<tr><td class="passfail_FAIL"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/f5c33b87e6d695c53201693d837f174616720d4a">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">FAIL</a></td><td><a href="http://files.scene.org/get/parties/1993/assembly93/demo/obsess.zip">parties/1993/assembly93/demo/obsess.zip</a><br><br>DOSBox-X &amp; DOSBox-SVN NOTES: <pre>Why the demo failed the test:
+- Sound Blaster playback st-stutter-ter's pretty badly for some reason (but it supports SBOS according to the demo, yay!)</pre></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1993/assembly93/demo/opticnrv.zip">parties/1993/assembly93/demo/opticnrv.zip</a><br><br>DOSBox-X NOTES: <pre>The demo demands that you remove HIMEM.SYS and EMM386.EXE from memory. It uses
 it's own protected mode handler.
 The demo seems to have graphical glitches in DOSBox unless machine=svga_et4000.
