@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo will randomly hang in certain parts where interrupt handler has the wrong data segment loaded, and ends up waiting for SB DSP ready from the DMA controller
