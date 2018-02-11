@@ -32,7 +32,7 @@ print H "Rules regarding PASS or FAIL:<br>\n";
 print H "- If a demo crashes, faults, or shows behavior that suggests a problem, that is a FAIL.<br>\n";
 print H "- Known faulty behavior in the demo itself doesn't count as failure. Future development may offer off-by-default hacks or workarounds in the emulator for the problem.<br>\n";
 print H "- Known faulty behavior that occurs on real hardware doesn't count as failure, because it means DOSBox is emulating real hardware accurately and the demo is at fault.<br>\n";
-print H "- Issues that are DOSBox-SVN's fault, that the DOSBox SVN developers have expressd an unwillingness to fix or accept patches to fix, do not count as failure.<br>\n";
+print H "- Issues that are DOSBox-SVN's fault, that the DOSBox SVN developers have expressed an unwillingness to fix or accept patches to fix, do not count as failure.<br>\n";
 print H "<br>\n";
 
 print H "Common problems with DOSBox SVN so far:<br>\n";
