@@ -1,3 +1,4 @@
 Why the demo failed the test:
 - LPT DAC output doesn't work
+The following is not DOSBox's fault and does not count as failure:
 - Demo does not unmask IRQ, DOSBox SVN does not provide "unmask IRQ" for Sound Blaster emulation

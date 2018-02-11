@@ -1,2 +1,2 @@
-Why the demo failed the test:
+This is not DOSBox's fault, and does not count as failure:
 - SVN does not unmask the RTC IRQ when the BIOS call is made to pause for a period of time (DOSBox-X fix)
