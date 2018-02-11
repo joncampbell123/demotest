@@ -42,6 +42,12 @@ print H "- PC speaker emulation on/off and frequency changes are limited to 1ms 
 print H "- Some demos rely on INT 16h AH=1 undefined behavior regarding ZF flag (standard only describes CF flag), which so far has been confirmed on at least one 386 system and may occur in other old systems.<br>\n";
 print H "<br>\n";
 
+print H "Common problems to both DOSBox-X and DOSBox-SVN:<br>\n";
+print H "- Having UMB or EMS enabled can cause crashiness in some demos.<br>\n";
+print H "- Some demos require XMS to be enabled, will call to a NULL pointer otherwise.<br>\n";
+print H "- Some demos will crash or malfunction if loaded too low (below 64KB) in memory. Try loadfix or the minimum mcb segment option.<br>\n";
+print H "<br>\n";
+
 print H "Problems that do NOT count as failures against DOSBox SVN, because they are bugs in the demo itself:<br>\n";
 print H "- Audio halting or interrupt problems with GUS or SB related to a failure to unmask the IRQ (democoder laziness, NOT SVN's fault).<br>\n";
 print H "- Hangs related to undefined or reserved bits in VGA emulation that the demo really ought to ignore.<br>\n";

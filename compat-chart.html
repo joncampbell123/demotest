@@ -31,6 +31,11 @@ Common problems with DOSBox SVN so far:<br>
 - PC speaker emulation on/off and frequency changes are limited to 1ms precision. This affects some demos as well as old Apogee titles like Duke Nukum.<br>
 - Some demos rely on INT 16h AH=1 undefined behavior regarding ZF flag (standard only describes CF flag), which so far has been confirmed on at least one 386 system and may occur in other old systems.<br>
 <br>
+Common problems to both DOSBox-X and DOSBox-SVN:<br>
+- Having UMB or EMS enabled can cause crashiness in some demos.<br>
+- Some demos require XMS to be enabled, will call to a NULL pointer otherwise.<br>
+- Some demos will crash or malfunction if loaded too low (below 64KB) in memory. Try loadfix or the minimum mcb segment option.<br>
+<br>
 Problems that do NOT count as failures against DOSBox SVN, because they are bugs in the demo itself:<br>
 - Audio halting or interrupt problems with GUS or SB related to a failure to unmask the IRQ (democoder laziness, NOT SVN's fault).<br>
 - Hangs related to undefined or reserved bits in VGA emulation that the demo really ought to ignore.<br>
