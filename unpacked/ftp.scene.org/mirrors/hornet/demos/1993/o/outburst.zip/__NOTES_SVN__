@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- VGA palette flashing between modesets
+- SVN does not support "goldplay"
