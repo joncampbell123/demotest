@@ -28,6 +28,18 @@ print H "DOSBox-X refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/
 print H "DOSBox-SVN refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a><br>\n";
 print H "<br>\n";
 
+print H "Common problems with DOSBox SVN so far:<br>\n";
+print H "- Lack of support for &quot;goldplay&quot; Sound Blaster playback. Audio is rendered &quot;muffled&quot; in DOSBox SVN.<br>\n";
+print H "- LPT DAC (but not Disney Sound Source) output doesn't work.<br>\n";
+print H "- PC speaker emulation on/off and frequency changes are limited to 1ms precision. This affects some demos as well as old Apogee titles like Duke Nukum.<br>\n";
+print H "- Some demos rely on INT 16h AH=1 undefined behavior regarding ZF flag (standard only describes CF flag), which so far has been confirmed on at least one 386 system and may occur in other old systems.<br>\n";
+print H "<br>\n";
+
+print H "Problems that do NOT count as failures against DOSBox SVN, because they are bugs in the demo itself:<br>\n";
+print H "- Audio halting or interrupt problems with GUS or SB related to a failure to unmask the IRQ (democoder laziness, NOT SVN's fault).<br>\n";
+print H "- Hangs related to undefined or reserved bits in VGA emulation that the demo really ought to ignore.<br>\n";
+print H "<br>\n";
+
 print H "<table cellpadding=0 cellspacing=0>\n";
 print H "<thead class=\"testing_header\">\n";
 print H "<tr>\n";
