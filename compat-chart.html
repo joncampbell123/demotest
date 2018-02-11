@@ -1549,7 +1549,10 @@ Does not respond to keyboard to move on or exit.</pre></td></tr>
 I have no idea if that's intentional or if it's supposed to go
 to the next part or exit to DOS or what...</pre></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1996/0-9/303.zip">mirrors/hornet/demos/1996/0-9/303.zip</a><br></td></tr>
-<tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1996/0-9/380voltf.zip">mirrors/hornet/demos/1996/0-9/380voltf.zip</a><br></td></tr>
+<tr><td class="passfail_FAIL"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/729880572362f4fa5d1d3f037692ffe797639c94">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">FAIL</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1996/0-9/380voltf.zip">mirrors/hornet/demos/1996/0-9/380voltf.zip</a><br><br>DOSBox-X NOTES: <pre>Why the demo failed the test:
+- When beginning the looping animation, GUS music stops, and the demo never proceeds past the animation</pre><br>DOSBox-SVN NOTES: <pre>Why the demo failed the test:
+- Title screen glitches during unpack (SVN does not implement CTTY command, used by the demo to run PKUNZIP with STDOUT redirected to NUL)
+- When beginning the looping animation, GUS music stops, and the demo never proceeds past the animation</pre></td></tr>
 </tbody>
 <thead class="testing_header">
 <tr>
@@ -3084,20 +3087,10 @@ Will mark as passed if the same snafu appears on real hardware.</pre></td></tr>
 <tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/f940f06077857b9001dbcb55cd5fea3f0f6c1795">PASS</a></td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1995/thegathering95/in64/maple_dz.zip">parties/1995/thegathering95/in64/maple_dz.zip</a><br></td></tr>
 <tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/36118045d2fbf4d01df32679036ca9b97a4849e3">PASS</a></td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1995/thegathering95/in64/val_fmf.zip">parties/1995/thegathering95/in64/val_fmf.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1995/thegathering95/in64/val-fm.zip">parties/1995/thegathering95/in64/val-fm.zip</a><br></td></tr>
-<tr><td class="passfail_FAIL">FAIL</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1995/theparty95/demo/380volt.zip">parties/1995/theparty95/demo/380volt.zip</a><br><br>DOSBox-X NOTES: <pre>Demo requires EMS.
-It also requires an FPU for some reason (PowerBasic doesn't emulate one??)
-The demo is marked as FAILED because Gravis ultrasound music stops working
-during the transition from the first part to the animation loop (buildings
-and a helicopter, zooming into a satellite dish). The music stops and the
-demo never leaves the animation loop. Strange, considering I had no problems
-with this demo back in 2007 running it under DOSBox 0.72.
-Fixed:
-The glitching out on the title screen is the demo using PKUNZIP on DIT.DAT
-to unpack it's files. The reason it glitches is because it attempts to use
-CTTY to redirect the console to NUL (which doesn't work in DOSBox) and then
-PKUNZIP prints text to the console (now one of the VGA planes in mode 0x13
-320x200x256) and that makes the distortion you see. The fix: Implement CTTY
-so the demo's CON redirection works.</pre></td></tr>
+<tr><td class="passfail_FAIL"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/729880572362f4fa5d1d3f037692ffe797639c94">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">FAIL</a></td><td><a href="http://files.scene.org/get/parties/1995/theparty95/demo/380volt.zip">parties/1995/theparty95/demo/380volt.zip</a><br><br>DOSBox-X NOTES: <pre>Why the demo failed the test:
+- When beginning the looping animation, GUS music stops, and the demo never proceeds past the animation</pre><br>DOSBox-SVN NOTES: <pre>Why the demo failed the test:
+- Title screen glitches during unpack (SVN does not implement CTTY command, used by the demo to run PKUNZIP with STDOUT redirected to NUL)
+- When beginning the looping animation, GUS music stops, and the demo never proceeds past the animation</pre></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1995/theparty95/demo/an_circ.zip">parties/1995/theparty95/demo/an_circ.zip</a><br></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1995/theparty95/demo/angel95.zip">parties/1995/theparty95/demo/angel95.zip</a><br><br>DOSBox-X NOTES: <pre>- Sound Blaster 16 support appears to incorrectly program DMA and DSP block lengths and
 the sound alternates between music and junk.</pre></td></tr>
