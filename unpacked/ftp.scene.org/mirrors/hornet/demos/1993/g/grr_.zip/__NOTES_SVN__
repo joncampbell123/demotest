@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- SVN limits per-scanline VGA raster to machine=vgaonly. This demo requires machine=svga_et4000 to avoid graphics from appearing at the bottom when panning.

@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Crashes DOSBox-X with "floating point exception", DOS FCB random record size == 0?
