@@ -30,7 +30,7 @@ print H "<br>\n";
 
 print H "Common problems with DOSBox SVN so far:<br>\n";
 print H "- Lack of support for &quot;goldplay&quot; Sound Blaster playback. Audio is rendered &quot;muffled&quot; in DOSBox SVN.<br>\n";
-print H "- LPT DAC (but not Disney Sound Source) output doesn't work.<br>\n";
+print H "- LPT DAC output doesn't work. However code explicitly written for the Disney Sound Source works.<br>\n";
 print H "- PC speaker emulation on/off and frequency changes are limited to 1ms precision. This affects some demos as well as old Apogee titles like Duke Nukum.<br>\n";
 print H "- Some demos rely on INT 16h AH=1 undefined behavior regarding ZF flag (standard only describes CF flag), which so far has been confirmed on at least one 386 system and may occur in other old systems.<br>\n";
 print H "<br>\n";
