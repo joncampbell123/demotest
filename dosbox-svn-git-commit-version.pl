@@ -7,7 +7,17 @@ chdir($ARGV[0]) || die;
 $branch = `git branch | grep '^\*' | sed -e 's/^\* //'`; chomp $branch;
 die if $branch eq "";
 
-$svn = `svn log -l 1 | grep -E '^r[0-9]' | head -n 1`; chomp $svn;
+if ( -f "SVN.LOG.CACHE" ) {
+    $svn = `cat SVN.LOG.CACHE`; chomp $svn;
+}
+else {
+    $svn = `svn log -l 1 | grep -E '^r[0-9]' | head -n 1`; chomp $svn;
+    if ($svn ne "") {
+        open(X,">SVN.LOG.CACHE") || die;
+        print X "$svn\n";
+        close(X);
+    }
+}
 die if $svn eq "";
 
 if (!open(S,"git --no-pager log --max-count=1 |")) { exit 1; }
