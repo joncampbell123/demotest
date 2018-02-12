@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Does not respond to keyboard (polls I/O port 64h with interrupts enabled, which means BIOS keyboard handler takes care of it before it can see it)
