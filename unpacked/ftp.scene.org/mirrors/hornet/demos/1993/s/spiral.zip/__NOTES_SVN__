@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Mode X VGA graphics come out blocky because SVN does not implement Sequencer alias registers
