@@ -5,6 +5,7 @@ hand_restart "key 278 mod1 mod2"
 hand_paste "key 285 mod1 mod2" 
 hand_pause "key 19 mod1" 
 hand_gui "key 291 mod2" 
+hand_resetsize 
 hand_mapper "key 282 mod1" 
 hand_speedlock "key 293" 
 hand_speedlock2 "key 292" 
@@ -18,6 +19,8 @@ hand_video "key 286 mod1 mod2"
 hand_debugger "key 19 mod2" 
 hand_volup "key 270" 
 hand_voldown "key 269" 
+hand_recvolup 
+hand_recvoldown 
 hand_cycledown "key 292 mod1" 
 hand_cycleup "key 293 mod1" 
 hand_cycauto "key 61 mod1" 
@@ -80,7 +83,7 @@ key_l "key 108"
 key_semicolon "key 59" 
 key_quote "key 39" 
 key_backslash "key 92" 
-key_lshift "key 304" 
+key_lshift 
 key_lessthan "key 60" 
 key_z "key 122" 
 key_x "key 120" 
@@ -93,7 +96,7 @@ key_comma "key 44"
 key_period "key 46" 
 key_slash "key 47" 
 key_rshift "key 303" 
-key_lctrl "key 306" 
+key_lctrl 
 key_lwindows "key 311" 
 key_lalt "key 308" 
 key_space "key 32" 
@@ -103,7 +106,7 @@ key_rwinmenu "key 319"
 key_rctrl "key 305" 
 key_printscreen "key 316" 
 key_scrolllock "key 302" 
-key_pause "key 19" 
+key_pause 
 key_kp_equals "key 272" 
 key_insert "key 277" 
 key_home "key 278" 
@@ -176,7 +179,7 @@ jhat_0_0_0
 jhat_0_0_3 
 jhat_0_0_2 
 jhat_0_0_1 
-mod_1 "key 305" "key 306" 
-mod_2 "key 307" "key 308" 
+mod_1 "key 306" "key 305" 
+mod_2 "key 308" "key 307" 
 mod_3 
 hand_caprawopl 

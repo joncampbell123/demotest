@@ -1,2 +1,3 @@
 Why the demo failed the test:
 - Demo gets stuck after the textured cube if output selection is Gravis Ultrasound
+- Sound Blaster output seems to have trouble keeping time with the sound card
