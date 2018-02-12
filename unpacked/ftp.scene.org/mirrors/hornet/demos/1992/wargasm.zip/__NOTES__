@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Sound Blaster support eventually crashes
+Important notes:
+- Sound Blaster output: DO NOT specify a sample rate higher than 20KHz. The demo will send Direct DAC output at the rate you specify. It will not wait for DSP ready, and it will not cap the sample rate within range. It will crash at higher than 25KHz sample rates.
