@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- VGA color palette problems (apparently introduced by DOSBox-X commit df3a230b6ba6728e81da63ce228eac481bc9eb1a which matches VGA DAC read index behavior to SVN)
