@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Uses protected mode. "Mapped vectors" are no fun when the code causes a storm of General Protection Faults and freezes.
