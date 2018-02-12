@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- SVN does not emulate "goldplay"
+The following does not count against DOSBox SVN:
+- Demo does not unmask the IRQ, causing Sound Blaster playback to eventually stop
