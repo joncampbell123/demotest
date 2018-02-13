@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- machine=svga_et4000 does not allow per-scanline effects as required by one part of the demo
