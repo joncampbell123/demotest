@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Crashes and tries to close CON handle
+- Exits to DOS by zeroing it's code segment out from under itself????
