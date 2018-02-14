@@ -3,3 +3,4 @@ Notes:
 The following dosbox.conf settings are known to cause the demo to crash:
 - ems=false
 - memsize=8 to memsize=12
+

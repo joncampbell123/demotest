@@ -480,9 +480,11 @@ The following bugs are NOT DOSBox SVN's fault and do not count as failure:
 - Gravis Ultrasound support does not work.</pre></td></tr>
 <tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/f5c33b87e6d695c53201693d837f174616720d4a">PASS</a></td><td class="passfail_PASS"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">PASS</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/p/phoenix.zip">mirrors/hornet/demos/1993/p/phoenix.zip</a><br></td></tr>
 <tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/f5c33b87e6d695c53201693d837f174616720d4a">PASS</a></td><td class="passfail_PASS"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">PASS</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/p/pizza.zip">mirrors/hornet/demos/1993/p/pizza.zip</a><br></td></tr>
-<tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/24c5917f91475d30642278dd7e99f5970c35fa76">PASS</a></td><td class="passfail_PASS"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">PASS</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/p/planb.zip">mirrors/hornet/demos/1993/p/planb.zip</a><br><br>DOSBox-X &amp; DOSBox-SVN NOTES: <pre>Notes:
+<tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/7b17c09868b9e7849ef9171de307c44373d9f683">PASS</a></td><td class="passfail_PASS"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">PASS</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/p/planb.zip">mirrors/hornet/demos/1993/p/planb.zip</a><br><br>DOSBox-X &amp; DOSBox-SVN NOTES: <pre>Notes:
 - Demo is a bit unstable and may write random garbage into extended memory.
-- Chances of running the demo without crashing improve quite a bit with ems=true</pre></td></tr>
+The following dosbox.conf settings are known to cause the demo to crash:
+- ems=false
+- memsize=8 to memsize=12</pre></td></tr>
 <tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/f5c33b87e6d695c53201693d837f174616720d4a">PASS</a></td><td class="passfail_PASS"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">PASS</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/p/portal.zip">mirrors/hornet/demos/1993/p/portal.zip</a><br></td></tr>
 <tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/f5c33b87e6d695c53201693d837f174616720d4a">PASS</a></td><td class="passfail_PASS"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">PASS</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/p/privtro.zip">mirrors/hornet/demos/1993/p/privtro.zip</a><br></td></tr>
 <tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/2c1fc825a3b7ad9839c250b61ada9af38bdbecf4">PASS</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">FAIL</a></td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/p/purity.zip">mirrors/hornet/demos/1993/p/purity.zip</a><br><br>DOSBox-SVN NOTES: <pre>Why the demo failed the test:
@@ -1862,7 +1864,9 @@ cycle count is high enough to allow a smooth frame rate.</pre></td></tr>
 <tbody>
 <tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/24c5917f91475d30642278dd7e99f5970c35fa76">PASS</a></td><td class="passfail_PASS"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">PASS</a></td><td><a href="http://files.scene.org/get/parties/1993/assembly93/100k/planb.zip">parties/1993/assembly93/100k/planb.zip</a><br><br>DOSBox-X &amp; DOSBox-SVN NOTES: <pre>Notes:
 - Demo is a bit unstable and may write random garbage into extended memory.
-- Chances of running the demo without crashing improve quite a bit with ems=true</pre></td></tr>
+The following dosbox.conf settings are known to cause the demo to crash:
+- ems=false
+- memsize=8 to memsize=12</pre></td></tr>
 <tr><td class="passfail_PASS">PASS</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/parties/1993/assembly93/100k/spiral.zip">parties/1993/assembly93/100k/spiral.zip</a><br><br>DOSBox-X NOTES: <pre>GUS:
 Assumes GUS on port 220h
 Graphics:
