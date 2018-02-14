@@ -1,0 +1,3 @@
+Notes:
+- Demo is a bit unstable and may write random garbage into extended memory.
+- Chances of running the demo without crashing improve quite a bit with ems=true
