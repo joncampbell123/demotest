@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Two parts are glitchy, one flashes with vertical lines, the other overdraws the frame randomly. Will mark PASS if the same occurs on REAL HARDWARE.
