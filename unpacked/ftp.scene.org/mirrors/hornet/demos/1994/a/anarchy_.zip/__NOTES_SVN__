@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- SVN does not emulate "goldplay"
+The following is not marked as failure against SVN:
+- Does not offer option to unmask the SB IRQ
