@@ -1,2 +1,3 @@
 Why the demo failed the test:
 - Flickering during linear algebra part
+- VGA palette errors, mid-demo text (should fade in from black but doesn't)
