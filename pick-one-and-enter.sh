@@ -107,6 +107,7 @@ cp -vn mapper-0.801.map "$x/mapper-0.82.map" || exit 1
 cp -vn mapper-0.801.map "$x/mapper-0.82.1.map" || exit 1
 cp -vn mapper-0.801.map "$x/mapper-0.82.2.map" || exit 1
 cp -vn mapper-0.801.map "$x/mapper-0.82.3.map" || exit 1
+cp -vn mapper-0.801.map "$x/mapper-0.82.4.map" || exit 1
 cp -vn mapper-SVN.map "$x/mapper-SVN.map" || exit 1
 
 downld="`pwd`/demo-download.pl"
