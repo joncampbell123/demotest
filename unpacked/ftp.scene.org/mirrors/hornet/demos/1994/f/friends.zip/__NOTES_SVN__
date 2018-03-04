@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- It thinks there's an EMS manager present, because SVN does not offer zeroing INT 67h
