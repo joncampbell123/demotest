@@ -1,0 +1,2 @@
+Warning:
+- This demo has rapid flickering (to "cross-blend" frames). Unless your monitor refresh rate happens to match the demo's the effect will look like glitching, but it isn't.
