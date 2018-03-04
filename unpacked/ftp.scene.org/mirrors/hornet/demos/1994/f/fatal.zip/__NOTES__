@@ -1,7 +1,7 @@
 Demo bugs:
 - When the demo probes the Sound Blaster IRQ, it uses a software timeout
   (I/O delay) that can fail to detect the IRQ if it takes longer than
-  1us for it's IRQ handler to receive the signal.
+  500ns for it's IRQ handler to receive the signal.
 - If the demo cannot detect the Sound Blaster IRQ, then it will take
   IRQ 0 (the timer interrupt) as the Sound Blaster IRQ, which will then
   result in incorrect music playback.
