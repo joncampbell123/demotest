@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- GUS music has odd "buzzing" sound, and random I/O ports are being accessed during demo
