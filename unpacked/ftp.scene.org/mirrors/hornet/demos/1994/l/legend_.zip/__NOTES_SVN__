@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Does not emulate Mode X DAC palette overdraw trick used in vectordots
+- Demo can get stuck easily during the two moving "lenses"
