@@ -1,0 +1,2 @@
+WARNING:
+- This demo happens to work in DOSBox-X and DOSBox-SVN because both offer A20 gate emulation to work around bugs in the demo and it's use of XMS and flat real mode. See dosbox.conf for details.
