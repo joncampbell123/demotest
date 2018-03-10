@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- On exit, demo gets stuck waiting for DSP to clear busy bit
