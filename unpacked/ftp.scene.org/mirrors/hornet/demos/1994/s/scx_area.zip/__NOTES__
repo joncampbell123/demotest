@@ -1,4 +1,0 @@
-Why the demo failed the test:
-- It exits to DOS leaving the VGA alphanumeric mode in a
-  weird 1056x400 70Hz text mode.
-
