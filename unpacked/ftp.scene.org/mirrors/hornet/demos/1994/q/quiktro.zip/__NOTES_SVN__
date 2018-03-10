@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo scribbles on ROM BIOS and adaptor ROM (though does not crash)
