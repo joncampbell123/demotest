@@ -28,11 +28,11 @@ if [[ "$what" == "svn" ]]; then
 else
     if [ -x /home/jon/src/dosbox-x/src/dosbox-x ]; then
         emu="/home/jon/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
+	gitcommit_sh="/home/jon/src/dosbox-x/git-commit-version.pl"
     else
         emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
+	gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
     fi
-
-    gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
 
     if [ -x $gitcommit_sh ]; then
         x=`dirname $gitcommit_sh`
