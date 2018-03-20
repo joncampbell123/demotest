@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- 8-bit linear doesn't work
+- 32bpp doesn't work
