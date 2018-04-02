@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- DOSBox SVN seems to have lost support for "huge real mode"

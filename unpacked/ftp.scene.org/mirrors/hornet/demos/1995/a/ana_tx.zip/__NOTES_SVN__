@@ -1,0 +1,5 @@
+Why the demo failed the test:
+- Somehow, the demo is triggering a 14Mhz dot clock, and setting a text
+  mode with a refresh rate of 10Hz, which any sane VGA monitor would not
+  support.
+
