@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo gets stuck (?)
+- "VGAMISC:VGA:S3:SEQ:Write to illegal index  F"
