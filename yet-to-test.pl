@@ -19,6 +19,12 @@ else {
     open(C,">","pick-one$suffix.cache") || die;
 }
 
+sub escape_shell($) {
+    my $x = shift(@_);
+    $x =~ s/([^a-z])/\\$1/gi;
+    return $x;
+}
+
 while (my $path = <X>) {
     chomp $path;
     next unless -d $path;
@@ -39,7 +45,8 @@ while (my $path = <X>) {
     );
 
     # skip unless it has an EXE or COM file
-    $x=`cd '$path' && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
+    $path_esc=escape_shell($path);
+    $x=`cd $path_esc && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
     next if $x eq "";
 
     print "$path\n";

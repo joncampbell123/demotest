@@ -64,6 +64,12 @@ print H "</thead>\n";
 
 print H "<tbody>\n";
 
+sub escape_shell($) {
+    my $x = shift(@_);
+    $x =~ s/([^a-z])/\\$1/gi;
+    return $x;
+}
+
 $count = 0;
 #open(S,"find -type d | sort |") || die;
 open(S,"(find -type d; cat pick-one.cache pick-one.svn.cache) | sort | uniq |") || die;
@@ -182,7 +188,8 @@ while ($line = <S>) {
         next if $line =~ m/\'/;
 
         # skip unless it has an EXE or COM file
-        $x=`cd '$line' && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
+        $path_esc=escape_shell($line);
+        $x=`cd $path_esc && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
         next if $x eq "";
     }
 
