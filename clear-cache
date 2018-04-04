@@ -1,4 +1,5 @@
 #!/bin/bash
 rm -fv pick-one.cache
 rm -fv pick-one.svn.cache
+rm -fv pick-one.xdos.cache
 

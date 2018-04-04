@@ -5,6 +5,7 @@ pext=
 filesuffix=
 
 if [[ "$1" == "svn" ]]; then what=svn; pext=" svn"; filesuffix="_SVN"; fi
+if [[ "$1" == "xdos" ]]; then what=xdos; pext=" xdos"; filesuffix="_XDOS"; fi
 
 pick=
 

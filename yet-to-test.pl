@@ -8,6 +8,10 @@ if ($ARGV[0] eq "svn") {
     $suffix=".svn";
     $suffic="_SVN";
 }
+elsif ($ARGV[0] eq "xdos") {
+    $suffix=".xdos";
+    $suffic="_XDOS";
+}
 
 if ( -f "pick-one$suffix.cache" ) {
     $writecache=0;

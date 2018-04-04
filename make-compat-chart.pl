@@ -27,6 +27,7 @@ print H "<br>\n";
 
 print H "DOSBox-X refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/\">DOSBox-X project</a><br>\n";
 print H "DOSBox-SVN refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a><br>\n";
+print H "DOSBox-X-DOS refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/\">DOSBox-X project</a> booting an MS-DOS system.<br>\n";
 print H "<br>\n";
 
 print H "Rules regarding PASS or FAIL:<br>\n";
@@ -59,6 +60,7 @@ print H "<thead class=\"testing_header\">\n";
 print H "<tr>\n";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
 print H "<td>Demo</td>";
 print H "</tr>\n";
 print H "</thead>\n";
@@ -202,6 +204,62 @@ while ($line = <S>) {
         next if $x eq "";
     }
 
+    my $pass_dosbox_xdos = undef;
+    my $pass_dosbox_xdos_rev = undef;
+    my $pass_dosbox_xdos_url = undef;
+    my $pass_dosbox_xdos_rev_file = undef;
+
+    die unless !defined($pass_dosbox_xdos);
+    die unless !defined($pass_dosbox_xdos_url);
+    die unless !defined($pass_dosbox_xdos_rev);
+    die unless !defined($pass_dosbox_xdos_rev_file);
+
+    if ( -f "$line/__PASS_XDOS__" ) {
+        $pass_dosbox_xdos = "PASS";
+        $pass_dosbox_xdos_rev_file = "$line/__PASS_XDOS__";
+    }
+    if ( -f "$line/__FAIL_XDOS__" ) {
+        $pass_dosbox_xdos = "FAIL";
+        $pass_dosbox_xdos_rev_file = "$line/__FAIL_XDOS__";
+    }
+    if ( -f "$line/__WINDOWS_XDOS__" ) {
+        $pass_dosbox_xdos = "WINDOWS";
+        $pass_dosbox_xdos_rev_file = "$line/__WINDOWS_XDOS__";
+    }
+    if (defined($pass_dosbox_xdos_rev_file) && -f $pass_dosbox_xdos_rev_file ) {
+        open(R,"<",$pass_dosbox_xdos_rev_file) || die;
+        # 20180208-004727-cf142387b7108d61666c99f9b8bd7bee5f054284-develop
+        # yyyymmdd-hhmmss-commit-----------------------------------branch
+        $pass_dosbox_xdos_rev = <R>;
+        chomp $pass_dosbox_xdos_rev;
+        close(R);
+
+        my $x = $pass_dosbox_xdos_rev;
+        if ($x =~ s/^\d+-\d+-//) {
+            $x =~ s/\-.*$//g;
+            $pass_dosbox_xdos_url = "https://github.com/joncampbell123/dosbox-x/commit/".$x;
+        }
+    }
+
+    my $notes_dosbox_xdos = undef;
+    if ( -f "$line/__NOTES_XDOS__" ) {
+        my $nline="",$pline,$res="",$ncount=0;
+
+        open(X,"<","$line/__NOTES_XDOS__") || die;
+        while ($nline = <X>) {
+            $pline = $nline;
+            chomp $nline;
+            $nline =~ s/^[ \t]+//;
+            $nline =~ s/[ \t]+$//;
+            next if $nline eq "";
+            $res .= "\n" if $ncount > 0;
+            $res .= "$nline";
+            $ncount++;
+        }
+        close(X);
+        $notes_dosbox_xdos = $res;
+    }
+
     $count++;
     if ($count >= 24) {
         $count = 0;
@@ -212,6 +270,7 @@ while ($line = <S>) {
         print H "<tr>\n";
         print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X</td>";
         print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
+        print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
         print H "<td>Demo</td>";
         print H "</tr>\n";
         print H "</thead>\n";
@@ -245,15 +304,57 @@ while ($line = <S>) {
         print H "<td class=\"passfail_NA\">---</td>";
     }
 
-    my $more = "<br>";
-
-    if (defined($notes_dosbox_x) && $notes_dosbox_x ne "" &&
-        defined($notes_dosbox_svn) && $notes_dosbox_svn ne "" &&
-        $notes_dosbox_x eq $notes_dosbox_svn) {
-        $more .= "<br>";
-        $more .= "DOSBox-X &amp; DOSBox-SVN NOTES: <pre>$notes_dosbox_x</pre>";
+    if (defined($pass_dosbox_xdos)) {
+        if (defined($pass_dosbox_xdos_url) && $pass_dosbox_xdos_url ne "") {
+            print H "<td class=\"passfail_$pass_dosbox_xdos\"><a target=\"_blank\" href=\"$pass_dosbox_xdos_url\">$pass_dosbox_xdos</a></td>";
+        }
+        else {
+            print H "<td class=\"passfail_$pass_dosbox_xdos\">$pass_dosbox_xdos</td>";
+        }
     }
     else {
+        print H "<td class=\"passfail_NA\">---</td>";
+    }
+
+    my $more = "<br>";
+
+    $comb = "";
+    $combnotes = "";
+
+    if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
+        if ($comb eq "" || $combnotes eq $notes_dosbox_x) {
+            $comb .= " &amp; " if $comb ne "";
+            $comb .= "DOSBox-X";
+            $combnotes = $notes_dosbox_x;
+        }
+        else {
+            $comb = "NO";
+        }
+    }
+
+    if (defined($notes_dosbox_svn) && $notes_dosbox_svn ne "") {
+        if ($comb eq "" || $combnotes eq $notes_dosbox_svn) {
+            $comb .= " &amp; " if $comb ne "";
+            $comb .= "DOSBox-SVN";
+            $combnotes = $notes_dosbox_svn;
+        }
+        else {
+            $comb = "NO";
+        }
+    }
+
+    if (defined($notes_dosbox_xdos) && $notes_dosbox_xdos ne "") {
+        if ($comb eq "" || $combnotes eq $notes_dosbox_xdos) {
+            $comb .= " &amp; " if $comb ne "";
+            $comb .= "DOSBox-X-DOS";
+            $combnotes = $notes_dosbox_xdos;
+        }
+        else {
+            $comb = "NO";
+        }
+    }
+ 
+    if ($comb eq "" || $comb eq "NO") {
         if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
             $more .= "<br>";
             $more .= "DOSBox-X NOTES: <pre>$notes_dosbox_x</pre>";
@@ -263,6 +364,15 @@ while ($line = <S>) {
             $more .= "<br>";
             $more .= "DOSBox-SVN NOTES: <pre>$notes_dosbox_svn</pre>";
         }
+
+        if (defined($notes_dosbox_xdos) && $notes_dosbox_xdos ne "") {
+            $more .= "<br>";
+            $more .= "DOSBox-X-DOS NOTES: <pre>$notes_dosbox_xdos</pre>";
+        }
+    }
+    else {
+        $more .= "<br>";
+        $more .= "$comb NOTES: <pre>$combnotes</pre>";
     }
 
     if ($disp_line =~ s/^ftp\.scene\.org\///) {
