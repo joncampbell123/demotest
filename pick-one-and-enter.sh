@@ -118,8 +118,12 @@ else
     cp -v dosbox-pentium.conf dosbox-template.conf || exit 1
 fi
 
+
 if [[ "$what" == "xdos" ]]; then
-    cp -vn dosbox-xdos.example.conf "$x/dosbox-xdos.conf" || exit 1
+    cp -vn dosbox-template.conf "$x/dosbox.conf" || exit 1
+    if [[ !( -f "$x/dosbox-xdos.conf" ) ]]; then
+        cat "$x/dosbox.conf" dosbox-xdos.example.conf >>"$x/dosbox-xdos.conf" || exit 1
+    fi
     cp -vn xdos-__build_hdd__.example.sh "$x/__build_hdd__.sh" || exit 1
 else
     cp -vn dosbox-template.conf "$x/dosbox.conf" || exit 1
