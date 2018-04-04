@@ -65,7 +65,8 @@ print H "</thead>\n";
 print H "<tbody>\n";
 
 $count = 0;
-open(S,"find -type d | sort |") || die;
+#open(S,"find -type d | sort |") || die;
+open(S,"(find -type d; cat pick-one.cache pick-one.svn.cache) | sort | uniq |") || die;
 while ($line = <S>) {
     chomp $line;
 
@@ -176,7 +177,14 @@ while ($line = <S>) {
         $notes_dosbox_svn = $res;
     }
 
-    next unless defined($pass_dosbox_x) || defined($pass_dosbox_svn);
+    if (!(defined($pass_dosbox_x) || defined($pass_dosbox_svn))) {
+        # FIXME: need to handle dirs with single quotes
+        next if $line =~ m/\'/;
+
+        # skip unless it has an EXE or COM file
+        $x=`cd '$line' && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
+        next if $x eq "";
+    }
 
     $count++;
     if ($count >= 24) {
