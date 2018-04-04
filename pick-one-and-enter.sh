@@ -43,6 +43,10 @@ else
     fi
 fi
 
+if [[ "$what" == "xdos" ]]; then
+    emu+=" --conf dosbox-xdos.conf"
+fi
+
 export filesuffix
 
 windows() {
@@ -59,6 +63,9 @@ pass() {
 
 commit() {
     git add *.conf *.map
+
+    if [ -f "__build_hdd__.sh" ]; then git add "__build_hdd__.sh"; fi
+
     if [ -f "__PASS"$filesuffix"__" ]; then git add "__PASS"$filesuffix"__"; fi
     if [ -f "__FAIL"$filesuffix"__" ]; then git add "__FAIL"$filesuffix"__"; fi
     if [ -f "__NOTES"$filesuffix"__" ]; then git add "__NOTES"$filesuffix"__"; fi
@@ -111,7 +118,13 @@ else
     cp -v dosbox-pentium.conf dosbox-template.conf || exit 1
 fi
 
-cp -vn dosbox-template.conf "$x/dosbox.conf" || exit 1
+if [[ "$what" == "xdos" ]]; then
+    cp -vn dosbox-xdos.example.conf "$x/dosbox-xdos.conf" || exit 1
+    cp -vn xdos-__build_hdd__.example.sh "$x/__build_hdd__.sh" || exit 1
+else
+    cp -vn dosbox-template.conf "$x/dosbox.conf" || exit 1
+fi
+
 cp -vn mapper-0.801.map "$x/mapper-0.801.map" || exit 1
 cp -vn mapper-0.801.map "$x/mapper-0.81.map" || exit 1
 cp -vn mapper-0.801.map "$x/mapper-0.82.map" || exit 1
