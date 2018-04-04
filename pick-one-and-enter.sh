@@ -44,6 +44,12 @@ fi
 
 export filesuffix
 
+windows() {
+    echo $gitcommit >"__WINDOWS__"
+    echo $gitcommit >"__WINDOWS_SVN__"
+    commit
+}
+
 pass() {
     rm -f "__FAIL"$filesuffix"__"
     echo $gitcommit >"__PASS"$filesuffix"__"
@@ -55,6 +61,9 @@ commit() {
     if [ -f "__PASS"$filesuffix"__" ]; then git add "__PASS"$filesuffix"__"; fi
     if [ -f "__FAIL"$filesuffix"__" ]; then git add "__FAIL"$filesuffix"__"; fi
     if [ -f "__NOTES"$filesuffix"__" ]; then git add "__NOTES"$filesuffix"__"; fi
+
+    if [ -f "__WINDOWS__" ]; then git add "__WINDOWS__"; fi
+    if [ -f "__WINDOWS_SVN__" ]; then git add "__WINDOWS_SVN__"; fi
 }
 
 fail() {
@@ -82,6 +91,7 @@ export -f run
 export -f pass
 export -f fail
 export -f commit
+export -f windows
 export -f download
 
 if [ -n "$pick" ]; then

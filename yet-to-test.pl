@@ -44,6 +44,11 @@ while (my $path = <X>) {
         ( -f ("$path/__FAIL$suffic"."__") && ( -s ("$path/__FAIL$suffic"."__")) > 4)
     );
 
+    # skip it if it's Windows only
+    next if (
+        ( -f ("$path/__WINDOWS$suffic"."__") && ( -s ("$path/__WINDOWS$suffic"."__")) > 4) ||
+    );
+
     # skip unless it has an EXE or COM file
     $path_esc=escape_shell($path);
     $x=`cd $path_esc && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;

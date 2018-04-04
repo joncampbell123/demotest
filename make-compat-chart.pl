@@ -7,6 +7,7 @@ print H "<html>\n";
 print H "<head>\n";
 print H "<title>Demoscene compat testing chart</title>\n";
 print H "<style>\n";
+print H ".passfail_WINDOWS { background-color: #DFDFBF; text-align: center; vertical-align: top; }\n";
 print H ".passfail_PASS { background-color: #7FFF7F; text-align: center; vertical-align: top; }\n";
 print H ".passfail_FAIL { background-color: #FF7F7F; text-align: center; vertical-align: top; }\n";
 print H ".passfail_NA { background-color: #DFDFDF; text-align: center; vertical-align: top; }\n";
@@ -98,6 +99,10 @@ while ($line = <S>) {
         $pass_dosbox_x = "FAIL";
         $pass_dosbox_x_rev_file = "$line/__FAIL__";
     }
+    if ( -f "$line/__WINDOWS__" ) {
+        $pass_dosbox_x = "WINDOWS";
+        $pass_dosbox_x_rev_file = "$line/__WINDOWS__";
+    }
     if (defined($pass_dosbox_x_rev_file) && -f $pass_dosbox_x_rev_file ) {
         open(R,"<",$pass_dosbox_x_rev_file) || die;
         # 20180208-004727-cf142387b7108d61666c99f9b8bd7bee5f054284-develop
@@ -147,6 +152,10 @@ while ($line = <S>) {
     if ( -f "$line/__FAIL_SVN__" ) {
         $pass_dosbox_svn = "FAIL";
         $pass_dosbox_svn_rev_file = "$line/__FAIL_SVN__";
+    }
+    if ( -f "$line/__WINDOWS_SVN__" ) {
+        $pass_dosbox_svn = "WINDOWS";
+        $pass_dosbox_svn_rev_file = "$line/__WINDOWS_SVN__";
     }
     if (defined($pass_dosbox_svn_rev_file) && -f $pass_dosbox_svn_rev_file ) {
         open(R,"<",$pass_dosbox_svn_rev_file) || die;
