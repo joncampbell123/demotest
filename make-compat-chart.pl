@@ -321,7 +321,7 @@ while ($line = <S>) {
     $comb = "";
     $combnotes = "";
 
-    if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
+    if ($comb ne "NO" && defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
         if ($comb eq "" || $combnotes eq $notes_dosbox_x) {
             $comb .= " &amp; " if $comb ne "";
             $comb .= "DOSBox-X";
@@ -332,7 +332,7 @@ while ($line = <S>) {
         }
     }
 
-    if (defined($notes_dosbox_svn) && $notes_dosbox_svn ne "") {
+    if ($comb ne "NO" && defined($notes_dosbox_svn) && $notes_dosbox_svn ne "") {
         if ($comb eq "" || $combnotes eq $notes_dosbox_svn) {
             $comb .= " &amp; " if $comb ne "";
             $comb .= "DOSBox-SVN";
@@ -343,7 +343,7 @@ while ($line = <S>) {
         }
     }
 
-    if (defined($notes_dosbox_xdos) && $notes_dosbox_xdos ne "") {
+    if ($comb ne "NO" && defined($notes_dosbox_xdos) && $notes_dosbox_xdos ne "") {
         if ($comb eq "" || $combnotes eq $notes_dosbox_xdos) {
             $comb .= " &amp; " if $comb ne "";
             $comb .= "DOSBox-X-DOS";
