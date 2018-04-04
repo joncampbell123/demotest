@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo get stuck on the "ball with spring" part, does not exit to DOS, music stops.
