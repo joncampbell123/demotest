@@ -1,3 +1,2 @@
 Why the demo failed the test:
-- Demo crashes (JMPs or CALLs to 0000:0000) if Gravis Ultrasound emulation is enabled. Demo runs fine with Sound Blaster.
-
+- Gravis Ultrasound playback crashes, JMPs to 0000:0000
