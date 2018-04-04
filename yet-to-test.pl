@@ -46,7 +46,7 @@ while (my $path = <X>) {
 
     # skip it if it's Windows only
     next if (
-        ( -f ("$path/__WINDOWS$suffic"."__") && ( -s ("$path/__WINDOWS$suffic"."__")) > 4) ||
+        ( -f ("$path/__WINDOWS$suffic"."__") && ( -s ("$path/__WINDOWS$suffic"."__")) > 4)
     );
 
     # skip unless it has an EXE or COM file
