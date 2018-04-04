@@ -1,4 +1,0 @@
-Why the demo failed the test:
-- When examining "Jesus's" art, the demo appears to switch
-  to a 640x480 16-color mode but it does not display any art.
-
