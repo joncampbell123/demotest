@@ -12,6 +12,9 @@ qemu-img convert -O raw $hddimg __hdd__ || exit 1
 mmd -i __hdd__@@$prtofs demo || exit 1
 mcopy -i __hdd__@@$prtofs -b *.* ::demo || exit 1
 
+# power
+mcopy -i __hdd__@@$prtofs -b $hddimgdir/apm.exe ::apm.exe || exit 1
+
 # configure
 mdel -i __hdd__@@$prtofs ::autoexec.bat ::config.sys || exit 1
 # config.sys
@@ -26,5 +29,7 @@ SET PATH=C:\DOS
 CD \DEMO
 RAX
 ECHO ---- END OF DEMO ----
+PAUSE
+\\apm.exe off
 _EOF
 
