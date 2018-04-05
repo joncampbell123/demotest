@@ -8,6 +8,9 @@ prtofs=$((26*512))
 rm -f __hdd__ || exit 1
 qemu-img convert -O raw $hddimg __hdd__ || exit 1
 
+# power
+mcopy -i __hdd__@@$prtofs -b $hddimgdir/apm.exe ::apm.exe || exit 1
+
 # DEMO
 mmd -i __hdd__@@$prtofs demo || exit 1
 mcopy -i __hdd__@@$prtofs -b *.* ::demo || exit 1
@@ -26,5 +29,7 @@ SET PATH=C:\DOS
 CD \DEMO
 sholiday
 ECHO ---- END OF DEMO ----
+PAUSE
+\\apm.exe off
 _EOF
 
