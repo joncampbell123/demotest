@@ -27,8 +27,7 @@ mcopy -i __hdd__@@$prtofs -t - ::autoexec.bat <<_EOF
 @echo off
 SET PATH=C:\DOS
 CD \DEMO
-REM ------ RUN DEMO HERE
-
+NOPE.EXE
 ECHO ---- END OF DEMO ----
 PAUSE
 \\apm.exe off
