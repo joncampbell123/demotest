@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Hangs on exit to DOS
+- Hangs on exit to DOS IF you selected MPU401 playback

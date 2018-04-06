@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Does not exit to DOS, does not respond to keyboard
+- Does not exit to DOS, does not respond to keyboard IF you selected MPU401 playback
