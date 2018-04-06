@@ -1,0 +1,10 @@
+# qemu config file
+[drive]
+file = "__hdd__"
+if = "ide"
+index = "0"
+cyls = "98"
+secs = "26"
+heads = "16"
+format = "raw"
+
