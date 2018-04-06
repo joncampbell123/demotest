@@ -29,7 +29,7 @@ print H "DOSBox-X refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/
 print H "DOSBox-SVN refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a><br>\n";
 print H "DOSBox-X-DOS refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/\">DOSBox-X project</a> booting an MS-DOS system.<br>\n";
 print H "DOSBox-SVN-DOS refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a> booting an MS-DOS system.<br>\n";
-print H "Bochs-SVN refers to the Bochs project booting an MS-DOS system disk.<br>\n";
+print H "Bochs-SVN refers to the <a target=\"_blank\" href=\"https://sourceforge.net/projects/bochs/\">Bochs project</a> booting an MS-DOS system disk.<br>\n";
 print H "<br>\n";
 
 print H "Rules regarding PASS or FAIL:<br>\n";
@@ -354,7 +354,7 @@ while ($line = <S>) {
         if ($x =~ s/^svn=r//) {
             if ($x =~ m/^\d+ /) {
                 $x =~ s/ .*$//g;
-                $pass_dosbox_svnbochs_url = "https://sourceforge.net/p/dosbox/code-0/".$x."/";
+                $pass_dosbox_svnbochs_url = "https://sourceforge.net/p/bochs/code/".$x."/";
             }
         }
     }
