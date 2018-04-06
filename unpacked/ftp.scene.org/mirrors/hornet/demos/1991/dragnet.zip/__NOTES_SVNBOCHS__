@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Does not support SB16 emulation
+- VGA panning is broken

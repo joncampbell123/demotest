@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- QEMU does not support Sound Blaster direct DAC output

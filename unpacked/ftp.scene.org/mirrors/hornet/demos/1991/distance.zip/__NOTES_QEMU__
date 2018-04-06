@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- QEMU does not support digitized PC speaker audio
+Not QEMU's fault:
+- Does not support LPT DAC
