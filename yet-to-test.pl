@@ -16,6 +16,10 @@ elsif ($ARGV[0] eq "svndos") {
     $suffix=".svndos";
     $suffic="_SVNDOS";
 }
+elsif ($ARGV[0] eq "svnbochs") {
+    $suffix=".svnbochs";
+    $suffic="_SVNBOCHS";
+}
 
 if ( -f "pick-one$suffix.cache" ) {
     $writecache=0;

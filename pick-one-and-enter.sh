@@ -7,6 +7,7 @@ filesuffix=
 if [[ "$1" == "svn" ]]; then what=svn; pext=" svn"; filesuffix="_SVN"; fi
 if [[ "$1" == "xdos" ]]; then what=xdos; pext=" xdos"; filesuffix="_XDOS"; fi
 if [[ "$1" == "svndos" ]]; then what=svndos; pext=" svndos"; filesuffix="_SVNDOS"; fi
+if [[ "$1" == "svnbochs" ]]; then what=svnbochs; pext=" svnbochs"; filesuffix="_SVNBOCHS"; fi
 
 pick=
 
@@ -15,7 +16,15 @@ if [[ -n "$2" ]]; then
     if [[ !( -d "$pick" ) ]]; then echo No such $pick; exit 1; fi
 fi
 
-if [[ "$what" == "svn" || "$what" == "svndos" ]]; then
+if [[ "$what" == "svnbochs" ]]; then
+    bochs_root="/mnt/main/src/bochs-svn"
+
+    emu="$bochs_root/bochs/bochs -q"
+    gitcommit_sh="`pwd`/dosbox-svn-git-commit-version.pl $bochs_root"
+    gitcommit=`cd $x && $gitcommit_sh`
+    echo "Bochs-SVN commit is $gitcommit"
+    export gitcommit
+elif [[ "$what" == "svn" || "$what" == "svndos" ]]; then
     if [ -x /home/jon/src/dosbox-svn/src/dosbox-svn ]; then
         dosbox_root="/home/jon/src/dosbox-svn"
     else
@@ -52,6 +61,10 @@ if [[ "$what" == "svndos" ]]; then
     emu+=" -conf dosbox-xdos.conf"
 fi
 
+if [[ "$what" == "svnbochs" ]]; then
+    emu+=" -f bochsrc"
+fi
+
 export filesuffix
 
 windows() {
@@ -68,6 +81,8 @@ pass() {
 
 commit() {
     git add *.conf *.map
+
+    if [ -f "bochsrc" ]; then git add "bochsrc"; fi
 
     if [ -f "__build_hdd__.sh" ]; then git add "__build_hdd__.sh"; fi
 
@@ -124,7 +139,9 @@ else
 fi
 
 
-if [[ "$what" == "xdos" || "$what" == "svndos" ]]; then
+if [[ "$what" == "svnbochs" ]]; then
+    cp -vn bochsrc-example "$x/bochsrc" || exit 1
+elif [[ "$what" == "xdos" || "$what" == "svndos" ]]; then
     cp -vn dosbox-template.conf "$x/dosbox.conf" || exit 1
     if [[ !( -f "$x/dosbox-xdos.conf" ) ]]; then
         cat "$x/dosbox.conf" dosbox-xdos.example.conf >>"$x/dosbox-xdos.conf" || exit 1

@@ -29,6 +29,7 @@ print H "DOSBox-X refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/
 print H "DOSBox-SVN refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a><br>\n";
 print H "DOSBox-X-DOS refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/\">DOSBox-X project</a> booting an MS-DOS system.<br>\n";
 print H "DOSBox-SVN-DOS refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a> booting an MS-DOS system.<br>\n";
+print H "Bochs-SVN refers to the Bochs project booting an MS-DOS system disk.<br>\n";
 print H "<br>\n";
 
 print H "Rules regarding PASS or FAIL:<br>\n";
@@ -63,6 +64,7 @@ print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
 print H "<td style=\"min-width: 8em; text-align: center;\">DOSBox-SVN-DOS</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">Bochs-SVN</td>";
 print H "<td>Demo</td>";
 print H "</tr>\n";
 print H "</thead>\n";
@@ -319,6 +321,63 @@ while ($line = <S>) {
         $notes_dosbox_svndos = $res;
     }
 
+    my $pass_dosbox_svnbochs = undef;
+    my $pass_dosbox_svnbochs_rev = undef;
+    my $pass_dosbox_svnbochs_url = undef;
+    my $pass_dosbox_svnbochs_rev_file = undef;
+
+    die unless !defined($pass_dosbox_svnbochs);
+    die unless !defined($pass_dosbox_svnbochs_url);
+    die unless !defined($pass_dosbox_svnbochs_rev);
+    die unless !defined($pass_dosbox_svnbochs_rev_file);
+
+    if ( -f "$line/__PASS_SVNBOCHS__" ) {
+        $pass_dosbox_svnbochs = "PASS";
+        $pass_dosbox_svnbochs_rev_file = "$line/__PASS_SVNBOCHS__";
+    }
+    if ( -f "$line/__FAIL_SVNBOCHS__" ) {
+        $pass_dosbox_svnbochs = "FAIL";
+        $pass_dosbox_svnbochs_rev_file = "$line/__FAIL_SVNBOCHS__";
+    }
+    if ( -f "$line/__WINDOWS_SVNBOCHS__" ) {
+        $pass_dosbox_svnbochs = "WINDOWS";
+        $pass_dosbox_svnbochs_rev_file = "$line/__WINDOWS_SVNBOCHS__";
+    }
+    if (defined($pass_dosbox_svnbochs_rev_file) && -f $pass_dosbox_svnbochs_rev_file ) {
+        open(R,"<",$pass_dosbox_svnbochs_rev_file) || die;
+        $pass_dosbox_svnbochs_rev = <R>;
+        chomp $pass_dosbox_svnbochs_rev;
+        close(R);
+
+        my $x = $pass_dosbox_svnbochs_rev;
+        $x =~ s/^git=[^ ]+ +//;
+        if ($x =~ s/^svn=r//) {
+            if ($x =~ m/^\d+ /) {
+                $x =~ s/ .*$//g;
+                $pass_dosbox_svnbochs_url = "https://sourceforge.net/p/dosbox/code-0/".$x."/";
+            }
+        }
+    }
+
+    my $notes_dosbox_svnbochs = undef;
+    if ( -f "$line/__NOTES_SVNBOCHS__" ) {
+        my $nline="",$pline,$res="",$ncount=0;
+
+        open(X,"<","$line/__NOTES_SVNBOCHS__") || die;
+        while ($nline = <X>) {
+            $pline = $nline;
+            chomp $nline;
+            $nline =~ s/^[ \t]+//;
+            $nline =~ s/[ \t]+$//;
+            next if $nline eq "";
+            $res .= "\n" if $ncount > 0;
+            $res .= "$nline";
+            $ncount++;
+        }
+        close(X);
+        $notes_dosbox_svnbochs = $res;
+    }
+
     $count++;
     if ($count >= 24) {
         $count = 0;
@@ -331,6 +390,7 @@ while ($line = <S>) {
         print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
         print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
         print H "<td style=\"min-width: 8em; text-align: center;\">DOSBox-SVN-DOS</td>";
+        print H "<td style=\"min-width: 6em; text-align: center;\">Bochs-SVN</td>";
         print H "<td>Demo</td>";
         print H "</tr>\n";
         print H "</thead>\n";
@@ -388,6 +448,18 @@ while ($line = <S>) {
         print H "<td class=\"passfail_NA\">---</td>";
     }
 
+    if (defined($pass_dosbox_svnbochs)) {
+        if (defined($pass_dosbox_svnbochs_url) && $pass_dosbox_svnbochs_url ne "") {
+            print H "<td class=\"passfail_$pass_dosbox_svnbochs\"><a target=\"_blank\" href=\"$pass_dosbox_svnbochs_url\">$pass_dosbox_svnbochs</a></td>";
+        }
+        else {
+            print H "<td class=\"passfail_$pass_dosbox_svnbochs\">$pass_dosbox_svnbochs</td>";
+        }
+    }
+    else {
+        print H "<td class=\"passfail_NA\">---</td>";
+    }
+
     my $more = "<br>";
 
     $comb = "";
@@ -436,6 +508,17 @@ while ($line = <S>) {
             $comb = "NO";
         }
     }
+
+    if ($comb ne "NO" && defined($notes_dosbox_svnbochs) && $notes_dosbox_svnbochs ne "") {
+        if ($comb eq "" || $combnotes eq $notes_dosbox_svnbochs) {
+            $comb .= " &amp; " if $comb ne "";
+            $comb .= "Bochs-SVN";
+            $combnotes = $notes_dosbox_svnbochs;
+        }
+        else {
+            $comb = "NO";
+        }
+    }
  
     if ($comb eq "" || $comb eq "NO") {
         if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
@@ -455,7 +538,12 @@ while ($line = <S>) {
 
         if (defined($notes_dosbox_svndos) && $notes_dosbox_svndos ne "") {
             $more .= "<br>";
-            $more .= "DOSBox-X-DOS NOTES: <pre>$notes_dosbox_svndos</pre>";
+            $more .= "DOSBox-SVN-DOS NOTES: <pre>$notes_dosbox_svndos</pre>";
+        }
+
+        if (defined($notes_dosbox_svnbochs) && $notes_dosbox_svnbochs ne "") {
+            $more .= "<br>";
+            $more .= "Bochs-SVN NOTES: <pre>$notes_dosbox_svnbochs</pre>";
         }
     }
     else {

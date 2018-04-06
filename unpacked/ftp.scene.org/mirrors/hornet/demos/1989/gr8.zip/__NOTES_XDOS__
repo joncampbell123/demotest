@@ -1,4 +1,3 @@
 Why the demo failed the test:
 - "Future Crew" logo at the bottom is missing
 - Running the cycle count too low causes VGA emulation to complain about rapid switching between EGA/CGA mode (?)
-- Garbled graphics and overdraw
