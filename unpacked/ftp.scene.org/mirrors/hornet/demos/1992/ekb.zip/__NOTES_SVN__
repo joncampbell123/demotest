@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- Garbled background
+- machine=svga_et4000 will not render per-scanline effects at startup correctly
+- scroller is not rendered correctly, though background works correctly
