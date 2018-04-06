@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo hangs after initial scroller
+- Scroller exhibits odd "mode x" tearlines

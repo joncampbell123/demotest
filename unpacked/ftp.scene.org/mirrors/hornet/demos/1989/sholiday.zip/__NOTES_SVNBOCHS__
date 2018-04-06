@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Bochs doesn't like the "PC speaker speech" of this demo, and will hang/slow down

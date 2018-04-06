@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Does not support PC speaker "digitized speech"
+Bochs will not be faulted for:
+- Does not support LPT DAC
