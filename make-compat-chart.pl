@@ -30,6 +30,7 @@ print H "DOSBox-SVN refers to the <a target=\"_blank\" href=\"https://www.dosbox
 print H "DOSBox-X-DOS refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/\">DOSBox-X project</a> booting an MS-DOS system.<br>\n";
 print H "DOSBox-SVN-DOS refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a> booting an MS-DOS system.<br>\n";
 print H "Bochs-SVN refers to the <a target=\"_blank\" href=\"https://sourceforge.net/projects/bochs/\">Bochs project</a> booting an MS-DOS system disk.<br>\n";
+print H "QEMU refers to the <a target=\"_blank\" href=\"https://www.qemu.org/\">QEMU project</a> booting an MS-DOS system disk.<br>\n";
 print H "<br>\n";
 
 print H "Rules regarding PASS or FAIL:<br>\n";
@@ -65,6 +66,7 @@ print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
 print H "<td style=\"min-width: 8em; text-align: center;\">DOSBox-SVN-DOS</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">Bochs-SVN</td>";
+print H "<td style=\"min-width: 4em; text-align: center;\">QEMU</td>";
 print H "<td>Demo</td>";
 print H "</tr>\n";
 print H "</thead>\n";
@@ -378,6 +380,63 @@ while ($line = <S>) {
         $notes_dosbox_svnbochs = $res;
     }
 
+    my $pass_dosbox_qemu = undef;
+    my $pass_dosbox_qemu_rev = undef;
+    my $pass_dosbox_qemu_url = undef;
+    my $pass_dosbox_qemu_rev_file = undef;
+
+    die unless !defined($pass_dosbox_qemu);
+    die unless !defined($pass_dosbox_qemu_url);
+    die unless !defined($pass_dosbox_qemu_rev);
+    die unless !defined($pass_dosbox_qemu_rev_file);
+
+    if ( -f "$line/__PASS_QEMU__" ) {
+        $pass_dosbox_qemu = "PASS";
+        $pass_dosbox_qemu_rev_file = "$line/__PASS_QEMU__";
+    }
+    if ( -f "$line/__FAIL_QEMU__" ) {
+        $pass_dosbox_qemu = "FAIL";
+        $pass_dosbox_qemu_rev_file = "$line/__FAIL_QEMU__";
+    }
+    if ( -f "$line/__WINDOWS_QEMU__" ) {
+        $pass_dosbox_qemu = "WINDOWS";
+        $pass_dosbox_qemu_rev_file = "$line/__WINDOWS_QEMU__";
+    }
+    if (defined($pass_dosbox_qemu_rev_file) && -f $pass_dosbox_qemu_rev_file ) {
+        open(R,"<",$pass_dosbox_qemu_rev_file) || die;
+        $pass_dosbox_qemu_rev = <R>;
+        chomp $pass_dosbox_qemu_rev;
+        close(R);
+
+        my $x = $pass_dosbox_qemu_rev;
+        $x =~ s/^git=[^ ]+ +//;
+        if ($x =~ s/^svn=r//) {
+            if ($x =~ m/^\d+ /) {
+                $x =~ s/ .*$//g;
+                $pass_dosbox_qemu_url = "https://sourceforge.net/p/bochs/code/".$x."/";
+            }
+        }
+    }
+
+    my $notes_dosbox_qemu = undef;
+    if ( -f "$line/__NOTES_QEMU__" ) {
+        my $nline="",$pline,$res="",$ncount=0;
+
+        open(X,"<","$line/__NOTES_QEMU__") || die;
+        while ($nline = <X>) {
+            $pline = $nline;
+            chomp $nline;
+            $nline =~ s/^[ \t]+//;
+            $nline =~ s/[ \t]+$//;
+            next if $nline eq "";
+            $res .= "\n" if $ncount > 0;
+            $res .= "$nline";
+            $ncount++;
+        }
+        close(X);
+        $notes_dosbox_qemu = $res;
+    }
+
     $count++;
     if ($count >= 24) {
         $count = 0;
@@ -391,6 +450,7 @@ while ($line = <S>) {
         print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
         print H "<td style=\"min-width: 8em; text-align: center;\">DOSBox-SVN-DOS</td>";
         print H "<td style=\"min-width: 6em; text-align: center;\">Bochs-SVN</td>";
+        print H "<td style=\"min-width: 4em; text-align: center;\">QEMU</td>";
         print H "<td>Demo</td>";
         print H "</tr>\n";
         print H "</thead>\n";
@@ -460,6 +520,18 @@ while ($line = <S>) {
         print H "<td class=\"passfail_NA\">---</td>";
     }
 
+    if (defined($pass_dosbox_qemu)) {
+        if (defined($pass_dosbox_qemu_url) && $pass_dosbox_qemu_url ne "") {
+            print H "<td class=\"passfail_$pass_dosbox_qemu\"><a target=\"_blank\" href=\"$pass_dosbox_qemu_url\">$pass_dosbox_qemu</a></td>";
+        }
+        else {
+            print H "<td class=\"passfail_$pass_dosbox_qemu\">$pass_dosbox_qemu</td>";
+        }
+    }
+    else {
+        print H "<td class=\"passfail_NA\">---</td>";
+    }
+
     my $more = "<br>";
 
     $comb = "";
@@ -520,6 +592,17 @@ while ($line = <S>) {
         }
     }
  
+    if ($comb ne "NO" && defined($notes_dosbox_qemu) && $notes_dosbox_qemu ne "") {
+        if ($comb eq "" || $combnotes eq $notes_dosbox_qemu) {
+            $comb .= " &amp; " if $comb ne "";
+            $comb .= "QEMU";
+            $combnotes = $notes_dosbox_qemu;
+        }
+        else {
+            $comb = "NO";
+        }
+    }
+ 
     if ($comb eq "" || $comb eq "NO") {
         if (defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
             $more .= "<br>";
@@ -544,6 +627,11 @@ while ($line = <S>) {
         if (defined($notes_dosbox_svnbochs) && $notes_dosbox_svnbochs ne "") {
             $more .= "<br>";
             $more .= "Bochs-SVN NOTES: <pre>$notes_dosbox_svnbochs</pre>";
+        }
+
+        if (defined($notes_dosbox_qemu) && $notes_dosbox_qemu ne "") {
+            $more .= "<br>";
+            $more .= "QEMU NOTES: <pre>$notes_dosbox_qemu</pre>";
         }
     }
     else {

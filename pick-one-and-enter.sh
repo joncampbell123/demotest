@@ -72,6 +72,8 @@ if [[ "$what" == "svnbochs" ]]; then
 fi
 
 if [[ "$what" == "qemu" ]]; then
+    export QEMU_AUDIO_DRV=alsa
+    export QEMU_ALSA_DAC_DEV=pulse 
     emu+=" -readconfig qemu.conf"
 fi
 
