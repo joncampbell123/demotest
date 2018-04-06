@@ -1,0 +1,5 @@
+Why the demo failed the test:
+- Does not render PC music
+- Demo seems to hang when starting
+Not QEMU's fault:
+- Does not support LPT DAC

@@ -1,0 +1,6 @@
+Why the demo failed the test:
+- Runs way too fast
+- Some parts do not render at all
+- Per-scanline effects not supported
+Not QEMU's fault:
+- Lack of LPT DAC emulation

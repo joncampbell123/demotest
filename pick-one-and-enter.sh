@@ -18,7 +18,8 @@ if [[ -n "$2" ]]; then
 fi
 
 if [[ "$what" == "qemu" ]]; then
-    emu="/usr/bin/qemu-system-i386"
+    cmdopts="-soundhw sb16,adlib"
+    emu="/usr/bin/qemu-system-i386 $cmdopts"
     gitcommit="unknown"
     echo "QEMU commit is $gitcommit"
     export gitcommit
@@ -72,8 +73,7 @@ if [[ "$what" == "svnbochs" ]]; then
 fi
 
 if [[ "$what" == "qemu" ]]; then
-    export QEMU_AUDIO_DRV=alsa
-    export QEMU_ALSA_DAC_DEV=pulse 
+    export QEMU_AUDIO_DRV=sdl
     emu+=" -readconfig qemu.conf"
 fi
 
@@ -97,6 +97,8 @@ commit() {
     if [ -f "bochsrc" ]; then git add "bochsrc"; fi
 
     if [ -f "__build_hdd__.sh" ]; then git add "__build_hdd__.sh"; fi
+
+    if [ -f "qemu-options.conf" ]; then git add "qemu-options.conf"; fi
 
     if [ -f "__PASS"$filesuffix"__" ]; then git add "__PASS"$filesuffix"__"; fi
     if [ -f "__FAIL"$filesuffix"__" ]; then git add "__FAIL"$filesuffix"__"; fi

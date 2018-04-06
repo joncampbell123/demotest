@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Does not detect QEMU's display as VGA or PS/1 compatible

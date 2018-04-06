@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Hangs on startup (SB16 emulation given DSP command it doesn't understand)

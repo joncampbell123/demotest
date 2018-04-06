@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Uses Direct DAC SB output, which QEMU apparently does not understand

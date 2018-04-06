@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Fails to show anything, exits to DOS
+Notes:
+- Sound Blaster output ACTUALLY WORKS WITH QEMU!
