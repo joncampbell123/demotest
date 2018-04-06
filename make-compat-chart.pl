@@ -429,7 +429,7 @@ while ($line = <S>) {
     if ($comb ne "NO" && defined($notes_dosbox_svndos) && $notes_dosbox_svndos ne "") {
         if ($comb eq "" || $combnotes eq $notes_dosbox_svndos) {
             $comb .= " &amp; " if $comb ne "";
-            $comb .= "DOSBox-X-DOS";
+            $comb .= "DOSBox-SVN-DOS";
             $combnotes = $notes_dosbox_svndos;
         }
         else {
