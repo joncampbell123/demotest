@@ -20,6 +20,10 @@ elsif ($ARGV[0] eq "svnbochs") {
     $suffix=".svnbochs";
     $suffic="_SVNBOCHS";
 }
+elsif ($ARGV[0] eq "qemu") {
+    $suffix=".qemu";
+    $suffic="_QEMU";
+}
 
 if ( -f "pick-one$suffix.cache" ) {
     $writecache=0;

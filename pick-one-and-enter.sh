@@ -6,6 +6,7 @@ filesuffix=
 
 if [[ "$1" == "svn" ]]; then what=svn; pext=" svn"; filesuffix="_SVN"; fi
 if [[ "$1" == "xdos" ]]; then what=xdos; pext=" xdos"; filesuffix="_XDOS"; fi
+if [[ "$1" == "qemu" ]]; then what=qemu; pext=" qemu"; filesuffix="_QEMU"; fi
 if [[ "$1" == "svndos" ]]; then what=svndos; pext=" svndos"; filesuffix="_SVNDOS"; fi
 if [[ "$1" == "svnbochs" ]]; then what=svnbochs; pext=" svnbochs"; filesuffix="_SVNBOCHS"; fi
 
@@ -16,7 +17,12 @@ if [[ -n "$2" ]]; then
     if [[ !( -d "$pick" ) ]]; then echo No such $pick; exit 1; fi
 fi
 
-if [[ "$what" == "svnbochs" ]]; then
+if [[ "$what" == "qemu" ]]; then
+    emu="/usr/bin/qemu-system-i386"
+    gitcommit="unknown"
+    echo "QEMU commit is $gitcommit"
+    export gitcommit
+elif [[ "$what" == "svnbochs" ]]; then
     bochs_root="/mnt/main/src/bochs-svn"
 
     emu="$bochs_root/bochs/bochs -q"
@@ -63,6 +69,10 @@ fi
 
 if [[ "$what" == "svnbochs" ]]; then
     emu+=" -f bochsrc"
+fi
+
+if [[ "$what" == "qemu" ]]; then
+    emu+=" -readconfig qemu.conf"
 fi
 
 export filesuffix
@@ -139,7 +149,9 @@ else
 fi
 
 
-if [[ "$what" == "svnbochs" ]]; then
+if [[ "$what" == "qemu" ]]; then
+    cp -vn qemu.conf-example "$x/qemu.conf" || exit 1
+elif [[ "$what" == "svnbochs" ]]; then
     cp -vn bochsrc-example "$x/bochsrc" || exit 1
 elif [[ "$what" == "xdos" || "$what" == "svndos" ]]; then
     cp -vn dosbox-template.conf "$x/dosbox.conf" || exit 1
