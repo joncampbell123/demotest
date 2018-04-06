@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Does not support per-scanline VGA "warping" effects
+- Second title animation is off-center
+- Panning and scroller are completely messed up

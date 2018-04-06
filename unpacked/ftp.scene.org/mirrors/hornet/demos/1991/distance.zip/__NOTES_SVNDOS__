@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Disney sound source / LPT DAC output doesn't work
+- PC speaker output is distorted (compared to DOSBox-X)

@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Bochs doesn't support digitized PC speaker audio
+Not Bochs fault:
+- Does not support LPT DAC
