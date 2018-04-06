@@ -9,6 +9,7 @@ suffix=
 csuffix=
 if [[ "$1" == "svn" ]]; then csuffix=".svn"; suffix="svn"; fi
 if [[ "$1" == "xdos" ]]; then csuffix=".xdos"; suffix="xdos"; fi
+if [[ "$1" == "svndos" ]]; then csuffix=".svndos"; suffix="svndos"; fi
 
 if [[ !( -f "pick-one$csuffix.cache" ) ]]; then ./yet-to-test.pl $suffix >/dev/null; fi
 

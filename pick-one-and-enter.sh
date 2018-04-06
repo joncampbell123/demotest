@@ -6,6 +6,7 @@ filesuffix=
 
 if [[ "$1" == "svn" ]]; then what=svn; pext=" svn"; filesuffix="_SVN"; fi
 if [[ "$1" == "xdos" ]]; then what=xdos; pext=" xdos"; filesuffix="_XDOS"; fi
+if [[ "$1" == "svndos" ]]; then what=svndos; pext=" svndos"; filesuffix="_SVNDOS"; fi
 
 pick=
 
@@ -14,7 +15,7 @@ if [[ -n "$2" ]]; then
     if [[ !( -d "$pick" ) ]]; then echo No such $pick; exit 1; fi
 fi
 
-if [[ "$what" == "svn" ]]; then
+if [[ "$what" == "svn" || "$what" == "svndos" ]]; then
     if [ -x /home/jon/src/dosbox-svn/src/dosbox-svn ]; then
         dosbox_root="/home/jon/src/dosbox-svn"
     else
@@ -45,6 +46,10 @@ fi
 
 if [[ "$what" == "xdos" ]]; then
     emu+=" --conf dosbox-xdos.conf"
+fi
+
+if [[ "$what" == "svndos" ]]; then
+    emu+=" -conf dosbox-xdos.conf"
 fi
 
 export filesuffix
@@ -119,7 +124,7 @@ else
 fi
 
 
-if [[ "$what" == "xdos" ]]; then
+if [[ "$what" == "xdos" || "$what" == "svndos" ]]; then
     cp -vn dosbox-template.conf "$x/dosbox.conf" || exit 1
     if [[ !( -f "$x/dosbox-xdos.conf" ) ]]; then
         cat "$x/dosbox.conf" dosbox-xdos.example.conf >>"$x/dosbox-xdos.conf" || exit 1

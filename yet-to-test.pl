@@ -12,6 +12,10 @@ elsif ($ARGV[0] eq "xdos") {
     $suffix=".xdos";
     $suffic="_XDOS";
 }
+elsif ($ARGV[0] eq "svndos") {
+    $suffix=".svndos";
+    $suffic="_SVNDOS";
+}
 
 if ( -f "pick-one$suffix.cache" ) {
     $writecache=0;
@@ -31,6 +35,8 @@ sub escape_shell($) {
 
 while (my $path = <X>) {
     chomp $path;
+    next if $path eq ".";
+    next if $path eq "./";
     next unless -d $path;
     next if $path =~ m/\'/;
     next if ($skip ne '' && (substr($path,0,length($skip)) eq $skip));
