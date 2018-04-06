@@ -292,7 +292,7 @@ while ($line = <S>) {
 
         my $x = $pass_dosbox_svndos_rev;
         $x =~ s/^git=[^ ]+ +//;
-        if ($x =~ s/^svndos=r//) {
+        if ($x =~ s/^svn=r//) {
             if ($x =~ m/^\d+ /) {
                 $x =~ s/ .*$//g;
                 $pass_dosbox_svndos_url = "https://sourceforge.net/p/dosbox/code-0/".$x."/";
