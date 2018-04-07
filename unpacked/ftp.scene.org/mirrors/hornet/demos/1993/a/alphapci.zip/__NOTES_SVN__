@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Despite prompt for sound output, demo makes no attempt to play music. Will mark PASS if behavior occurs on REAL HARDWARE.
+- Code page conversion is preventing the demo from accessing it's mod file (file name "CRISIS" extension \xFF)
