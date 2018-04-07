@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo does not stop music and does not unhook music interrupt. Running anything after this point will crash DOS. Will mark as PASS if demo does the same thing on REAL HARDWARE.
+- Demo does not stop GUS music and does not unhook music interrupt. Running anything after this point will crash DOS. Will mark as PASS if demo does the same thing on REAL HARDWARE.
