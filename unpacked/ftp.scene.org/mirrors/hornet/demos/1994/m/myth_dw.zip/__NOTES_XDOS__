@@ -1,5 +1,7 @@
 Why the demo failed the test:
-- Demo hangs after asking sound card.
-- Sound Blaster support starts playback then leaves it to run through
-  garbage data in RAM.
+- Sound Blaster Pro support starts playback then leaves it to run through
+  garbage data in RAM, while hung at the sound card selection menu.
 - Gravis Ultrasound support appears to get stuck waiting for something.
+Notes:
+- If you select "Sound Blaster 16" you must specify the 16-bit DMA channel (usually 5)
+  or the demo will not play any music.
