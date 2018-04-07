@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Code page conversion is preventing the demo from accessing it's mod file (file name "CRISIS" extension \xFF)
