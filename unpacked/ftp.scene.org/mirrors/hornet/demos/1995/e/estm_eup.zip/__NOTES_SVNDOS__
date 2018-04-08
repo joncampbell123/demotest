@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Gravis Ultrasound support will always complain about insufficient memory, no matter what
