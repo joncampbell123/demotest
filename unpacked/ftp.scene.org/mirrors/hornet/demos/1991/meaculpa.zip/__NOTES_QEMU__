@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- QEMU does not support demo's use of Sound Blaster playback

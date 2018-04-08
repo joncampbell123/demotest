@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- QEMU does not support DSP commands used by this demo
