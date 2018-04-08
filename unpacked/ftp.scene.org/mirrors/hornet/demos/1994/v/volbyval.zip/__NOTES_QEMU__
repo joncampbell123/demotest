@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- I am unable to get it to run.
+- Demo does not run. However it looks like a conflict with filenames and code page conversion, since the ZIP has filenames with extended ASCII.

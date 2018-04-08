@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Demo doesn't GPF rapidly, but stops and does not respond to the keyboard
+Real hardware test:
+- Toshiba Laptop, 1997, Pentium, MS-DOS 6.22: Crashed to DOS with an exception immediately

@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Demo leaves Sound Blaster playback running on exit to DOS. Will mark PASS if behavior occurs on REAL HARDWARE.
+Real hardware testing:
+- Toshiba 1997 laptop with SBPro compatible (OPL3-SAx): Crash on startup

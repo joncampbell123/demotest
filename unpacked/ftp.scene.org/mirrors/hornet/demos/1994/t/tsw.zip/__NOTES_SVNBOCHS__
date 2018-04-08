@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Doesn't show anything
+- Doesn't show anything during the first part. If you're patient, the demo will get to the other parts that do show content. Some content will show incorrectly anyway depending on SVGA card vs selection. HOWEVER: Real hardware testing also shows the same problems (test 1/1), which means the emulation may be accurate regardless.
