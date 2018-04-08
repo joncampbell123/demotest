@@ -1,7 +1,0 @@
-Why the demo failed the test:
-- "Future Crew" logo at the bottom is missing. Logo appears on REAL HARDWARE (Test 1/1)
-- Running the cycle count too low causes VGA emulation to complain about rapid switching between EGA/CGA mode (?)
-- Garbled graphics and overdraw
-Real hardware notes:
-- There should be a "Future Crew" logo on the bottom half of the screen.
-  Confirmed: Toshiba 1997 Pentium Laptop, Chips & Tech SVGA chipset, 800x600 LCD display.
