@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- The demo thinks EMS is installed even if ems=false
