@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Corrupted sprite display during intro (as if rendering off-pointer)
