@@ -16,8 +16,8 @@ mcopy -i __hdd__@@$prtofs -b *.* ::demo || exit 1
 mdel -i __hdd__@@$prtofs ::autoexec.bat ::config.sys || exit 1
 # config.sys
 mcopy -i __hdd__@@$prtofs -t - ::config.sys <<_EOF
-FILES=50
-BUFFERS=50
+DEVICE=C:\DOS\HIMEM.SYS
+DOS=HIGH,UMB
 _EOF
 # autoexec.bat
 mcopy -i __hdd__@@$prtofs -t - ::autoexec.bat <<_EOF
