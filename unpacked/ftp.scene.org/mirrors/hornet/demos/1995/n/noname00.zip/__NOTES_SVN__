@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- There is a part mid-demo that shows an "I" half-inverted, which
+  scrolls up then leaves a blank screen for an extended amount of time.
