@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo uses Sound Blaster DSP commands not recognized by QEMU

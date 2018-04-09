@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo requires Sound Blaster, which Bochs is not emulating
