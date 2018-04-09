@@ -100,6 +100,12 @@ commit() {
 
     if [ -f "qemu-options.conf" ]; then git add "qemu-options.conf"; fi
 
+    for xxx in _SVN _SVNDOS _SVNBOCHS _QEMU _XDOS; do
+        if [ -f "__PASS"$xxx"__" ]; then git add "__PASS"$xxx"__"; fi
+        if [ -f "__FAIL"$xxx"__" ]; then git add "__FAIL"$xxx"__"; fi
+        if [ -f "__NOTES"$xxx"__" ]; then git add "__NOTES"$xxx"__"; fi
+    done
+
     if [ -f "__PASS"$filesuffix"__" ]; then git add "__PASS"$filesuffix"__"; fi
     if [ -f "__FAIL"$filesuffix"__" ]; then git add "__FAIL"$filesuffix"__"; fi
     if [ -f "__NOTES"$filesuffix"__" ]; then git add "__NOTES"$filesuffix"__"; fi
