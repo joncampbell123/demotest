@@ -23,6 +23,8 @@ _EOF
 mcopy -i __hdd__@@$prtofs -t - ::autoexec.bat <<_EOF
 @echo off
 SET PATH=C:\DOS
+SET BLASTER=A220 I7 D1
+SET ULTRASND=240,3,3,5,5
 CD \DEMO
 SILENCE.EXE
 ECHO ---- END OF DEMO ----
