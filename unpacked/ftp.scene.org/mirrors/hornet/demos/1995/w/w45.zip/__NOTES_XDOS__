@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- The "COMA" text eventually gets corrupted. Will mark as PASS if this occurs on real hardware.
