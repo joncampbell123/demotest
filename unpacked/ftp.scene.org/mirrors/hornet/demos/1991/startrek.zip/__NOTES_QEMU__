@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- It doesn't think QEMU provides a VGA display
