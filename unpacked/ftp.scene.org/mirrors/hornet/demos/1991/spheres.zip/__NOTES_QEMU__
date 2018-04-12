@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- SB emulation not supported by QEMU. Even if you select "no sound"
