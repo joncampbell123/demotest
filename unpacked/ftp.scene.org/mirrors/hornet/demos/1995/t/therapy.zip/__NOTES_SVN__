@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo mis-detects GUS at IRQ 5 DMA 2
