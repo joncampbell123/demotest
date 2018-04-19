@@ -1,1 +1,2 @@
 Why the demo failed the test:
+- Demo exits to DOS without resetting the video mode
