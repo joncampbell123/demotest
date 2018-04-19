@@ -1,3 +1,2 @@
 Why the demo failed the test:
-- Demo crashes at end, does not exit to DOS
-
+- Demo exits to DOS without resetting the video mode
