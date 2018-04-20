@@ -55,6 +55,9 @@ while (my $path = <X>) {
     # skip Amiga demos, we can't run them
     next if $path =~ m/\/amiga\/demo\//;
 
+    # no MOD music executables
+    next if $path =~ m/\/m4ch\//;
+
     # skip if it already has __PASS__ or __FAIL__
     # 2018/02/09: we now require PASS/FAIL to indicate the commit!
     next if (
