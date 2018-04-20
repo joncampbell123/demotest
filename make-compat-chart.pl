@@ -80,8 +80,9 @@ sub escape_shell($) {
 }
 
 $count = 0;
+$list = "pick-one.cache  pick-one.qemu.cache  pick-one.svnbochs.cache  pick-one.svn.cache  pick-one.svndos.cache  pick-one.xdos.cache";
 #open(S,"find -type d | sort |") || die;
-open(S,"(find -type d; cat pick-one.cache pick-one.svn.cache) | sort | uniq |") || die;
+open(S,"(find -type d; cat $list) | sort | uniq |") || die;
 while ($line = <S>) {
     chomp $line;
 

@@ -70,10 +70,14 @@ while (my $path = <X>) {
         ( -f ("$path/__WINDOWS$suffic"."__") && ( -s ("$path/__WINDOWS$suffic"."__")) > 4)
     );
 
-    # skip unless it has an EXE or COM file
-    $path_esc=escape_shell($path);
-    $x=`cd $path_esc && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
-    next if $x eq "";
+    # skip unless it has an EXE or COM file OR it is already marked
+    if ( -f ("$path/__PASS$suffic"."__") || -f ("$path/__FAIL$suffic"."__") ) {
+    }
+    else {
+        $path_esc=escape_shell($path);
+        $x=`cd $path_esc && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
+        next if $x eq "";
+    }
 
     print "$path\n";
     print C "$path\n" if $writecache > 0;
