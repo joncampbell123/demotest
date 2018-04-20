@@ -1,4 +1,2 @@
-Demo gets stuck in an infinite loop at the "dreamy city" part.
-I have no idea if that's intentional or if it's supposed to go
-to the next part or exit to DOS or what...
-
+Why the demo failed the test:
+- E_Exit: No byte handler for write to ffffffb3
