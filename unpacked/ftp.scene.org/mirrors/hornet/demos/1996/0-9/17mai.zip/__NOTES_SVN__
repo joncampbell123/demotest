@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Hangs at startup in an infinite loop without LOADFIX
+- Crashes during credits, invalid opcode exception
