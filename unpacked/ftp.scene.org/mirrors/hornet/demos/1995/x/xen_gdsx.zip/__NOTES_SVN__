@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo runs perfectly BUT the filename is extended ASCII and does not map cleanly to host filesystem charset
