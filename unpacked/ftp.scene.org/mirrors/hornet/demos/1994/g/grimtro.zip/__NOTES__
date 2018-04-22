@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- No text is displayed, only one continuous black bar (INT 10h AH=09h problem, https://github.com/joncampbell123/dosbox-x/issues/650)
