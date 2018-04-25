@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Sound Blaster output doesn't work in Bochs
+- Flickering video problems in Bochs

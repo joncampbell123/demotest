@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Hangs on startup, QEMU does not understand Sound Blaster detection
