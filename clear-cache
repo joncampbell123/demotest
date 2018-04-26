@@ -2,4 +2,7 @@
 rm -fv pick-one.cache
 rm -fv pick-one.svn.cache
 rm -fv pick-one.xdos.cache
+rm -fv pick-one.qemu.cache
+rm -fv pick-one.svndos.cache
+rm -fv pick-one.svnbochs.cache
 
