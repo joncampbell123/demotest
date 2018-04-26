@@ -205,6 +205,9 @@ while ($line = <S>) {
         # FIXME: need to handle dirs with single quotes
         next if $line =~ m/\'/;
 
+        # skip m4ch directories
+        next if $line =~ s/\/m4ch\///;
+
         # skip unless it has an EXE or COM file
         $path_esc=escape_shell($line);
         $x=`cd $path_esc && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
