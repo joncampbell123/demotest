@@ -135,6 +135,8 @@ PS1="\s-\v demo test$pext>> "
 export PS1
 export emu
 export downld
+export testroot
+export testpick
 export -f run
 export -f pass
 export -f fail
@@ -183,6 +185,7 @@ cp -vn mapper-0.801.map "$x/mapper-0.82.4.map" || exit 1
 cp -vn mapper-0.801.map "$x/mapper-0.82.5.map" || exit 1
 cp -vn mapper-SVN.map "$x/mapper-SVN.map" || exit 1
 
+testpick="$x"
 testroot="`pwd`"
 downld="$testroot/demo-download.pl"
 
