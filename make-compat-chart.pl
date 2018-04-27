@@ -86,6 +86,15 @@ open(S,"(find -type d; cat $list) | sort | uniq |") || die;
 while ($line = <S>) {
     chomp $line;
 
+    next unless -d $line;
+
+    # some are symlinks
+    $symlink_to = undef;
+    if ( -l $line ) {
+        $symlink_to = readlink($line);
+        die "path $line" unless defined($symlink_to);
+    }
+
     $line =~ s/^\.\///;
     $disp_line = $line;
     next unless $disp_line =~ s/^unpacked\///;
@@ -540,6 +549,16 @@ while ($line = <S>) {
 
     $comb = "";
     $combnotes = "";
+
+    if (defined($symlink_to)) {
+        $x = $symlink_to;
+        $x =~ s/^(\.\.\/)+//g;
+        $x =~ s/^(\.\/)+//g;
+        $x =~ s/^unpacked\///;
+        $x =~ s/^ftp\.scene\.org\///;
+        $x =~ s/^pub\///;
+        $more .= "<pre>* This is a known duplicate of $x</pre>";
+    }
 
     if ($comb ne "NO" && defined($notes_dosbox_x) && $notes_dosbox_x ne "") {
         if ($comb eq "" || $combnotes eq $notes_dosbox_x) {
