@@ -7,7 +7,7 @@ my $original = shift @ARGV;
 die unless -d $topdir;
 chdir $topdir || die;
 die unless $original =~ m/^\.\//;
-die unless -d $original;
+die "$original not a dir" unless -d $original;
 
 # pick something to match by.
 # pick the LARGEST executable file (EXE or COM)
