@@ -52,6 +52,9 @@ while (my $path = <X>) {
     # TEMP: we only want 1995 and earlier demos
 #    next unless ($path =~ m/\/199[0-5]\// || $path =~ m/\/198[0-9]\//);
 
+    # not our GIT repo!
+    next if $path =~ m/\/\.git\//;
+
     # skip Amiga demos, we can't run them
     next if $path =~ m/\/amiga\/demo\//;
 
