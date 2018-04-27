@@ -8,6 +8,13 @@ my $path2 = shift @ARGV;
 die unless -d $path1;
 die unless -d $path2;
 
+$x1 = `realpath -- $path1`;
+$x2 = `realpath -- $path2`;
+if ($x1 eq $x2) {
+    print "Already the same\n";
+    exit 1
+}
+
 sub getdir($) {
     my $path = shift @_;
     my @x;

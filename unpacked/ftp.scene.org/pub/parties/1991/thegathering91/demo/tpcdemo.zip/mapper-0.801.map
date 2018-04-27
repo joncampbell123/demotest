@@ -11,7 +11,6 @@ hand_speedlock2 "key 292"
 hand_decfskip "key 288 mod1" 
 hand_incfskip "key 289 mod1" 
 hand_recwave "key 287 mod1" 
-hand_recmtwave "key 288 mod1" 
 hand_caprawmidi "key 289 mod1 mod2" 
 hand_scrshot "key 286 mod1" 
 hand_video "key 286 mod1 mod2" 
@@ -22,8 +21,6 @@ hand_cycauto "key 61 mod1"
 hand_normal "key 49 mod1" 
 hand_full "key 50 mod1" 
 hand_simple "key 52 mod1" 
-hand_swapimg "key 285 mod1" 
-hand_swapcd "key 284 mod1" 
 key_esc "key 27" 
 key_f1 "key 282" 
 key_f2 "key 283" 
@@ -178,3 +175,5 @@ mod_1 "key 306" "key 305"
 mod_2 "key 308" "key 307" 
 mod_3 
 hand_caprawopl 
+hand_swapimg 
+hand_swapcd 
