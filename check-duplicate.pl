@@ -37,6 +37,7 @@ sub filter($$) {
     return 0 if $x =~ m/^file_id\.diz$/i;
     return 0 if $x =~ m/^hdd$/;
     return 0 if $x =~ m/^__.*__\.sh$/;
+    return 0 if $x =~ m/^_download_\.zip$/;
 
     # "This file has been at so and so BBS" add-ons to ignore
     return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1104;
