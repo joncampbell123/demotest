@@ -2,19 +2,30 @@ hand_shutdown "key 290 mod1"
 hand_capmouse "key 291 mod1" 
 hand_fullscr "key 13 mod2" 
 hand_restart "key 278 mod1 mod2" 
+hand_paste "key 285 mod1 mod2" 
+hand_pause "key 19 mod1" 
+hand_gui "key 291 mod2" 
 hand_mapper "key 282 mod1" 
 hand_speedlock "key 293" 
+hand_speedlock2 "key 292" 
+hand_decfskip "key 288 mod1" 
+hand_incfskip "key 289 mod1" 
 hand_recwave "key 287 mod1" 
+hand_recmtwave "key 288 mod1" 
 hand_caprawmidi "key 289 mod1 mod2" 
 hand_scrshot "key 286 mod1" 
 hand_video "key 286 mod1 mod2" 
-hand_decfskip "key 288 mod1" 
-hand_incfskip "key 289 mod1" 
+hand_debugger "key 19 mod2" 
+hand_volup "key 270" 
+hand_voldown "key 269" 
 hand_cycledown "key 292 mod1" 
 hand_cycleup "key 293 mod1" 
-hand_debugger "key 19 mod2" 
-hand_caprawopl "key 288 mod1 mod2" 
+hand_cycauto "key 61 mod1" 
+hand_normal "key 49 mod1" 
+hand_full "key 50 mod1" 
+hand_simple "key 52 mod1" 
 hand_swapimg "key 285 mod1" 
+hand_swapcd "key 284 mod1" 
 key_esc "key 27" 
 key_f1 "key 282" 
 key_f2 "key 283" 
@@ -26,8 +37,8 @@ key_f7 "key 288"
 key_f8 "key 289" 
 key_f9 "key 290" 
 key_f10 "key 291" 
-key_f11 "key 292" 
-key_f12 "key 293" 
+key_f11 
+key_f12 
 key_grave "key 96" 
 key_1 "key 49" 
 key_2 "key 50" 
@@ -83,13 +94,17 @@ key_period "key 46"
 key_slash "key 47" 
 key_rshift "key 303" 
 key_lctrl "key 306" 
+key_lwindows "key 311" 
 key_lalt "key 308" 
 key_space "key 32" 
 key_ralt "key 307" 
+key_rwindows "key 312" 
+key_rwinmenu "key 319" 
 key_rctrl "key 305" 
 key_printscreen "key 316" 
 key_scrolllock "key 302" 
 key_pause "key 19" 
+key_kp_equals "key 272" 
 key_insert "key 277" 
 key_home "key 278" 
 key_pageup "key 280" 
@@ -103,11 +118,11 @@ key_right "key 275"
 key_numlock "key 300" 
 key_kp_divide "key 267" 
 key_kp_multiply "key 268" 
-key_kp_minus "key 269" 
+key_kp_minus 
 key_kp_7 "key 263" 
 key_kp_8 "key 264" 
 key_kp_9 "key 265" 
-key_kp_plus "key 270" 
+key_kp_plus 
 key_kp_4 "key 260" 
 key_kp_5 "key 261" 
 key_kp_6 "key 262" 
@@ -117,6 +132,26 @@ key_kp_3 "key 259"
 key_kp_enter "key 271" 
 key_kp_0 "key 256" 
 key_kp_period "key 266" 
+key_f13 "key 294" 
+key_f14 "key 295" 
+key_f15 "key 296" 
+key_f16 
+key_f17 
+key_f18 
+key_f19 
+key_f20 
+key_f21 
+key_f22 
+key_f23 
+key_f24 
+key_jp_hankaku "key 172" 
+key_jp_muhenkan "key 173" 
+key_jp_henkan "key 174" 
+key_jp_hiragana "key 175" 
+key_jp_yen "key 171" 
+key_jp_bckslash "key 170" 
+key_kor_hancha 
+key_kor_hanyong 
 jbutton_0_0 
 jbutton_0_1 
 jaxis_0_1- 
@@ -141,6 +176,7 @@ jhat_0_0_0
 jhat_0_0_3 
 jhat_0_0_2 
 jhat_0_0_1 
-mod_1 "key 306" "key 305" 
-mod_2 "key 308" "key 307" 
+mod_1 "key 305" "key 306" 
+mod_2 "key 307" "key 308" 
 mod_3 
+hand_caprawopl 
