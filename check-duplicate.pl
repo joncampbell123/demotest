@@ -47,6 +47,9 @@ sub filter($$) {
 my @list1 = sort grep { filter($_,$path1) } getdir($path1);
 my @list2 = sort grep { filter($_,$path2) } getdir($path2);
 
+exit 1 if @list1 == 0;
+exit 1 if @list2 == 0;
+
 if (@list1 != @list2) {
     print "Not the same amount of files. ".@list1." vs ".@list2."\n";
     exit 1
