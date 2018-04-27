@@ -19,20 +19,26 @@ sub getdir($) {
     return @x;
 }
 
-sub filter($) {
+sub filter($$) {
     $x = shift @_;
+    $path = shift @_;
 
     return 0 if $x =~ m/^\.*$/;
     return 0 if $x =~ m/^__.*__$/;
     return 0 if $x =~ m/^mapper-.*\.map$/;
     return 0 if $x =~ m/^dosbox.*\.conf$/;
     return 0 if $x =~ m/^file_id\.diz$/i;
+    return 0 if $x =~ m/^hdd$/;
+    return 0 if $x =~ m/^__.*__\.sh$/;
+
+    # "This file has been at so and so BBS" add-ons to ignore
+    return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1104;
 
     return 1;
 }
 
-my @list1 = sort grep { filter($_) } getdir($path1);
-my @list2 = sort grep { filter($_) } getdir($path2);
+my @list1 = sort grep { filter($_,$path1) } getdir($path1);
+my @list2 = sort grep { filter($_,$path2) } getdir($path2);
 
 if (@list1 != @list2) {
     print "Not the same amount of files. ".@list1." vs ".@list2."\n";
