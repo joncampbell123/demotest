@@ -1,4 +1,2 @@
-- Crashes after credits, does not exit to DOS.
-  But, it passes, because this demo has a reputation for crashing
-  at the end anyway.
-
+Emulation accuracy notes:
+- Demo hangs at the end, does not exit to DOS. This is well known.
