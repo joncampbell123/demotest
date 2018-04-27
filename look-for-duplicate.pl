@@ -56,6 +56,10 @@ while (my $match = <M>) {
     next unless -d $matchbase;
     next if $matchbase =~ m/\.DUPLICATE$/;
 
+    # symlink ignore
+    next if -l $original;
+    next if -l $matchbase;
+
     # does it match?
     $x = system("$topdir/check-duplicate.pl",$matchbase,$original);
     next unless $x == 0;
