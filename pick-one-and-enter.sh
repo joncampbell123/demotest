@@ -92,7 +92,7 @@ pass() {
 }
 
 commit() {
-    git add *.conf *.map
+    git add *.conf
 
     if [ -f "bochsrc" ]; then git add "bochsrc"; fi
 
