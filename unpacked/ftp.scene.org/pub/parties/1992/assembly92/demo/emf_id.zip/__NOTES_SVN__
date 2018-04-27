@@ -1,3 +1,0 @@
-Why the demo failed the test:
-- SVN version does not emulate DSP alias port 22Dh
-- SVN version does not support backwards DMA

@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- SVN version does not emulate goldplay, DSP nagging, and the ability to sense the end of the DSP block through the DSP busy cycle
