@@ -56,7 +56,7 @@ while (my $path = <X>) {
     next if $path =~ m/\/\.git\//;
 
     # skip Amiga demos, we can't run them
-    next if $path =~ m/\/amiga\/demo\//;
+    next if $path =~ m/\/amiga\/(demo|in64|in40|in4k)\//;
 
     # no MOD music executables
     next if $path =~ m/\/m4ch\//;
