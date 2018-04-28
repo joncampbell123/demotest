@@ -2,3 +2,7 @@ dosbox-template.conf
 pick-one.cache
 pick-one.svn.cache
 pick-one.xdos.cache
+pick-one.qemu.cache
+pick-one.svnbochs.cache
+pick-one.svndos.cache
+
