@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- GUS support stuck.
+- Gravis Ultrasound output hangs, waiting for a bit from register 8Dh

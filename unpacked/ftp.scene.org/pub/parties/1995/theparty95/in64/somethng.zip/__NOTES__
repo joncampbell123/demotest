@@ -1,5 +1,3 @@
 Why the demo failed the test:
-- Exits to DOS with keyboard in an unresponsive state
-- Sound Blaster audio sounds like vague buzzing, compared
-  to GUS playback that sounds like proper music.
+- Leaves keyboard unresponsive when exiting to DOS
 

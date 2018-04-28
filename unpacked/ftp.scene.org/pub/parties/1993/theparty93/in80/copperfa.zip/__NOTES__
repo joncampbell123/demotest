@@ -1,4 +1,0 @@
-Most of the VGA effects in this demo rely on "copper bars"
-and on warping the display through reprogramming the offset
-register once per scanline.
-

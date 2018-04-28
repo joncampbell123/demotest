@@ -1,6 +1,2 @@
-Demo doesn't respond to keystrokes during the credits.
-It's impossible to exit.
-
-Will remove __FAIL__ status if demo has the same problem
-on real hardware.
-
+Why the demo failed the test:
+- Demo does not stop GUS music and does not unhook music interrupt. Running anything after this point will crash DOS. Will mark as PASS if demo does the same thing on REAL HARDWARE.

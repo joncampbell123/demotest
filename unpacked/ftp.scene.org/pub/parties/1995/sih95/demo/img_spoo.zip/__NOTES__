@@ -1,3 +1,1 @@
-Why the demo failed the test:
-- Crashes with a storm of Divide by Zero exception
-
+- Demo will consistently crash with divide by zero exception

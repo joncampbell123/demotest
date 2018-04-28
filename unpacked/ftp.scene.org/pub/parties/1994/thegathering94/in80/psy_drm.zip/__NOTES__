@@ -1,3 +1,3 @@
 Why the demo failed the test:
-- Demo does not restore screen to text mode before exiting to DOS
-
+- Demo dumps to DOS without restoring screen mode.
+  Not sure if intentional.

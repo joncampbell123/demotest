@@ -1,1 +1,3 @@
-Divide by zero exception during the 3D ship fight
+Why the demo failed the test:
+- Always crashes at one point with divide by zero
+

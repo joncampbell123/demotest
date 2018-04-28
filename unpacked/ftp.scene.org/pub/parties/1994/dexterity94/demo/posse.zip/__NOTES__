@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- Ooooooo! So close! Demo runs perfectly but crashes on exit (Invalid opcode exception).
+- On exit, demo gets stuck waiting for DSP to clear busy bit
+- Demo doesn't recognize Sound Blaster Pro, even though sbtype=sbpro2
