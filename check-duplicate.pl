@@ -26,6 +26,12 @@ sub getdir($) {
     return @x;
 }
 
+sub lcsort($$) {
+    $a = shift @_;
+    $b = shift @_;
+    return lc($a) cmp lc($b);
+}
+
 sub filter($$) {
     $x = shift @_;
     $path = shift @_;
@@ -47,8 +53,8 @@ sub filter($$) {
     return 1;
 }
 
-my @list1 = sort grep { filter($_,$path1) } getdir($path1);
-my @list2 = sort grep { filter($_,$path2) } getdir($path2);
+my @list1 = sort { lcsort($a,$b) } grep { filter($_,$path1) } getdir($path1);
+my @list2 = sort { lcsort($a,$b) } grep { filter($_,$path2) } getdir($path2);
 
 exit 1 if @list1 == 0;
 exit 1 if @list2 == 0;
@@ -61,6 +67,9 @@ if (@list1 != @list2) {
 for ($i=0;$i < @list1;$i++) {
     if (lc($list1[$i]) ne lc($list2[$i])) {
         print "Not the same files names. ".$list1[$i]." vs ".$list2[$i]."\n";
+        for ($j=0;$j < @list1;$j++) {
+            print "  List[$j] = ".$list1[$j]." vs ".$list2[$j]."\n";
+        }
         exit 1
     }
 }
