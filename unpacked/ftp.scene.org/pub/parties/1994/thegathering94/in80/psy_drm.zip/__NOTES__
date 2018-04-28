@@ -1,3 +1,0 @@
-Why the demo failed the test:
-- Demo dumps to DOS without restoring screen mode.
-  Not sure if intentional.

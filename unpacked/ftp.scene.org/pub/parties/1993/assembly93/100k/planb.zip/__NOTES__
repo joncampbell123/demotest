@@ -1,5 +1,0 @@
-Notes:
-- Demo is a bit unstable and may write random garbage into extended memory.
-The following dosbox.conf settings are known to cause the demo to crash:
-- ems=false
-- memsize=8 to memsize=12
