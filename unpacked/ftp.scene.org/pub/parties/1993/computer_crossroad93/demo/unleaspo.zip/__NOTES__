@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Sound Blaster Pro output crashes (will mark as PASS if same crash occurs on REAL HARDWARE). Confirmed, real hardware: Tests 1/1
