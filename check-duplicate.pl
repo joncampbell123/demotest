@@ -48,6 +48,7 @@ sub filter($$) {
     return 0 if $x =~ m/^scene\.org$/i;
     return 0 if $x =~ m/^qemu\.conf$/i;
     return 0 if $x =~ m/^bochsrc$/;
+    return 0 if $x =~ m/^dosbox\.log\.txt$/i;
 
     # "This file has been at so and so BBS" add-ons to ignore
     return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1104;
