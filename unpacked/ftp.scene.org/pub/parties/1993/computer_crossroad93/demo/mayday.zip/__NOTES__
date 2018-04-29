@@ -1,9 +1,0 @@
-Demo bugs:
-  - The demo seems to mask IRQ 2 (or 8) and then expect the BIOS
-    to carry out INT 15h AH=86h properly. Since DOSBox relies on
-    the RTC interrupt to count time, this doesn't work, and the
-    demo hangs after the introductory text. DOSBox-X contains a
-    fix to deal with this.
-
-  - Very minor sound skips and stutters during the rave part
-
