@@ -46,9 +46,12 @@ sub filter($$) {
     return 0 if $x =~ m/^_download_\.zip$/;
     return 0 if $x =~ m/^scene\.org\.txt$/i;
     return 0 if $x =~ m/^scene\.org$/i;
+    return 0 if $x =~ m/^qemu\.conf$/i;
+    return 0 if $x =~ m/^bochsrc$/;
 
     # "This file has been at so and so BBS" add-ons to ignore
     return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1104;
+    return 0 if $x =~ m/^STARPRT2\.EXE$/i && -s "$path/$x" == 6400;
 
     return 1;
 }
@@ -61,6 +64,9 @@ exit 1 if @list2 == 0;
 
 if (@list1 != @list2) {
     print "Not the same amount of files. ".@list1." vs ".@list2."\n";
+    for ($j=0;$j < @list1;$j++) {
+        print "  List[$j] = ".$list1[$j]." vs ".$list2[$j]."\n";
+    }
     exit 1
 }
 
