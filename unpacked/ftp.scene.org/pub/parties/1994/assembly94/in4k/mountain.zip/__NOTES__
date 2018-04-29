@@ -1,3 +1,2 @@
 Why the demo failed the test:
-- It draws every other Mode X "pixel". Not sure it it's supposed to do that.
-
+- VGA Mode X problem

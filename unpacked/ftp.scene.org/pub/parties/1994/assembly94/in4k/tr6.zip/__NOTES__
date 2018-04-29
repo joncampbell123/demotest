@@ -1,4 +1,0 @@
-Why the demo failed the test:
-- Demo does not restore graphics mode at exit
-- Some of the text is garbled
-

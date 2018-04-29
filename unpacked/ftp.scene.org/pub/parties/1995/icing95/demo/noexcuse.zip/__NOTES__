@@ -1,3 +1,2 @@
 Why the demo failed the test:
-- Demo GUS player crashes. Demo does run without music.
-
+- Crashes on startup IF it detects Gravis Ultrasound
