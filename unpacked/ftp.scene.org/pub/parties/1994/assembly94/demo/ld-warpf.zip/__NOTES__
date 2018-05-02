@@ -1,1 +1,2 @@
-Demo is unable to detect the CPU properly, requires you to enter it in.
+Why the demo failed the test:
+- Demo requires CONFIG.EXE to run, CONFIG.EXE hangs if run before WARP.EXE
