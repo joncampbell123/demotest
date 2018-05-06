@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Uses VGA active display "animiation" which doesn't work well with DOSBox-X
+- Crashes with invalid opcode
+
