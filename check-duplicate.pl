@@ -70,6 +70,8 @@ exit 1 if @list2 == 0;
 if (@list1 != @list2) {
     $count = @list1;
     $count = @list2 if $count < @list2;
+    print "in $path1\n";
+    print "vs $path2\n";
     print "Not the same amount of files. ".@list1." vs ".@list2."\n";
     for ($j=0;$j < $count;$j++) {
         print "  List[$j] = ".$list1[$j]." vs ".$list2[$j]."\n";
@@ -79,6 +81,8 @@ if (@list1 != @list2) {
 
 for ($i=0;$i < @list1;$i++) {
     if (lc($list1[$i]) ne lc($list2[$i])) {
+        print "in $path1\n";
+        print "vs $path2\n";
         print "Not the same files names. ".$list1[$i]." vs ".$list2[$i]."\n";
         for ($j=0;$j < @list1;$j++) {
             print "  List[$j] = ".$list1[$j]." vs ".$list2[$j]."\n";
@@ -101,6 +105,8 @@ for ($i=0;$i < @list1;$i++) {
     $sz2 = -s $fp2;
 
     if ($sz1 != $sz2) {
+        print "in $path1\n";
+        print "vs $path2\n";
         print "File size mismatch:\n";
         print "    ".$list1[$i]." ".$sz1."\n";
         print "    ".$list2[$i]." ".$sz2."\n";
@@ -114,6 +120,8 @@ for ($i=0;$i < @list1;$i++) {
 
     $x = system("/usr/bin/cmp","-b","--",$fp1,$fp2);
     if ($x != 0) {
+        print "in $path1\n";
+        print "vs $path2\n";
         print "File content mismatch for ".$list1[$i]."\n";
         exit 1
     }
