@@ -49,10 +49,12 @@ sub filter($$) {
     return 0 if $x =~ m/^qemu\.conf$/i;
     return 0 if $x =~ m/^bochsrc$/;
     return 0 if $x =~ m/^dosbox\.log\.txt$/i;
-    return 0 if $x =~ m/^type_me\.pls$/;
+    return 0 if $x =~ m/^type_me\.pls$/i;
+    return 0 if $x =~ m/^TWILIGHT\.NFO$/i;
 
     # "This file has been at so and so BBS" add-ons to ignore
     return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1104;
+    return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1709;
     return 0 if $x =~ m/^STARPRT2\.EXE$/i && -s "$path/$x" == 6400;
     return 0 if $x =~ m/^ZERO-BBS\.EXE$/i && -s "$path/$x" == 7729;
 
@@ -66,8 +68,10 @@ exit 1 if @list1 == 0;
 exit 1 if @list2 == 0;
 
 if (@list1 != @list2) {
+    $count = @list1;
+    $count = @list2 if $count < @list2;
     print "Not the same amount of files. ".@list1." vs ".@list2."\n";
-    for ($j=0;$j < @list1;$j++) {
+    for ($j=0;$j < $count;$j++) {
         print "  List[$j] = ".$list1[$j]." vs ".$list2[$j]."\n";
     }
     exit 1
