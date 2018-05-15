@@ -49,10 +49,12 @@ sub filter($$) {
     return 0 if $x =~ m/^qemu\.conf$/i;
     return 0 if $x =~ m/^bochsrc$/;
     return 0 if $x =~ m/^dosbox\.log\.txt$/i;
+    return 0 if $x =~ m/^type_me\.pls$/;
 
     # "This file has been at so and so BBS" add-ons to ignore
     return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1104;
     return 0 if $x =~ m/^STARPRT2\.EXE$/i && -s "$path/$x" == 6400;
+    return 0 if $x =~ m/^ZERO-BBS\.EXE$/i && -s "$path/$x" == 7729;
 
     return 1;
 }
