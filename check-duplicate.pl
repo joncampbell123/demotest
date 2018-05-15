@@ -57,6 +57,7 @@ sub filter($$) {
     return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1709;
     return 0 if $x =~ m/^STARPRT2\.EXE$/i && -s "$path/$x" == 6400;
     return 0 if $x =~ m/^ZERO-BBS\.EXE$/i && -s "$path/$x" == 7729;
+    return 0 if $x =~ m/^BLUE\.COM$/i     && -s "$path/$x" == 4874;
 
     return 1;
 }
