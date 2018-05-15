@@ -51,13 +51,18 @@ sub filter($$) {
     return 0 if $x =~ m/^dosbox\.log\.txt$/i;
     return 0 if $x =~ m/^type_me\.pls$/i;
     return 0 if $x =~ m/^TWILIGHT\.NFO$/i;
+    return 0 if $x =~ m/^DEFIANCE\.NFO$/i;
+    return 0 if $x =~ m/^README\.TXT$/i;
+    return 0 if $x =~ m/\.FAQ$/i;
 
     # "This file has been at so and so BBS" add-ons to ignore
     return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1104;
     return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1709;
     return 0 if $x =~ m/^STARPRT2\.EXE$/i && -s "$path/$x" == 6400;
     return 0 if $x =~ m/^ZERO-BBS\.EXE$/i && -s "$path/$x" == 7729;
+    return 0 if $x =~ m/^MER-XMAS\.COM$/i && -s "$path/$x" == 1339;
     return 0 if $x =~ m/^BLUE\.COM$/i     && -s "$path/$x" == 4874;
+    return 0 if $x =~ m/^UNO\.COM$/i      && -s "$path/$x" == 5920;
 
     return 1;
 }
