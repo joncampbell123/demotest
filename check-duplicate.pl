@@ -53,7 +53,11 @@ sub filter($$) {
     return 0 if $x =~ m/^TWILIGHT\.NFO$/i;
     return 0 if $x =~ m/^DEFIANCE\.NFO$/i;
     return 0 if $x =~ m/^README\.TXT$/i;
+    return 0 if $x =~ m/\.NFO$/i;
     return 0 if $x =~ m/\.FAQ$/i;
+    return 0 if $x =~ m/\.DOC$/i;
+    return 0 if $x =~ m/\.TXT$/i;
+    return 0 if $x =~ m/\.BBS$/i;
 
     # "This file has been at so and so BBS" add-ons to ignore
     return 0 if $x =~ m/^demosite\.com$/i && -s "$path/$x" == 1104;
