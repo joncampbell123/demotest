@@ -1,6 +1,0 @@
-Demo seems to read random I/O ports sometimes, and write 0x8F to random I/O ports.
-Something with the GUS IRQ, perhaps?
-
-Also, demo will exit to DOS, but the instant you touch the keyboard, the IRQ 1 handler
-it installs segfaults!
-

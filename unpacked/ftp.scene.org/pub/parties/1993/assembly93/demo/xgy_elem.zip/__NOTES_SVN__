@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Demo appears to be skipping half of it's parts. Not sure if it has anything to do with unpacking itself into a temporary directory.
