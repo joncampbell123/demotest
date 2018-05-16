@@ -1,1 +1,3 @@
-The palette rotation fractal part isn't rendering properly.
+Why the demo failed the test:
+- The palette rotation fractal part isn't rendering properly.
+- Black screens.
