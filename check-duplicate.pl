@@ -52,7 +52,7 @@ sub filter($$) {
     return 0 if $x =~ m/^type_me\.pls$/i;
     return 0 if $x =~ m/^TWILIGHT\.NFO$/i;
     return 0 if $x =~ m/^DEFIANCE\.NFO$/i;
-    return 0 if $x =~ m/^README\.TXT$/i;
+    return 0 if $x =~ m/^README\./i;
     return 0 if $x =~ m/\.NFO$/i;
     return 0 if $x =~ m/\.FAQ$/i;
     return 0 if $x =~ m/\.DOC$/i;
@@ -67,6 +67,7 @@ sub filter($$) {
     return 0 if $x =~ m/^MER-XMAS\.COM$/i && -s "$path/$x" == 1339;
     return 0 if $x =~ m/^BLUE\.COM$/i     && -s "$path/$x" == 4874;
     return 0 if $x =~ m/^UNO\.COM$/i      && -s "$path/$x" == 5920;
+    return 0 if $x =~ m/^TRIPLEX!\.COM$/i && -s "$path/$x" == 4072;
 
     return 1;
 }
