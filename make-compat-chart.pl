@@ -94,6 +94,9 @@ while ($line = <S>) {
     # no MOD music executables
     next if $line =~ m/\/m4ch\//;
 
+    # no graphics
+    next if $line =~ m/\/grfx\//;
+
     # some are symlinks
     $symlink_to = undef;
     if ( -l $line ) {
