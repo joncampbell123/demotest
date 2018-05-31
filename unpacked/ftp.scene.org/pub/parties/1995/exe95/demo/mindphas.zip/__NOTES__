@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Rotating torus part flickers badly, as if not page flipping properly
