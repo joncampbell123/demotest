@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo runs, but only shows credits and a graphic. The number of files in the directory suggest the demo should do more.
+
