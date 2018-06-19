@@ -1,4 +1,0 @@
-Demo ends suddenly, drops to the DOS prompt, while leaving the screen
-in mode 0x13. Unless I see evidence otherwise, I'm going to assume that
-means the demo crashed.
-
