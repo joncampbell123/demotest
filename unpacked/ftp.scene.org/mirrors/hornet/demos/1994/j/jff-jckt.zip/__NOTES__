@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- "There's a problem with your video card"
+- "There's a problem with your video card". Will mark as PASS if this happens on real hardware.
