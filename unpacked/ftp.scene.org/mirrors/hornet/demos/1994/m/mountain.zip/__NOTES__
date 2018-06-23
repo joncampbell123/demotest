@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- VGA Mode X problem
+Demo bugs:
+- Demo programs VGA Mode X, but accidentally enables chain odd/even mode which will likely cause incorrect display on real hardware.
