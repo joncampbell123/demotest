@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo exits to DOS without stopping music playback (leaves interrupt in memory). DOS will crash if you run anything else.
