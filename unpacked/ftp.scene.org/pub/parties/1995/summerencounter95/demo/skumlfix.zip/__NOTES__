@@ -1,2 +1,1 @@
-Why the demo failed the test:
-- Middle plasma shows up only one bitplane
+- Demo turns VGA DWORD and WORD mode off at some point, which on non-ET4000 chipsets will not yield correct display

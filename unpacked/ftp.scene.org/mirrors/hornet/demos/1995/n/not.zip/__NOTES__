@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo seems to rely on something the VGA emulation isn't offering in it's 320x400x256 mode, perhaps the 128KB A000 mapping
+- Demo seems to rely on something the VGA emulation isn't offering in it's 320x400x256 mode, perhaps the 128KB A000 mapping. Will mark as PASS if this occurs on real hardware.

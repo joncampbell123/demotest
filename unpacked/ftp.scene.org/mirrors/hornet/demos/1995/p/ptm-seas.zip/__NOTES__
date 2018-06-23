@@ -1,1 +1,4 @@
 Why the demo failed the test:
+- Gets stuck in the random blit test portion.
+  Does not respond to keyboard to move on or exit.
+

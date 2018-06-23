@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- SVGA display has random small black lines in it
+- SVGA display has random small black lines in it. Will mark PASS if it occurs on real hardware.

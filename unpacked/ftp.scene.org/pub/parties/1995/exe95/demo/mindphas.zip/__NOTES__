@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- Rotating torus part flickers badly, as if not page flipping properly
+- Rotating torus part flickers badly, as if not page flipping properly (SVGA page flipping problem?)
+- Closing credits do not scroll properly (reliance on SVGA memory wraparound?)
