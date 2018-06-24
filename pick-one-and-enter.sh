@@ -15,6 +15,9 @@ pick=
 if [[ -n "$2" ]]; then
     pick="$2"
     if [[ !( -d "$pick" ) ]]; then echo No such $pick; exit 1; fi
+else
+    echo Second parameter required
+    exit 1
 fi
 
 if [[ "$what" == "qemu" ]]; then
