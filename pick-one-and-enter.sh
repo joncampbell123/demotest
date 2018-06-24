@@ -4,11 +4,17 @@ what=
 pext=
 filesuffix=
 
+if [[ "$1" == "x" ]]; then what=x; pext=""; filesuffix=""; fi
 if [[ "$1" == "svn" ]]; then what=svn; pext=" svn"; filesuffix="_SVN"; fi
 if [[ "$1" == "xdos" ]]; then what=xdos; pext=" xdos"; filesuffix="_XDOS"; fi
 if [[ "$1" == "qemu" ]]; then what=qemu; pext=" qemu"; filesuffix="_QEMU"; fi
 if [[ "$1" == "svndos" ]]; then what=svndos; pext=" svndos"; filesuffix="_SVNDOS"; fi
 if [[ "$1" == "svnbochs" ]]; then what=svnbochs; pext=" svnbochs"; filesuffix="_SVNBOCHS"; fi
+
+if [[ -z "$what" ]]; then
+    echo Test env must be specified
+    exit 1
+fi
 
 pick=
 
