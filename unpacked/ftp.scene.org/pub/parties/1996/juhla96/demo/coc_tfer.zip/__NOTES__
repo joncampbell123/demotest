@@ -1,4 +1,2 @@
-The only reason for failure, is the failure of the demo
-to set the VGA palette when showing SVGA text (making it
-unreadable).
-
+Why the demo failed the test:
+- Initial title screens, failure to set the palette fully, making the text unreadable
