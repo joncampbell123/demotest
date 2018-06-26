@@ -1,2 +1,2 @@
-Crashes midway, invalid opcode FFFF
-
+Why the demo failed the test:
+- Crashes midway, invalid opcode FFFF
