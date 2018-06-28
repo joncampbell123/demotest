@@ -1,2 +1,2 @@
-Demo will crash if you select the 32bpp VBE mode.
-
+Why the demo failed the test:
+- "E_Exit: No byte handler for write to ffffffff" if you select VBE 32bpp
