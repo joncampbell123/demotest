@@ -1,4 +1,3 @@
 Why the demo failed the test:
-- Does not start. Screen is blank. Debugger shows a loop
-  reading the keyboard. Not sure what's wrong.
+- Does not start. Screen is blank. Exits to DOS after hitting ESC.
 
