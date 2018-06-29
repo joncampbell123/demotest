@@ -1,4 +1,0 @@
-Why the demo failed the test:
-- Game sits at a black screen, waiting for keypress.
-- Supports IPX, but handles it badly if DOSBox-X is not emulating it.
-
