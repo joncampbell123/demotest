@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Missing S3M music file. Demo either crashes or plays noise instead of music.
+
