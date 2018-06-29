@@ -1,0 +1,5 @@
+Why the demo failed the test:
+- It consistently, at many points of the demo, overdraws
+  past VGA display memory and into the VGA BIOS, triggering
+  many "write to rom" warnings.
+
