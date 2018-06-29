@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Starts up, then exits to DOS
+Things to look into:
+- "MIDAS Error: Out of soundcard memory" if the demo uses Gravis Ultrasound hardware mixing for music
