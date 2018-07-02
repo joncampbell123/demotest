@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- Uses 640x480 truecolor VESA mode, but does not display properly (24bpp or 32bpp?)
+- Uses 640x480 truecolor VESA mode, but does not display properly (24bpp or 32bpp?). Not certain what it's trying to display.
+! Please examine this demo on real hardware
