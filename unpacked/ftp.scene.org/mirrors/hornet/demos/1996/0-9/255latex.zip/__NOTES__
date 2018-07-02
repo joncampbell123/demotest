@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- E_Exit: No byte handler for write to ffffffb3
+- "Please use a VBE 2.0 driver with lowres support" even though we DO SUPPORT IT
