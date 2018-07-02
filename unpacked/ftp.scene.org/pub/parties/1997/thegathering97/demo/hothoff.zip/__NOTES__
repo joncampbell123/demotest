@@ -1,3 +1,0 @@
-Why the demo failed the test:
-- When you select 320x200x32bpp it switches to 320x200x16bpp and misrenders.
-
