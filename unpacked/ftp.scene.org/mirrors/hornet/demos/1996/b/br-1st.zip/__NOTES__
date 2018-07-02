@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- "E_Exit: No byte handler for write to ffff0028"
+- Demo does not exit to DOS at the end, does not respond to keyboard. Will mark PASS if this occurs on real hardware.

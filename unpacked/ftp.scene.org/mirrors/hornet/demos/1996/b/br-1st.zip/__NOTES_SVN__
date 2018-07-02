@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo does not exit to DOS, music keeps playing
+- Demo does not exit to DOS at the end, does not respond to keyboard. Will mark PASS if this occurs on real hardware.
