@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- E_Exit: No byte handler for write to fffffffb
+- PMODE/W not enough memory (?) if gus=true
+- Runs only the end scroller if gus=false
