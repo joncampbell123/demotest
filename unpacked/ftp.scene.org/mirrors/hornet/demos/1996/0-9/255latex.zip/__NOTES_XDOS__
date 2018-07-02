@@ -1,2 +1,1 @@
-Why the demo failed the test:
-- E_Exit: No byte handler for write to ffffffb3
+- It's unknown whether the rotating cityscape at the end is supposed to end on it's own, hit ESC to exit

@@ -1,2 +1,1 @@
-Why the demo failed the test:
-- "Please use a VBE 2.0 driver with lowres support" even though we DO SUPPORT IT
+- It's unknown whether the rotating cityscape at the end is supposed to end on it's own, hit ESC to exit
