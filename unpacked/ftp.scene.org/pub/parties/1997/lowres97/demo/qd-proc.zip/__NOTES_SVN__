@@ -1,2 +1,1 @@
-Why the demo failed the test:
-- Hard-coded for UNIVBE, VESA BIOS mode 0x136, 320x200x16bpp, which is not emulated by DOSBox SVN
+- Demo is hard-coded for UNIVBE, VESA BIOS mode 0x136, 320x200x16bpp, which is not emulated by DOSBox SVN
