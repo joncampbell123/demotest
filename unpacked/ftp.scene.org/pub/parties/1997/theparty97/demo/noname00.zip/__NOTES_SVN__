@@ -1,2 +1,3 @@
 Why the demo failed the test:
 - Demo runs fine but the VGA color palette is not fully written, making the white snowflakes black. Will mark PASS if this happens on real hardware.
+! PLEASE TEST ON REAL HARDWARE TO VERIFY THIS IS THE ACTUAL DEMO BEHAVIOR
