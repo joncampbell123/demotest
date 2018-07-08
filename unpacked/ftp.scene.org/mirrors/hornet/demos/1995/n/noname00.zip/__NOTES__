@@ -1,8 +1,0 @@
-Why the demo failed the test:
-- There is a part mid-demo that shows an "I" half-inverted, which
-  scrolls up then leaves a blank screen for an extended amount of time.
-  Will mark PASS if this happens on real hardware.
-! PLEASE TEST THIS DEMO ON REAL HARDWARE
-TEST RESULTS:
-- PASS: Chips & Tech 65554 SVGA (Same "I" result, however mirrored rotozoomer is also garbled)
-- PASS: S3 VIRGE PCI SVGA (Same "I" result)
