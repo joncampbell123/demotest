@@ -3,3 +3,4 @@ Why the demo failed the test:
 ! PLEASE TEST THIS ON REAL HARDWARE
 TEST RESULTS:
 - Inconclusive: Chips & Tech 65554 SVGA: Text moves slower, has a "melted" effect. Second part displays just as DOSBox-X though.
+- Inconclusive: S3 VIRGE PCI SVGA: Text moves slower, has a "melted" effect. Second part displays just as DOSBox-X though.

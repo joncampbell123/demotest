@@ -3,3 +3,4 @@ Why the demo failed the test:
 ! PLEASE TEST THIS ON REAL HARDWARE
 TEST RESULTS:
 - FAIL: Chips & Tech 65554 SVGA. Demo did not exit immediately, but ran just as it does in DOSBox SVN
+- FAIL: S3 VIRGE PCI SVGA. Demo did not exit immediately, but ran just as it does in DOSBox SVN

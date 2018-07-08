@@ -3,4 +3,6 @@ Why the demo failed the test:
 ! Please check against real hardware
 TEST RESULTS:
 - Inconclusive: Chips & Tech 65554 SVGA laptop. Not having EMM386.EXE loaded results in "not enough memory for samples" on a laptop with 32MB of memory. Right.
-- FAIL. Running IPLAY.EXE in DOSBox-X but selecting Sound Blaster instead of Gravis Ultrasound causes more normal (though still fast) playback. Gravis Ultrasound playback is WAY TOO FAST.
+- Inconclusive: S3 VIRGE PCI SVGA. EMM386.EXE is resident. System does not have GUS, but has Sound Blaster 16, which plays at normal speed.
+- FAIL. Running IPLAY.EXE in DOSBox-X but selecting Sound Blaster 16 instead of Gravis Ultrasound gives very normal playback. Gravis Ultrasound playback is WAY TOO FAST.
+- FAIL. Running IPLAY.EXE in DOSBox-X but selecting Sound Blaster Pro instead of Gravis Ultrasound causes audio playback at 200% speed (and audio is higher pitched as well) unless you specifically set a mixing rate of 44KHz. Gravis Ultrasound playback is WAY TOO FAST.

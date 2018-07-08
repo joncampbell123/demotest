@@ -3,3 +3,4 @@ Why the demo failed the test:
 ! Please examine this demo on real hardware
 TEST RESULTS:
 - Inconclusive: Chips & Tech 65554 SVGA Laptop. Demo refuses to run without Gravis Ultrasound.
+- Inconclusive: S3 VIRGE DX PCI SVGA. Demo refuses to run without Gravis Ultrasound.
