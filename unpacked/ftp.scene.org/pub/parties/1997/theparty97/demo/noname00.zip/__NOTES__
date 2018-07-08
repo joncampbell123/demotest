@@ -1,3 +1,2 @@
 Why the demo failed the test:
-- Invalid opcode exception (FF FFh)
-
+- Demo runs fine but the VGA color palette is not fully written, making the white snowflakes black. Will mark PASS if this happens on real hardware.
