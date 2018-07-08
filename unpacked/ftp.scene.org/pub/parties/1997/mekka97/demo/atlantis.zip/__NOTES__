@@ -1,4 +1,4 @@
 Why the demo failed the test:
 - GUS music sounds like it didn't load properly.
 - Demo gets stuck in an infinite loop "floating" around a 3D ship model.
-
+! PLEASE TEST ON REAL HARDWARE
