@@ -1,3 +1,6 @@
 Why the demo failed the test:
 - Not sure if demo is rendering correctly the display
 ! PLEASE TEST THIS ON REAL HARDWARE
+
+TEST RESULTS:
+- Chips & Tech 65554 SVGA: Inconclusive, garbled display (even worse than DOSBox-X)
