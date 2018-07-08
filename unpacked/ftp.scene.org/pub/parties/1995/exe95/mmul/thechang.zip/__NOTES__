@@ -1,3 +1,6 @@
 Why the demo failed the test:
 - Music plays way too fast (unless that's intentional??).
 ! Please check against real hardware
+TEST RESULTS:
+- Inconclusive: Chips & Tech 65554 SVGA laptop. Not having EMM386.EXE loaded results in "not enough memory for samples" on a laptop with 32MB of memory. Right.
+- FAIL. Running IPLAY.EXE in DOSBox-X but selecting Sound Blaster instead of Gravis Ultrasound causes more normal (though still fast) playback. Gravis Ultrasound playback is WAY TOO FAST.
