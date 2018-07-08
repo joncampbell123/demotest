@@ -1,2 +1,5 @@
 Why the demo failed the test:
 - Sound Blaster support crashes if about 600KB of memory is available
+! PLEASE TEST ON REAL HARDWARE
+TEST RESULTS:
+- FAIL. Chips & Tech 65554 SVGA Laptop with Sound Blaster Pro compatible. Demo crashes just after morphing fractals, just as it does in DOSBox-X.
