@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Random I/O ports are being accessed during demo
+Concerns to investiage:
+- Random I/O ports are being accessed during demo. The values written and read suggest the GUS playback routines are doing it.
