@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo hangs initializing GUS
+- Demo hangs initializing GUS (stuck polling IRQ/DMA status register)
