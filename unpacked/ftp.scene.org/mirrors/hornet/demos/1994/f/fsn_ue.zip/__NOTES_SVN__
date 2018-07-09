@@ -1,2 +1,3 @@
-Why the demo failed the test:
-- SVN does not support Goldplay, and does not unmask IRQ
+Possible emulation problems:
+- Demo refuses to talk to the Gravis Ultrasound. Why? Is this true of real hardware?
+! PLEASE TEST ON REAL HARDWARE

@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- Sound Blaster support crashes
+- Sound Blaster support crashes. Will mark PASS if it happens on real hardware.
+! PLEASE TEST ON REAL HARDWARE

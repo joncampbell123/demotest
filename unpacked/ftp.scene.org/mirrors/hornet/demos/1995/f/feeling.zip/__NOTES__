@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Gravis Ultrasound output hangs, waiting for a bit from register 8Dh
