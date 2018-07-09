@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo does not exit to DOS
+- Demo does not exit to DOS (instead goes to an infinite loop aka JMP $)
