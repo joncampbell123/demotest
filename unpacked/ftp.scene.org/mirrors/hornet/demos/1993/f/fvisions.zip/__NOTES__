@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Gravis Ultrasound support uploads samples via DMA, but does not play music
