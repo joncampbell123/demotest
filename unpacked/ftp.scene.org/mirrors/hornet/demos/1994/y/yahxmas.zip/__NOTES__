@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- Sound Blaster Pro support tries to use SB16 commands. Is the demo mis-detecting the DSP version?
+- Sound Blaster Pro support tries to use SB16 commands. Is the demo mis-detecting the DSP version? Will mark pass if the same happens on REAL HARDWARE.
+! PLEASE TEST THIS ON REAL HARDWARE

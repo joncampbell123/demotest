@@ -1,3 +1,2 @@
-Why the demo failed the test:
-- End loop does not exit
-
+Notes:
+- End loop does not exit. However looking at the end "techno" loop, the INT 21h 4Ch call is there but no branch path is given to it from that loop. The demo has the keyboard masked off, and does not check the keyboard.
