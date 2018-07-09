@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo crashes on shutdown trying to execute an invalid opcode (FFh FFh somewhere near the top of RAM)
+- Demo ALMOST exits normally, waiting on INT 16h, except that it keeps it's own keyboard handler hooked to IRQ 1 and therefore INT 16h can't read anything.
