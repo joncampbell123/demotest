@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- Demo kills it's own music routines midway through, leaving "stuck notes"
+- Demo kills it's own music routines midway through, leaving "stuck notes". Will mark as PASS if this occurs on REAL HARDWARE
+! PLEASE TEST ON REAL HARDWARE
