@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Gravis Ultrasound music sounds incomplete, and sparse. Will mark PASS if it happens on REAL HARDWARE.
+- The demo runs at half the frame rate that it does in DOSBox SVN for some reason IF Gravis Ultrasound is selected.
