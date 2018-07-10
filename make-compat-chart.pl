@@ -81,6 +81,8 @@ sub escape_shell($) {
 
 my $tot_x = 0,$pass_x = 0;
 my $tot_svn = 0,$pass_svn = 0;
+my $tot_xdos = 0,$pass_xdos = 0;
+my $tot_svndos = 0,$pass_svndos = 0;
 
 $count = 0;
 $list = "pick-one.cache  pick-one.qemu.cache  pick-one.svnbochs.cache  pick-one.svn.cache  pick-one.svndos.cache  pick-one.xdos.cache";
@@ -252,10 +254,13 @@ while ($line = <S>) {
     die unless !defined($pass_dosbox_xdos_rev_file);
 
     if ( -f "$line/__PASS_XDOS__" ) {
+        $tot_xdos++;
+        $pass_xdos++;
         $pass_dosbox_xdos = "PASS";
         $pass_dosbox_xdos_rev_file = "$line/__PASS_XDOS__";
     }
     if ( -f "$line/__FAIL_XDOS__" ) {
+        $tot_xdos++;
         $pass_dosbox_xdos = "FAIL";
         $pass_dosbox_xdos_rev_file = "$line/__FAIL_XDOS__";
     }
@@ -308,10 +313,13 @@ while ($line = <S>) {
     die unless !defined($pass_dosbox_svndos_rev_file);
 
     if ( -f "$line/__PASS_SVNDOS__" ) {
+        $tot_svndos++;
+        $pass_svndos++;
         $pass_dosbox_svndos = "PASS";
         $pass_dosbox_svndos_rev_file = "$line/__PASS_SVNDOS__";
     }
     if ( -f "$line/__FAIL_SVNDOS__" ) {
+        $tot_svndos++;
         $pass_dosbox_svndos = "FAIL";
         $pass_dosbox_svndos_rev_file = "$line/__FAIL_SVNDOS__";
     }
@@ -723,8 +731,8 @@ sub makestat($$) {
 print H "<tr>\n";
 print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_x,$pass_x)."</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_svn,$pass_svn)."</td>";
-print H "<td style=\"min-width: 6em; text-align: center;\"></td>";
-print H "<td style=\"min-width: 8em; text-align: center;\"></td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_xdos,$pass_xdos)."</td>";
+print H "<td style=\"min-width: 8em; text-align: center;\">".makestat($tot_svndos,$pass_svndos)."</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\"></td>";
 print H "<td style=\"min-width: 4em; text-align: center;\"></td>";
 print H "<td>TEST RESULTS</td>";
