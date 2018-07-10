@@ -83,6 +83,8 @@ my $tot_x = 0,$pass_x = 0;
 my $tot_svn = 0,$pass_svn = 0;
 my $tot_xdos = 0,$pass_xdos = 0;
 my $tot_svndos = 0,$pass_svndos = 0;
+my $tot_bochs = 0,$pass_bochs = 0;
+my $tot_qemu = 0,$pass_qemu = 0;
 
 $count = 0;
 $list = "pick-one.cache  pick-one.qemu.cache  pick-one.svnbochs.cache  pick-one.svn.cache  pick-one.svndos.cache  pick-one.xdos.cache";
@@ -373,10 +375,13 @@ while ($line = <S>) {
     die unless !defined($pass_dosbox_svnbochs_rev_file);
 
     if ( -f "$line/__PASS_SVNBOCHS__" ) {
+        $tot_bochs++;
+        $pass_bochs++;
         $pass_dosbox_svnbochs = "PASS";
         $pass_dosbox_svnbochs_rev_file = "$line/__PASS_SVNBOCHS__";
     }
     if ( -f "$line/__FAIL_SVNBOCHS__" ) {
+        $tot_bochs++;
         $pass_dosbox_svnbochs = "FAIL";
         $pass_dosbox_svnbochs_rev_file = "$line/__FAIL_SVNBOCHS__";
     }
@@ -430,10 +435,13 @@ while ($line = <S>) {
     die unless !defined($pass_dosbox_qemu_rev_file);
 
     if ( -f "$line/__PASS_QEMU__" ) {
+        $tot_qemu++;
+        $pass_qemu++;
         $pass_dosbox_qemu = "PASS";
         $pass_dosbox_qemu_rev_file = "$line/__PASS_QEMU__";
     }
     if ( -f "$line/__FAIL_QEMU__" ) {
+        $tot_qemu++;
         $pass_dosbox_qemu = "FAIL";
         $pass_dosbox_qemu_rev_file = "$line/__FAIL_QEMU__";
     }
@@ -733,8 +741,8 @@ print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_x,$pa
 print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_svn,$pass_svn)."</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_xdos,$pass_xdos)."</td>";
 print H "<td style=\"min-width: 8em; text-align: center;\">".makestat($tot_svndos,$pass_svndos)."</td>";
-print H "<td style=\"min-width: 6em; text-align: center;\"></td>";
-print H "<td style=\"min-width: 4em; text-align: center;\"></td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_bochs,$pass_bochs)."</td>";
+print H "<td style=\"min-width: 4em; text-align: center;\">".makestat($tot_qemu,$pass_qemu)."</td>";
 print H "<td>TEST RESULTS</td>";
 print H "</tr>\n";
 
