@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo works, but, uses active display area effects in one part
+  (the part insulting Nintendo) which DOSBox-X does not render properly.
