@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo mis-detects GUS at IRQ 5 DMA 2
+- Hangs at startup if Gravis Ultrasound is selected
