@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- Gravis Ultrasound support will always complain about insufficient memory, no matter what
+- Gravis Ultrasound support will always complain about insufficient memory, no matter what. Will mark PASS if this occurs on REAL HARDWARE.
+! PLEASE TEST ON REAL HARDWARE
