@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Crashes on startup
+- Crashes on startup. Runs in a 16-bit DOS extender. Uses VESA BIOS extensions to set up 640x480x256 color mode. Crashes after modeset.
