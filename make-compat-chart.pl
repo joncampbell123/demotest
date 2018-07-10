@@ -79,6 +79,9 @@ sub escape_shell($) {
     return $x;
 }
 
+my $tot_x = 0,$pass_x = 0;
+my $tot_svn = 0,$pass_svn = 0;
+
 $count = 0;
 $list = "pick-one.cache  pick-one.qemu.cache  pick-one.svnbochs.cache  pick-one.svn.cache  pick-one.svndos.cache  pick-one.xdos.cache";
 #open(S,"find -type d | sort |") || die;
@@ -119,10 +122,13 @@ while ($line = <S>) {
     die unless !defined($pass_dosbox_x_rev_file);
 
     if ( -f "$line/__PASS__" ) {
+        $tot_x++;
+        $pass_x++;
         $pass_dosbox_x = "PASS";
         $pass_dosbox_x_rev_file = "$line/__PASS__";
     }
     if ( -f "$line/__FAIL__" ) {
+        $tot_x++;
         $pass_dosbox_x = "FAIL";
         $pass_dosbox_x_rev_file = "$line/__FAIL__";
     }
@@ -173,10 +179,13 @@ while ($line = <S>) {
     die unless !defined($pass_dosbox_svn_rev_file);
 
     if ( -f "$line/__PASS_SVN__" ) {
+        $tot_svn++;
+        $pass_svn++;
         $pass_dosbox_svn = "PASS";
         $pass_dosbox_svn_rev_file = "$line/__PASS_SVN__";
     }
     if ( -f "$line/__FAIL_SVN__" ) {
+        $tot_svn++;
         $pass_dosbox_svn = "FAIL";
         $pass_dosbox_svn_rev_file = "$line/__FAIL_SVN__";
     }
@@ -682,6 +691,44 @@ while ($line = <S>) {
     print H "</tr>\n";
 }
 close(S);
+
+print H "</tbody>\n";
+
+print H "<thead class=\"testing_header\">\n";
+print H "<tr>\n";
+print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
+print H "<td style=\"min-width: 8em; text-align: center;\">DOSBox-SVN-DOS</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">Bochs-SVN</td>";
+print H "<td style=\"min-width: 4em; text-align: center;\">QEMU</td>";
+print H "<td>Demo</td>";
+print H "</tr>\n";
+print H "</thead>\n";
+
+print H "<tbody>\n";
+
+sub makestat($$) {
+    my $total = shift @_;
+    my $pass = shift @_;
+
+    return "--" unless defined($total) && defined($pass) && $total > 0;
+
+    $percent = ($pass * 100) / $total;
+    $percent = int($percent * 100) / 100;
+
+    return sprintf("TOTAL:<br>%u<br><br>PASS:<br>%u<br><br>FAIL:<br>%u<br><br>PASSED:<br>%%%.2f",$total,$pass,$total-$pass,$percent);
+}
+
+print H "<tr>\n";
+print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_x,$pass_x)."</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_svn,$pass_svn)."</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\"></td>";
+print H "<td style=\"min-width: 8em; text-align: center;\"></td>";
+print H "<td style=\"min-width: 6em; text-align: center;\"></td>";
+print H "<td style=\"min-width: 4em; text-align: center;\"></td>";
+print H "<td>TEST RESULTS</td>";
+print H "</tr>\n";
 
 print H "</tbody>\n";
 print H "</table>\n";
