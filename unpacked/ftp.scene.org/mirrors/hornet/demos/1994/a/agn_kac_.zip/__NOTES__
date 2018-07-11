@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Does not run, crashes to DOS prompt, keyboard disabled
+- Demo runs, but exits to DOS leaving it's keyboard interrupt handler in place. System will crash when you hit a key (trigger IRQ1)
