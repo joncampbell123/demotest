@@ -1,3 +1,4 @@
 Why the demo failed the test:
 - LPT DAC output does not work
-- Demo got stuck at the rotating starfield
+- Sound Blaster emulation is not precise enough to avoid occasional artifacts in Sound Blaster music playback
+! PLEASE TEST ON REAL HARDWARE
