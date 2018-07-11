@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo does not respond to keyboard
+- Demo does not respond to keyboard (masks IRQ1 and expects BIOS to unmask on INT 16h)
