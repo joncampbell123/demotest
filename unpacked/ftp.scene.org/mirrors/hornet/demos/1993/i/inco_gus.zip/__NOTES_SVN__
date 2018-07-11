@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Gravis Ultrasound support is not working
+- Scroller part is broken (it doesn't scroll, just "judders")
