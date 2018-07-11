@@ -1,4 +1,5 @@
 Why the demo failed the test:
 - Gravis Ultrasound crashes and restarts the system (unknown opcode FFFF, exception handler the same)
+- Graphics appear incorrectly, are a bit glitchy looking
 - Keyboard is disabled on demo exit
 
