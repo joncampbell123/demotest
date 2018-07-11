@@ -1,3 +1,0 @@
-Why the demo failed the test:
-- Sound Blaster popping and crackling.
-- The parts where popping and crackling occur are when the demo tells the Sound Blaster to play 8KB of DMA, but then the timer interrupt periodically halts DMA (at about 4KB playback) and restarts the block. (??)
