@@ -1,3 +1,0 @@
-Why the demo failed the test:
-- Gravis Ultrasound playback crashes, JMPs to 0000:0000. Will mark PASS if this occurs on REAL HARDWARE.
-! PLEASE TEST ON REAL HARDWARE
