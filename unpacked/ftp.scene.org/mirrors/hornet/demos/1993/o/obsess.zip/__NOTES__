@@ -1,0 +1,3 @@
+Notes:
+- This demo seems to have very particular Sound Blaster DMA timing. There are very minor Sound Blaster artifacts during the demo.
+! PLEASE RUN ON REAL HARDWARE
