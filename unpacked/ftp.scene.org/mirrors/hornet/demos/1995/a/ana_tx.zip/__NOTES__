@@ -2,4 +2,5 @@ Why the demo failed the test:
 - Somehow, the demo is triggering a 14Mhz dot clock, and setting a text
   mode with a refresh rate of 24Hz, which any sane VGA monitor would not
   support.
-
+Real hardware:
+- 1997 Toshiba laptop (Chips & Tech 65554 SVGA): Becomes a sort of odd 400-line 84Hz mode, with glitches (or the glitches could be my capture card)

@@ -1,3 +1,5 @@
 Why the demo failed the test:
 - Last demo part shows nothing on the screen (will mark PASS if this is behavior on REAL HARDWARE).
 - Exits to DOS with the same blank screen (will mark PASS if this is behavior on REAL HARDWARE).
+Real hardware:
+- Toshiba laptop 1997: Crashed, hung

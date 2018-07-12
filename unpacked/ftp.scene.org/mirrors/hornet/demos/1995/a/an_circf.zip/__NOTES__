@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Demo does not exit to DOS (instead goes to an infinite loop aka JMP $)
+Real hardware:
+- Toshiba 1997 laptop (Chips & Tech 65554 SVGA): Same behavior

@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - GUS support does not work
+Real hardware:
+- Toshiba laptop 1997, Yamaha OPL3-SAx: Crashes/hangs after initial logo
