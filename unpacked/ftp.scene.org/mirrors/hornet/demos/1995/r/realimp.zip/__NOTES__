@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - "E_Exit: Illegal descriptor type 0 for int D"
+Real Hardware:
+- Toshiba Laptop 1997: Crashes, causes reboot

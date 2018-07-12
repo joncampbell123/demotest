@@ -1,3 +1,5 @@
 Why the demo failed the test:
 - "E_Exit: Illegal descriptor type 0 for int D"
 ! PLEASE TEST ON REAL HARDWARE
+Real Hardware:
+- Toshiba Laptop 1997, Sound Blaster Pro compatible, 32MB of RAM. Demo prompts for Sound Blaster card, base, and IRQ, but takes all keyboard input as IRQ 2(???), therefore no Sound Blaster. This is contrary to DOSBox-X where the demo detects the GUS and immediately starts. Demo crashes and casues system to reboot at the end.

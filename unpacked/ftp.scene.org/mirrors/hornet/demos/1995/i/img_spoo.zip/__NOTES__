@@ -1,1 +1,4 @@
+Why the demo failed the test:
 - Demo will consistently crash with divide by zero exception
+Real hardware:
+- Toshiba Laptop 1997: Demo crashes at GUS selection screen

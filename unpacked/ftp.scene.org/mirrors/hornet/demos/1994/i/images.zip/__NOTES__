@@ -1,3 +1,5 @@
 Why the demo failed the test:
-- Always crashes at one point with divide by zero
-
+- Always crashes at one point with divide by zero.
+- Running on real hardware, it turns out the demo skips a lot of parts when run under DOSBox-X (jumps straight to the space scene). On real hardware there are a lot more parts before the space part.
+Real hardware:
+- Toshiba Laptop 1997, Chips & Tech 65554 SVGA. Palette errors during "This demo is compatible with Tseng/Trident", render errors during animation. The ship gets garbled at one part in the same way that divide by zero crashes in DOSBox-X.

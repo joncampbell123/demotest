@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Demo ALMOST exits normally, waiting on INT 16h, except that it keeps it's own keyboard handler hooked to IRQ 1 and therefore INT 16h can't read anything.
+Real Hardware:
+- Toshiba Laptop 1997 Sound Blaster: No music (GUS only). Returned to DOS just fine.

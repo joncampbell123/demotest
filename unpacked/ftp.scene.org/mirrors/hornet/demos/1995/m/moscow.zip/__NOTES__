@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Demo appears to hang, waiting for a flag to change, while not acknowledging IRQ0
+Real Hardware:
+- Toshiba Laptop 1997, no GUS: Runs fine

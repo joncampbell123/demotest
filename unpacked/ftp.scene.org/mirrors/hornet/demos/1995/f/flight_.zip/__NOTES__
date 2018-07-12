@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Endless reboot cycle
+Real hardware:
+- Toshiba Laptop 1997: Hangs at startup, does not run

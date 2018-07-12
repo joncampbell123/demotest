@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - I can't get the demo to show anything on the screen, despite all the amazing SVGA support (S3 Trio support issues?)
+Real hardware:
+- Toshiba Laptop 1997, Chips & Tech 65554, OPL3-SAx (Sound Blaster Pro): Crashes against actual VBE BIOS, fails to detect Sound Blaster, UNIVBE driver doesn't support chipset, SVGA modes come out as garbled text

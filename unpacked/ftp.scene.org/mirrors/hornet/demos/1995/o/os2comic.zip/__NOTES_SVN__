@@ -1,3 +1,5 @@
 Why the demo failed the test:
 - Sound Blaster Pro support doesn't work (will mark PASS if this is a problem on real hardware)
 ! PLEASE TEST THIS ON REAL HARDWARE
+Real Hardware:
+- Toshiba Laptop 1997, OPL3-SAx (Sound Blaster Pro): No sound when Sound Blaster Pro selected. Sound Blaster works. Some 3D rotating objects "glitch out" during rotation for some reason.

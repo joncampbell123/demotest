@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - End credits do not respond to keyboard, rambles on too long, then runs off into garbage data
+Real hardware:
+- Toshiba Laptop 1997: Demo runs off into garbage data at the end, does not respond to keyboard

@@ -1,3 +1,5 @@
 Why the demo failed the test:
 - Gravis Ultrasound support will always complain about insufficient memory, no matter what. Will mark PASS if this occurs on REAL HARDWARE.
 ! PLEASE TEST ON REAL HARDWARE
+Real hardware:
+- Toshiba Laptop 1997, Sound Blaster Pro: Apparently 622KB conventional and 32MB extended is "not enough memory to load sound module"
