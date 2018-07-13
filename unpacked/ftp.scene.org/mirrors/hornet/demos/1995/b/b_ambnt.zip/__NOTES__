@@ -5,4 +5,4 @@ Why the demo failed the test:
 TEST RESULTS:
 - Chips & Tech 65554 SVGA: Inconclusive, garbled display (even worse than DOSBox-X) (two times)
 - S3 VIRGE SVGA: PASS, same visual effect at DOSBox-X (though no logo, perhaps capture card cut it off?)
-
+- COMP-Old486y91, Tseng ET4000: PASS, same visual effect as DOSBox-X (though no logo, perhaps capture card cut it off?)

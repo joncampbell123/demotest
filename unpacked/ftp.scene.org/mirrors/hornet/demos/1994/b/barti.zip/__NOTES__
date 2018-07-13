@@ -2,3 +2,4 @@ Why the demo failed the test:
 - Crashes after multiple-plane checkboard effect
 Real hardware:
 - Toshiba Laptop 1997 Pentium: Same crash
+- COMP-Old486y91, GUS, PAS: It made it past the checkerboard, to the circular cloud rendering (something about 486SX processors?), then crashed

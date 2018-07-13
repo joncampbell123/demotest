@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Does not exit cleanly to DOS, leaves stuck notes. Will mark as PASS if same error occurs on REAL HARDWARE.
+Real hardware:
+- COMP-Old486y91, GUS, PAS: Can't find ultrasound card for some reason (?)

@@ -3,3 +3,4 @@ Why the demo failed the test:
 - Exits to DOS with the same blank screen (will mark PASS if this is behavior on REAL HARDWARE).
 Real hardware:
 - Toshiba laptop 1997: Crashed, hung
+- COMP-Old486y91, GUS, PAS: Demo runs normally, then crashes/hangs (with audible beeps from the 486SX unit).

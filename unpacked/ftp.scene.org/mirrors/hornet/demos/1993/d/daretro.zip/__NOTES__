@@ -1,5 +1,3 @@
-Why the demo failed the test:
-- Silent Sound Blaster Pro output
-! PLEASE RUN ON REAL HARDWARE
 Real hardware:
 - Toshiba 1997 laptop: Crashes on startup
+- COMP-Old486y91, GUS, PAS: Works with Pro Audio Spectrum, music is audible (The 486SX 33MHz is slow enough, apparently)
