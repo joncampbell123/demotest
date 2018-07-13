@@ -1,6 +1,5 @@
-Why the demo failed the test:
-- Demo starts and immediately exits (uses INT 2E to execute shell commands which DOSBox-X does not emulate)
-! PLEASE TEST THIS ON REAL HARDWARE
+Notes:
+- Demo relies on INT 2Eh (COMMAND.COM) to unpack and run it's demo parts
 TEST RESULTS:
 - FAIL: Chips & Tech 65554 SVGA. Demo did not exit immediately, but ran just as it does in DOSBox SVN
 - FAIL: S3 VIRGE PCI SVGA. Demo did not exit immediately, but ran just as it does in DOSBox SVN
