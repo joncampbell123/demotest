@@ -1,2 +1,4 @@
 Why the demo failed the test:
-- Demo loops endlessly at part 2 (the 3D flying text)
+- Demo loops endlessly at part 2 (the 3D flying text). According to real hardware, the demo skips a whole part, goes straight to flying text. In fact the sequence in DOSBox-X is completely different from real hardware!
+Real Hardware:
+- Toshiba Laptop 1997: Runs fine with Sound Blaster. Demo got stuck endlessly repeating the closing credits.
