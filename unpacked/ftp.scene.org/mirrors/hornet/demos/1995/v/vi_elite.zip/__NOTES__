@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Demo exits to DOS without resetting the video mode
+Real hardware:
+- Toshiba Laptop 1997: Same result, exits to DOS without resetting the video mode

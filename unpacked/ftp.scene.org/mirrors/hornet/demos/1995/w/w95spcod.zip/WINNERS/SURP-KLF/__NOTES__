@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Crashes with invalid opcode
+Real hardware:
+- Toshiba Laptop 1997: Runs just fine

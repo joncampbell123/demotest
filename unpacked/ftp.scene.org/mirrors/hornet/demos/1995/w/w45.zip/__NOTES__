@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - The "COMA" text eventually gets corrupted. Will mark as PASS if this occurs on real hardware.
+Real Hardware:
+- Toshiba Laptop 1997: Inconclusve, demo does not animate with a GUS. Does not respond to keyboard.
