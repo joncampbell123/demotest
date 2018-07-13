@@ -7,3 +7,4 @@ Notes:
   or the demo will not play any music.
 Real hardware:
 - Toshiba 1997 Pentium with SBPro compatible OPL3-SAx: Sound Blaster Pro support works perfectly fine, does not hang as described above. However the 3D maze runs too fast, and exhibits Mode X tearlines.
+- COMP-Old486y91, GUS, PAS: GUS support works fine. SBPro selection detected the PAS and refused, properly.

@@ -2,3 +2,4 @@ Why the demo failed the test:
 - Does not run
 Real Hardware:
 - Toshiba Laptop 1997: Does not run, crashes with exception
+- COMP-Old486y91, GUS, PAS: Does not run, drops back to DOS

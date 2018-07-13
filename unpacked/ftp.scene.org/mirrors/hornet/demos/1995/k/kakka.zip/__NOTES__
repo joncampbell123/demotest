@@ -4,3 +4,4 @@ Why the demo failed the test:
 TEST RESULTS:
 - FAIL: Chips & Tech 65554 SVGA: Text moves slower, has a "melted" effect. Second part displays just as DOSBox-X though.
 - FAIL: S3 VIRGE PCI SVGA: Text moves slower, has a "melted" effect. Second part displays just as DOSBox-X though.
+- FAIL: COMP-Old486y91, GUS, PAS, ET4000: Text moves slower, has a "melted" effect. Second part displays just as DOSBox-X though.

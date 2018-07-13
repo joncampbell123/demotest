@@ -1,3 +1,5 @@
-Why the demo failed the test:
-- Demo seems to rely on something the VGA emulation isn't offering in it's 320x400x256 mode, perhaps the 128KB A000 mapping. Will mark as PASS if this occurs on real hardware.
-! PLEASE TEST THIS ON REAL HARDWARE
+Notes:
+- Demo seems to rely on something the VGA emulation isn't offering in it's 320x400x256 mode, perhaps the 128KB A000 mapping typical of Tseng ET4000.
+Real hardware:
+- Toshiba Laptop 1997: "Sample too big, out of memory" on a DOS setup with 622KB of conventional memory free.
+- COMP-Old486y91, GUS, PAS, ET4000: GUS playback works. Does not have wraparound issue. 320x400 rotating phong item stays on the top half.

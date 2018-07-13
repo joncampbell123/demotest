@@ -2,3 +2,4 @@ Why the demo failed the test:
 - Some VGA rendering errors (mode X glitches?). Will mark as PASS if the same glitches occur on real hardware.
 Real hardware:
 - Toshiba Laptop 1997 Chips & Tech 65554 SVGA: Mode X glitch (with scroller) does not appear, though sometimes it will leave text on the screen and draw/scroll over it.
+- COMP-Old486y91, GUS, PAS: Mode X glitch appears (with scroller), just as DOSBox-X. GUS music works.

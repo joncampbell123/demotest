@@ -1,2 +1,4 @@
 Why the demo failed the test:
-- GUS support does not work
+- GUS support does not work. Demo does not work. Hangs.
+Real hardware:
+- COMP-Old486y91, GUS, PAS: Does not support IRQ 11. Does not use GUS.
