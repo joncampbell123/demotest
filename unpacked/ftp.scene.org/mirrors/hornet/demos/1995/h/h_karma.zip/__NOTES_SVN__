@@ -1,2 +1,5 @@
-Why the demo failed the test:
-- Demo get stuck on the "ball with spring" part, does not exit to DOS, music stops.
+Notes:
+- If insufficient memory: Demo get stuck on the "ball with spring" part, does not exit to DOS, music stops.
+Real hardware:
+- Toshiba Laptop, 1997: Unable to initialize Sound Blaster output, hangs at startup
+- COMP-Old486y91, GUS, PAS: Starts normally, detects GUS, uses GUS. Surprisingly good frame rate considering 486SX/33MHz. Does not get stuck at "ball with spring" part. Exits normally.
