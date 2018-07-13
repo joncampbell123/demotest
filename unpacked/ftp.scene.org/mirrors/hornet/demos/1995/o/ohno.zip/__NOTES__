@@ -4,3 +4,4 @@ Why the demo failed the test:
 TEST RESULTS:
 - FAIL: Chips & Tech 65554 SVGA. Demo did not exit immediately, but ran just as it does in DOSBox SVN
 - FAIL: S3 VIRGE PCI SVGA. Demo did not exit immediately, but ran just as it does in DOSBox SVN
+- COMP-Old486y91, GUS, PAS: Starts, uses GUS, runs fine.

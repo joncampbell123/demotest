@@ -1,4 +1,5 @@
-Why the demo failed the test:
-- Corrupted sprite display during intro (as if rendering off-pointer)
+Notes:
+- Corrupted sprite display during intro (as if rendering off-pointer) if cycle count too high (CPU too fast)
 Real Hardware:
 - Toshiba Laptop 1997: Same corrupted sprite display
+- COMP-Old486y91, GUS, PAS: Demo ran too slow to get to that part (486SX/33MHz too slow), missed two valid sprites. On a slow computer, demo slugs along and at some point the music plays FASTER.

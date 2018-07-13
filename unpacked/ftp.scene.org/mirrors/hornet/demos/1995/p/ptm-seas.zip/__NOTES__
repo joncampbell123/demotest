@@ -3,3 +3,4 @@ Why the demo failed the test:
   Does not respond to keyboard to move on or exit.
 Real Hardware:
 - Toshiba Laptop 1997: Sound Blaster output works. Stuck in random blit, does not respond to keyboard.
+- COMP-Old486y91, GUS, PAS: GUS output works. Stuck in random blit, does not respond to keyboard.
