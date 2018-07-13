@@ -3,3 +3,4 @@ Why the demo failed the test:
 ! PLEASE TEST ON REAL HARDWARE
 Real hardware:
 - Toshiba Laptop 1997, Sound Blaster Pro: Apparently 622KB conventional and 32MB extended is "not enough memory to load sound module"
+- COMP-Old486y91, GUS, PAS: GUS support claims not enough memory. PAS support complains not enough memory. Picky picky...

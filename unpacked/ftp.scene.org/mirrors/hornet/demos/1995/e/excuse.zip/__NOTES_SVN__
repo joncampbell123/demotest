@@ -1,2 +1,5 @@
-Why the demo failed the test:
-- Crashes on startup IF it detects Gravis Ultrasound
+Notes:
+- GUS support will crash apparently if the IRQ is less than 8.
+Real hardware:
+- Toshiba laptop 1997 no GUS: Runs fine
+- COMP-Old486y91, GUS, PAS: Runs fine with GUS, no crashing on startup. (GUS IRQ 11, DMA 5)

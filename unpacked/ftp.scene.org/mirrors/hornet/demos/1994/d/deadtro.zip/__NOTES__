@@ -2,3 +2,4 @@ Why the demo failed the test:
 - GUS support does not work
 Real hardware:
 - Toshiba laptop 1997, Yamaha OPL3-SAx: Crashes/hangs after initial logo
+- COMP-Old486y91, GUS, PAS: Crashes/hangs after prompts for GUS playback (stuck in the same way as DOSBox-X)
