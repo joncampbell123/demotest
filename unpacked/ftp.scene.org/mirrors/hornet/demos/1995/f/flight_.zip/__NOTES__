@@ -2,3 +2,4 @@ Why the demo failed the test:
 - Endless reboot cycle
 Real hardware:
 - Toshiba Laptop 1997: Hangs at startup, does not run
+- COMP-Old486y91, GUS, PAS: It starts up, detects GUS, runs (something about 486SX/33MHz?), exits to DOS normally. Hm....

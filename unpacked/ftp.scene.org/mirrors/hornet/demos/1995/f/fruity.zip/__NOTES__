@@ -2,3 +2,4 @@ Why the demo failed the test:
 - Demo exits way too early
 Real hardware:
 - Toshiba Laptop 1997, NO GUS: Demo does not progress
+- COMP-Old486y91, GUS, PAS: Demo works, runs, exits normally. Does not support GUS IRQ > 7.
