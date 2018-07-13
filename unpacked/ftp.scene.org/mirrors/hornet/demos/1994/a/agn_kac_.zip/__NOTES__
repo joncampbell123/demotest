@@ -1,4 +1,4 @@
-Why the demo failed the test:
+Notes:
 - Demo runs, but exits to DOS leaving it's keyboard interrupt handler in place. System will crash when you hit a key (trigger IRQ1)
 Real hardware:
 - COMP-Old486y91, GUS, PAS: Demo runs, exits, leaves keyboard unresponsive.
