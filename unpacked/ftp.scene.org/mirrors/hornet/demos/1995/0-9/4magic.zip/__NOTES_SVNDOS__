@@ -1,3 +1,5 @@
-Why the demo failed the test:
-- Glitched pixels in the middle of the fractal animation
-! PLEASE TEST ON REAL HARDWARE
+Notes:
+- Glitched pixels in the middle of the fractal animation are apparently normal
+Real hardware:
+- Toshiba Laptop 1997: Intermittent pixels in the middle
+- COMP-Old486y91, GUS, PAS: Intermittent pixels in the middle
