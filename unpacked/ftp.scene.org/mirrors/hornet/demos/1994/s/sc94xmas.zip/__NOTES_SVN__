@@ -2,4 +2,5 @@ Why the demo failed the test:
 - Demo doesn't seem to respond to keyboard during
   main part and therefore there doesn't seem to be
   a way to exit to DOS.
-
+Real hardware:
+- Toshiba Laptop 1997, OPL3-SAx (Sound Blaster Pro): Sound works, does not respond to keyboard.

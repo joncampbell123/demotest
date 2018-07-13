@@ -1,7 +1,5 @@
-Why the demo failed the test:
+Notes:
 - Demo dumps to DOS without restoring screen mode.
-  Not sure if intentional.
-! PLEASE TEST ON REAL HARDWARE
 Real Hardware:
 - Toshiba Laptop 1997: Dumps to DOS without restoring screen mode
 - COMP-Old486y91, GUS, PAS: GUS music works, dumps to DOS without restoring screen mode

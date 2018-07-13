@@ -1,3 +1,6 @@
 Why the demo failed the test:
 - Demo gets stuck (?)
 - "VGAMISC:VGA:S3:SEQ:Write to illegal index  F"
+Real hardware:
+- Toshiba Laptop 1997: Demo gets stuck, VGA output shuts off. Internal LCD display is blank, and cannot refresh properly.
+- COMP-Old486y91, GUS, PAS, ET4000: Apparently on a slow 486SX/33MHz the KFMF letters will come down, and nothing will happen. Demo gets stuck after that, just as it does in DOSBox-X.

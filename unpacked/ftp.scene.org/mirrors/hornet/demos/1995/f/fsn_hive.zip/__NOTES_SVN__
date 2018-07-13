@@ -1,2 +1,5 @@
 Why the demo failed the test:
-- Demo does not start
+- Demo does not run (code page conversion may be getting in the way)
+Real hardware:
+- Toshiba Laptop 1997, no GUS: Runs fine
+- COMP-Old486y91, GUS, PAS: Detects GUS, plays music just fine (IRQ 11, DMA 5), exits normally.

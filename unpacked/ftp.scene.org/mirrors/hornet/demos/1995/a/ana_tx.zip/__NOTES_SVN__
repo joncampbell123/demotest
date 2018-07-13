@@ -4,3 +4,4 @@ Why the demo failed the test:
   support.
 Real hardware:
 - 1997 Toshiba laptop (Chips & Tech 65554 SVGA): Becomes a sort of odd 400-line 84Hz mode, with glitches (or the glitches could be my capture card)
+- COMP-Old486y91, Tseng ET4000: Becomes an odd 55Hz text mode, shows up somewhat correctly
