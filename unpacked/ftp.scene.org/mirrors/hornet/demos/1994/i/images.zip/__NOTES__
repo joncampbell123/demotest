@@ -1,5 +1,6 @@
 Why the demo failed the test:
 - Always crashes at one point with divide by zero.
-- Running on real hardware, it turns out the demo skips a lot of parts when run under DOSBox-X (jumps straight to the space scene). On real hardware there are a lot more parts before the space part.
+- Apparently in DOSBox-X, the demo skips everything except the space part. There's actually a whole lot more demo than shown in DOSBox-X! "DATA FX" seems to display only one part, then exit.
 Real hardware:
 - Toshiba Laptop 1997, Chips & Tech 65554 SVGA. Palette errors during "This demo is compatible with Tseng/Trident", render errors during animation. The ship gets garbled at one part in the same way that divide by zero crashes in DOSBox-X.
+- COMP-Old486y91, GUS, PAS, ET4000: Some flicker during 3D maze (as if bad page flipping). GUS music works (IRQ 11, DMA 5). Does not crash during space part (something about a 486SX/33MHz?)
