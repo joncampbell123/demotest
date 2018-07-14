@@ -2,3 +2,4 @@ Why the demo failed the test:
 - The "COMA" text eventually gets corrupted. Will mark as PASS if this occurs on real hardware.
 Real Hardware:
 - Toshiba Laptop 1997: Inconclusve, demo does not animate with a GUS. Does not respond to keyboard.
+- COMP-Old486y91, GUS, PAS: Runs, detects GUS. "COMA" text eventually gets corrupted. (486SX/33MHz)

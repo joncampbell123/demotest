@@ -3,3 +3,4 @@ Why the demo failed the test:
 - No audio playback means the demo is hung at startup
 Real hardware:
 - Toshiba Laptop 1997: Demo mis-detects Sound Blaster at really odd I/O base values. No audio playback, demo hung at startup.
+- COMP-Old486y91, GUS, PAS: Demo mis-detects Sound Blaster at really odd I/O base values. No audio playback, demo hung at startup.

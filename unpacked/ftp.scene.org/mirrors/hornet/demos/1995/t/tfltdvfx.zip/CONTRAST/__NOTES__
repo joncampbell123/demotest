@@ -3,3 +3,4 @@ Why the demo failed the test:
 ! PLEASE TEST ON REAL HARDWARE
 Real Hardware:
 - Toshiba Laptop 1997: Crashes on startup
+- COMP-Old486y91, GUS, PAS: Crashes on startup

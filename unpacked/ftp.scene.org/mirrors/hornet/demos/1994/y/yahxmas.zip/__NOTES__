@@ -3,3 +3,4 @@ Why the demo failed the test:
 ! PLEASE TEST THIS ON REAL HARDWARE
 Real Hardware:
 - Toshiba Laptop 1997 (Sound Blaster Pro compatible): Audio does not play (as if unable to process IRQ). Possibly same issues.
+- COMP-Old486y91, GUS, PAS: Sound Blaster Pro setting doesn't work (well, it is a Pro Audio Spectrum). 486SX/33MHz

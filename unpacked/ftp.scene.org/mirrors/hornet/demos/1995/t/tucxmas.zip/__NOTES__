@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Keyboard does not respond after demo
+Real hardware testing:
+- COMP-Old486y91, GUS, PAS: Keyboard does not respond after demo
