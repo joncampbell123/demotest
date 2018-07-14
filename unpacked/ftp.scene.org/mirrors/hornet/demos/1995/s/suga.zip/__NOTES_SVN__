@@ -1,4 +1,5 @@
-Why the demo failed the test:
-- Demo gets stuck transitioning from the donut
+Notes:
+- Demo gets stuck transitioning from the donut if CPU too fast
 Real Hardware:
 - Toshiba Laptop 1997: Demo gets stuck transitioning from the donut
+- COMP-Old486y91, GUS, PAS: Does not hang at the donut, though it runs pretty slow (486SX/33Mhz).

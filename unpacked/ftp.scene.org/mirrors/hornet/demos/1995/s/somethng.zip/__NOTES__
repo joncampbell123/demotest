@@ -2,3 +2,4 @@ Why the demo failed the test:
 - Leaves keyboard unresponsive when exiting to DOS
 Real Hardware:
 - Toshiba Laptop 1997: Failed to detect Sound Blaster (as it does in DOSBox-X). Keyboard remains responsive on exit.
+- COMP-Old486y91, GUS, PAS: Detects GUS, runs normally, keyboard remains responsive on exit.

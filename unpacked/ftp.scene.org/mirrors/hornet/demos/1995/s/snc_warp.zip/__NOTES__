@@ -2,3 +2,4 @@ Why the demo failed the test:
 - Demo crashes on exit
 Real Hardware:
 - Toshiba Laptop 1997: Exits just fine, without crashing
+- COMP-Old486y91, GUS, PAS: Does not run (486SX/33MHz)

@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Hangs. "Silent version" seems to talk to GUS at base address 200h.
+Real hardware testing:
+- COMP-Old486y91, GUS, PAS: Hangs, crashes

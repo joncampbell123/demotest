@@ -3,3 +3,4 @@ Why the demo failed the test:
 ! PLEASE TEST ON REAL HARDWARE
 Real Hardware:
 - Toshiba Laptop 1997, Chips & Tech 65554, no GUS, OPL3-SAx (Sound Blaster Pro): Same glitch graphics
+- COMP-Old486y91, GUS, PAS, ET4000: Same glitch graphics
