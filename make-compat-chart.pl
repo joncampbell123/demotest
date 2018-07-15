@@ -706,7 +706,10 @@ while ($line = <S>) {
     }
 
     print H "</tr>\n";
-    $totalcount++;
+
+    if (!($pass_dosbox_x eq "WINDOWS" || $pass_dosbox_svn eq "WINDOWS")) {
+        $totalcount++;
+    }
 }
 close(S);
 
