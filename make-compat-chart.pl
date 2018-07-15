@@ -517,7 +517,7 @@ while ($line = <S>) {
         }
     }
     else {
-        print H "<td class=\"passfail_NA\">---</td>";
+        print H "<td class=\"passfail_NA\">untested</td>";
     }
 
     if (defined($pass_dosbox_svn)) {
