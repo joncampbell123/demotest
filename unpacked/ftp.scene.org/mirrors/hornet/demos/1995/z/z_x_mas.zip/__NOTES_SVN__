@@ -1,2 +1,5 @@
 Why the demo failed the test:
 - Demo stays at title screen, does not advance, does not respond to keyboard
+Real hardware:
+- Toshiba Laptop 1997: Demo runs, responds to keyboard
+- COMP-Old486y91, GUS, PAS: Demo runs, responds to keyboard
