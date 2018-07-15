@@ -79,6 +79,7 @@ sub escape_shell($) {
     return $x;
 }
 
+my $totalcount = 0;
 my $tot_x = 0,$pass_x = 0;
 my $tot_svn = 0,$pass_svn = 0;
 my $tot_xdos = 0,$pass_xdos = 0;
@@ -705,6 +706,7 @@ while ($line = <S>) {
     }
 
     print H "</tr>\n";
+    $totalcount++;
 }
 close(S);
 
@@ -724,7 +726,8 @@ print H "</thead>\n";
 
 print H "<tbody>\n";
 
-sub makestat($$) {
+sub makestat($$$) {
+    my $totalcount = shift @_;
     my $total = shift @_;
     my $pass = shift @_;
 
@@ -733,16 +736,30 @@ sub makestat($$) {
     $percent = ($pass * 100) / $total;
     $percent = int($percent * 100) / 100;
 
-    return sprintf("TOTAL:<br>%u<br><br>PASS:<br>%u<br><br>FAIL:<br>%u<br><br>PASSED:<br>%%%.2f",$total,$pass,$total-$pass,$percent);
+    $coverage = ($total * 100) / $totalcount;
+    $coverage = int($coverage * 100) / 100;
+
+    return sprintf("TOTAL:<br>%u<br><br>".
+                   "TESTED:<br>%u<br><br>".
+                   "COVERAGE:<br>%%%.2f<br><br>".
+                   "PASS:<br>%u<br><br>".
+                   "FAIL:<br>%u<br><br>".
+                   "PASSED:<br>%%%.2f",
+                   $totalcount,
+                   $total,
+                   $coverage,
+                   $pass,
+                   $total-$pass,
+                   $percent);
 }
 
 print H "<tr>\n";
-print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_x,$pass_x)."</td>";
-print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_svn,$pass_svn)."</td>";
-print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_xdos,$pass_xdos)."</td>";
-print H "<td style=\"min-width: 8em; text-align: center;\">".makestat($tot_svndos,$pass_svndos)."</td>";
-print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($tot_bochs,$pass_bochs)."</td>";
-print H "<td style=\"min-width: 4em; text-align: center;\">".makestat($tot_qemu,$pass_qemu)."</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($totalcount,$tot_x,$pass_x)."</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($totalcount,$tot_svn,$pass_svn)."</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($totalcount,$tot_xdos,$pass_xdos)."</td>";
+print H "<td style=\"min-width: 8em; text-align: center;\">".makestat($totalcount,$tot_svndos,$pass_svndos)."</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($totalcount,$tot_bochs,$pass_bochs)."</td>";
+print H "<td style=\"min-width: 4em; text-align: center;\">".makestat($totalcount,$tot_qemu,$pass_qemu)."</td>";
 print H "<td>TEST RESULTS</td>";
 print H "</tr>\n";
 
