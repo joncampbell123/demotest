@@ -79,7 +79,7 @@ while (my $path = <X>) {
     }
     else {
         $path_esc=escape_shell($path);
-        $x=`cd $path_esc && ls *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
+        $x=`cd $path_esc && ls -- *.exe *.EXE *.com *.COM 2>/dev/null | head -n 1`; chomp $x;
         next if $x eq "";
     }
 
