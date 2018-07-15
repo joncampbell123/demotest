@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Supports GUS but is not using it
+- Demo doesn't appear to start
+- Failures may be the result of character set conversion code
