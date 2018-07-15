@@ -1,3 +1,5 @@
 Why the demo failed the test:
-- Demo crashes midway through, with blank screen. Music keeps playing though.
-
+- Demo crashes midway through, with blank screen. Music keeps playing though. It does respond to hitting ESC on the keyboard to exit to DOS.
+Real hardware:
+- Toshiba Laptop 1997: Runs fine
+- COMP-Old486y91, GUS, PAS: Demo hangs midway through, at rectangle and bouncing "ball", music keeps playing. It does however respond to the keyboard so it is possible to hit ESC to drop to DOS.

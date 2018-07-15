@@ -4,3 +4,4 @@ Why the demo failed the test:
   a way to exit to DOS.
 Real hardware:
 - Toshiba Laptop 1997, OPL3-SAx (Sound Blaster Pro): Sound works, does not respond to keyboard.
+- COMP-Old486y91, GUS, PAS: Sound works, does not respond to keyboard, takes a long time (486SX/33MHz?) to display anything.

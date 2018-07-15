@@ -1,3 +1,5 @@
-Possible emulation problems:
-- Demo refuses to talk to the Gravis Ultrasound. Why? Is this true of real hardware?
-! PLEASE TEST ON REAL HARDWARE
+Notes:
+- Demo refuses to talk to the Gravis Ultrasound.
+Real hardware:
+- Toshiba Laptop 1997 Chips & Tech 65554, Yamaha OPL3-SAx (Sound Blaster Pro): Runs fine, but then kills the VGA output
+- COMP-Old486y91, GUS, PAS: Refuses Gravis Ultrsound, just as it does in DOSBox-X
