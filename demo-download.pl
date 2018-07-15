@@ -38,7 +38,7 @@ die unless $x == 0;
 
 # unpack the ZIP archive
 if ($relpath =~ m/\.zip$/i) { # .zip, or .ZIP, or whatever
-    @args = ("unzip","_download_.zip"); # use InfoZip
+    @args = ("unzip","-o","_download_.zip"); # use InfoZip
     $x = system(@args);
     die unless $x == 0;
 }
