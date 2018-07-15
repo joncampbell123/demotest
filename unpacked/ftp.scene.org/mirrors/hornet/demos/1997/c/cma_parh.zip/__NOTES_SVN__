@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo assumes VBE mode 0x10F is 320x200x24bpp, DOSBox SVN only supports 32bpp
