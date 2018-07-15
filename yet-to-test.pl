@@ -53,6 +53,7 @@ while (my $path = <X>) {
 #    next unless ($path =~ m/\/199[0-5]\// || $path =~ m/\/198[0-9]\//);
 
     # not our GIT repo!
+    next if $path eq "./.git";
     next if $path =~ m/\/\.git\//;
 
     # skip Amiga demos, we can't run them
