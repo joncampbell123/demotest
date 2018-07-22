@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- SVN does not reset AC flip-flop, required to prevent bottom half from jumping

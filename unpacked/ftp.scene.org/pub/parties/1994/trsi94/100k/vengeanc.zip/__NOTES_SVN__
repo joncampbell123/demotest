@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Visible glitches during opening rotozoomer, will mark as PASS if it occurs on real hardware
