@@ -1,0 +1,5 @@
+Why the demo failed the test:
+- Can't figure out how to get GUS music working
+- GUS module loader appears to be TRYING to upload samples, but it's not working
+- Demo reboots after last segment. This might be a good reason to add a "exit on reboot" option to DOSBox-X.
+
