@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- GUS music does not play correctly (drum sounds like glitch audio). Will mark PASS if the same problem occurs on real hardware
+! PLEASE TEST THIS ON REAL HARDWARE
