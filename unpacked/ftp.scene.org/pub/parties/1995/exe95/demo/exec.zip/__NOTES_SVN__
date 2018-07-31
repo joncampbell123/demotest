@@ -1,0 +1,6 @@
+Why the demo failed the test:
+- Uses 640x480 truecolor VESA mode, but does not display properly (24bpp or 32bpp?). Not certain what it's trying to display.
+! Please examine this demo on real hardware
+TEST RESULTS:
+- Inconclusive: Chips & Tech 65554 SVGA Laptop. Demo refuses to run without Gravis Ultrasound.
+- Inconclusive: S3 VIRGE DX PCI SVGA. Demo refuses to run without Gravis Ultrasound.
