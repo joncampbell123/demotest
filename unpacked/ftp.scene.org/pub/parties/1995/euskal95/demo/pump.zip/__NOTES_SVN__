@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- The demo, and music, run at half normal speed. If Sound Blaster output is used, the audio DMA buffer will repeat at least once per IRQ.
