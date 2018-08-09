@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- End credits do not end. Keyboard doesn't work. If you let all the credits
+  pass by, it runs into random data past the end of the credits and will not end.
+
