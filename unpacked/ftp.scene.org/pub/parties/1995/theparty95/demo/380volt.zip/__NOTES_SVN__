@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Runs PKUNZIP to unpack itself, printout causes graphical glitches (lack of CTTY command)
+- Does not apply enough disk I/O delay to avoid demo bug that causes it to loop endlessly during the city scape part
