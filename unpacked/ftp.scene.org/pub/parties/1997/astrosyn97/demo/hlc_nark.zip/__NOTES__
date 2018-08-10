@@ -1,3 +1,2 @@
 Why the demo failed the test:
-- Does not start. Screen is blank. Exits to DOS after hitting ESC.
-
+- Demo prompt is invisible, screen is blank at startup
