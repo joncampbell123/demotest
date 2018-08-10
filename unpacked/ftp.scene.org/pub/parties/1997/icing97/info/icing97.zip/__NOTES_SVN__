@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Demo works fine, except that it manipulates VGA panning and vertical display area
+  to the beat of the music which DOSBox-X does not handle well, yet.
+

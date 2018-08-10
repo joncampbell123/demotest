@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Emulation is slow because SVN complains about every write to about 2KB just before the S3 framebuffer (due to demo bug)
