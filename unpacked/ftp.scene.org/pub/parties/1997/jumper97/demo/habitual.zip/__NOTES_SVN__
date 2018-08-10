@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- SVN emulation does not emulate the right VESA BIOS modes expected by the demo
