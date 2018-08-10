@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Illegal writes to extended memory addresses
