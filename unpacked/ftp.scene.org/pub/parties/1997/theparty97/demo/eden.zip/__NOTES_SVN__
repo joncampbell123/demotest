@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- SVN does not provide DOS32A, demo will crash with DOS4GW

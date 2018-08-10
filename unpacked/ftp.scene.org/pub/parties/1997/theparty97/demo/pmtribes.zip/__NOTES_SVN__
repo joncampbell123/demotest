@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- SVN does not provide DOS4GW
+- "Exit to error: FPU stack underflow"
