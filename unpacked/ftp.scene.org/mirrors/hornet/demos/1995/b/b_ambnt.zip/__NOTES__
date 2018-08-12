@@ -1,8 +1,6 @@
-Why the demo failed the test:
-- Not sure if demo is rendering correctly the display
-! PLEASE TEST THIS ON REAL HARDWARE
-
-TEST RESULTS:
+Notes:
+- Not sure if demo is rendering correctly the display, real hardware testing seems to indicate it is
+Real hardware:
 - Chips & Tech 65554 SVGA: Inconclusive, garbled display (even worse than DOSBox-X) (two times)
 - S3 VIRGE SVGA: PASS, same visual effect at DOSBox-X (though no logo, perhaps capture card cut it off?)
 - COMP-Old486y91, Tseng ET4000: PASS, same visual effect as DOSBox-X (though no logo, perhaps capture card cut it off?)

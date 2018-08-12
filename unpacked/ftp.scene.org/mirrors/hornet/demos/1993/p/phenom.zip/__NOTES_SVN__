@@ -1,5 +1,4 @@
-Why the demo failed the test:
+Notes:
 - Gravis Ultrasound support does not work. Will mark PASSED if this occurs on real hardware.
-! PLEASE TEST ON REAL HARDWARE.
 Real hardware testing:
 - COMP-Old486y91, GUS, PAS: Selected GUS, does not play music (GUS MAX card).
