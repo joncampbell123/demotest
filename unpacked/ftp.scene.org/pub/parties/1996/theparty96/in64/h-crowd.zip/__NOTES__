@@ -1,3 +1,2 @@
 Why the demo failed the test:
-- GUS base prompt doesn't wait for input
-
+- Crashes after prompt
