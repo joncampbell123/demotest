@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Exits immediately (as if queued keyboard input hits it right away)
