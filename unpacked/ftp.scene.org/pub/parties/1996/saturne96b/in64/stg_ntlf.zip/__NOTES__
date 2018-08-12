@@ -1,5 +1,0 @@
-Why the demo failed the test:
-- Somehow, I don't think the demo is supposed to leave
-  the screen blank while prompting for what looks like
-  language.
-! PLEASE TEST ON REAL HARDWARE
