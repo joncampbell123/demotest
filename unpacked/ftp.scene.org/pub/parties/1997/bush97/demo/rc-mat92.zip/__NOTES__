@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo gets stuck into an input loop, accepts keyboard input but does nothing, never progresses to a demo
+- Demo gets stuck into an input loop, accepts keyboard input but does nothing, never progresses to a demo. Seems to be related to missing files.
