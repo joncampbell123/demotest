@@ -19,7 +19,11 @@ while ($i < @dirs) {
 
 $relpath =~ s/\/pub\//\//;
 
-$baseurl = "http://files.scene.org/get";
+# Fix your US mirror! Use the NL one in the meantime
+$baseurl = "http://files.scene.org/get:nl-http";
+
+# Uncomment this when they fix their US mirror
+#$baseurl = "http://files.scene.org/get";
 
 $url = $baseurl . $relpath;
 
