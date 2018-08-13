@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Image is garbled
+- Image is garbled. Sets SVGA 640x400 mode then reprograms CRTC into "byte mode" which mis-represents the scan line length. TODO: Check against actual ET4000 hardware.
