@@ -1,5 +1,3 @@
-Why the demo failed the test:
-- The demo runs at half the frame rate it does in DOSBox SVN IF you select Gravis Ultrasound
 Real Hardware:
 - Toshiba Laptop 1997, Chips & Tech 65554: 3D city scene has incorrect palette. Fire, plasma, other end parts have incorrect palette.
 - COMP-Old486y91, GUS, PAS: Runs at normal frame rate.

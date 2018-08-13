@@ -1,5 +1,3 @@
-Why the demo failed the test:
-- The demo runs at half the frame rate that it does in DOSBox SVN for some reason IF Gravis Ultrasound is selected.
 Real hardware:
 - Toshiba laptop 1997 Yamaha OPL3-SAx Chips & Tech 65554 SVGA: Sound Blaster Pro playback OK. Color palette messed up in 3D city scene, fire, and plasma effect, end moving fractals, other parts.
 - COMP-Old486y91, GUS, PAS, ET4000: GUS playback OK. Animation speed normal. 3D city scene very slow, other parts slow, but that's expected of a 486SX/33MHz.
