@@ -1,2 +1,2 @@
 Concerns to investiage:
-- Random I/O ports are being accessed during demo. The values written and read suggest the GUS playback routines are doing it.
+- Random I/O ports are being accessed during demo. The values written and read suggest the GUS playback routines are doing it. The timing suggests that it's only a problem if the demo is changing video modes (within INT 10h).
