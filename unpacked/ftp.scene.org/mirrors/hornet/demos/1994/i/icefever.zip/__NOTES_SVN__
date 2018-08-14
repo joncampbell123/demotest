@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Hangs at startup, GUS support doesn't work
