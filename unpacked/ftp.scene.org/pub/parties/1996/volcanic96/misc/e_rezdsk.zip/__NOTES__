@@ -1,4 +1,2 @@
 Why the demo failed the test:
-- Demo will crash if loaded below the 64KB line in RAM
-- Demo does not run. Appears to try and set file attributes, then exit.
-
+- Requires missing file
