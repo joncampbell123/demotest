@@ -1,0 +1,46 @@
+if file INCENTIV.EXE
+    #
+    # This demo has a bug in the Gravis Ultrasound IRQ handler.
+    #
+    # It saves and loads DS properly while processing the next notes of the music,
+    # however it pops DS, but then goes to reload DX with the GUS I/O port base
+    # with what is then whatever DS value the demo underneath happened to have.
+    #
+    # The end of the IRQ handler reads a specific port of the GUS to acknowledge
+    # the interrupt.
+    #
+    # This patch changes the end of the IRQ handler to read the GUS to ack the IRQ,
+    # then pop DS, instead of popping DS and then reading the GUS to ack the IRQ.
+    #
+    # This fixes the problem of the demo reading random I/O ports while running
+    # it's music routine.
+    #
+    # +SEG:OFF values are relative to the base of the EXE when loaded into memory.
+    # Patches are applied immediately after loading the image into memory.
+    #
+    # The "base" of the EXE in memory is the first byte that follows the 256-byte
+    # PSP segment, in order for the offset in memory to match the offset in the
+    # EXE file following the header.
+    if match
+        +0000:2D63 07                  #pop  es
+        +0000:2D64 1F                  #pop  ds
+        +0000:2D65 8B16FE38            #mov  dx,[38FE]              ds:[38FE]=0000
+        +0000:2D69 B08F                #mov  al,8F
+        +0000:2D6B EE                  #out  dx,al
+        +0000:2D6C 80C202              #add  dl,02
+        +0000:2D6F EC                  #in   al,dx
+        +0000:2D70 61                  #popa
+        +0000:2D71 CF                  #iret
+    then write
+        +0000:2D63 8B16FE38            #mov  dx,[38FE]              ds:[38FE]=0000
+        +0000:2D67 B08F                #mov  al,8F
+        +0000:2D69 EE                  #out  dx,al
+        +0000:2D6A 80C202              #add  dl,02
+        +0000:2D6D EC                  #in   al,dx
+        +0000:2D6E 07                  #pop  es
+        +0000:2D6F 1F                  #pop  ds
+        +0000:2D70 61                  #popa
+        +0000:2D71 CF                  #iret
+    fi
+fi
+
