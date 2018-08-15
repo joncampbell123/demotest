@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Crashes on exit
+- Crashes on exit (INT 20h after causing stack pointer to wrap around 64KB)
