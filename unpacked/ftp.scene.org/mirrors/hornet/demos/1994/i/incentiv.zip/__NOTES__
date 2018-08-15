@@ -1,5 +1,4 @@
 Why the demo failed the test:
-- Music (or the demo itself?) causes memory corruption
-- GUS music playback (or the demo itself?) seems to read and write random I/O ports during the demo
 - Demo exits to DOS, but then hitting a key causes a crash.
-
+Notes:
+- GUS music playback (or the demo itself?) seems to read and write random I/O ports during the demo. DOSLIB utility to patch out that bug is available.
