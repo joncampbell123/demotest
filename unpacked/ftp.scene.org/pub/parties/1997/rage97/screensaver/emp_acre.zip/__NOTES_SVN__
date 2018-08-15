@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Only prints a "coded by" message
+- Only prints a "coded by" message. Terminates immediately because SVN INT 33 emulation and pointer position rounding between text and graphics causes the demo to think the cursor moved.
