@@ -1,3 +1,2 @@
 Why the demo failed the test:
 - Demo reboots after last segment. This might be a good reason to add a "exit on reboot" option to DOSBox-X.
-
