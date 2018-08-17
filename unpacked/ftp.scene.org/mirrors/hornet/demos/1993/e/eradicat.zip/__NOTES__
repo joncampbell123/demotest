@@ -1,6 +1,5 @@
-Why the demo failed the test:
+Notes:
 - Demo does not stop GUS music and does not unhook music interrupt. Running anything after this point will crash DOS. Will mark as PASS if demo does the same thing on REAL HARDWARE.
-! PLEASE RUN ON REAL HARDWARE
 Real hardware:
 - Toshiba 1997 laptop (no GUS): Runs fine, exits fine
 - COMP-Old486y91, GUS, PAS: Runs fine, does not respond do keyboard during credits screen.
