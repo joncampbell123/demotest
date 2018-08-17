@@ -1,5 +1,4 @@
-Why the demo failed the test:
+Notes:
 - Demo kills it's own music routines midway through, leaving "stuck notes". Will mark as PASS if this occurs on REAL HARDWARE
-! PLEASE TEST ON REAL HARDWARE
 Real hardware:
 - COMP-Old486y91, GUS, PAS: GUS music works. Music eventually gets stuck, though later than in DOSBox-X.
