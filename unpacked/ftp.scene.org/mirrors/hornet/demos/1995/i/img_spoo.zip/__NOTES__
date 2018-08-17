@@ -1,5 +1,5 @@
 Notes:
-- Demo will consistently crash with divide by zero exception, which is acknowledged by the democoders in the TXT file
+- Demo will consistently crash with divide by zero exception, which is acknowledged by the democoders in the TXT file, if the cycle count is too high
 Real hardware:
 - Toshiba Laptop 1997: Demo crashes at GUS selection screen
 - COMP-Old486y91, GUS, PAS: Demo ignores GUS selection, assumes port 220h, which on this unit is the Pro Audio Spectrum (GUS is on 240h), no music. Runs normally anyway, exits to DOS normally.
