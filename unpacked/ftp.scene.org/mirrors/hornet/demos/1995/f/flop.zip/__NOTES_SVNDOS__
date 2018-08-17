@@ -1,5 +1,5 @@
 Why the demo failed the test:
-- DO NOT EVER MODIFY THE CONTENTS OF THIS DEMO, EVEN IF YOU DIDN'T MODIFY ANYTHING
+- DO NOT EVER MODIFY THE CONTENTS OF THIS DEMO, EVEN IF YOU DIDN'T MODIFY ANYTHING. The demo checks the last-modified date of FLOP.EXE and expects it to be TIME=0000h DATE=2800h which would represent Jan 1st, 2000. That's an invalid date, however. FLOP.EXE has the closest valid date which is Dec 31, 1999.
 Real Hardware:
 - Same result, even on a Pentium (Toshiba Laptop 1997)
 - COMP-Old486y91, GUS, PAS: Same result, 486SX/33MHz
