@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Crashes on startup, endless reboot loop
+Notes:
+- Demo is wrapped in EFP Loader that uses some ugly anti-debugger tricks
