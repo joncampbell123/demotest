@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Do not ever modify the EXE file even though it has never been modified
+Notes:
+- Demo expects FLOP.EXE to have a specific last modified file time/date. The problem is that the date is an invalid value that DOSBox-X cannot reproduce. However to make the demo happy, a TSR (FLOPDATE.COM) is included to fake it.
