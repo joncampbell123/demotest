@@ -1,5 +1,5 @@
 Notes:
-- Demo is wrapped in a wrapper that has self-modifying code and it is VERY PARTICULAR about memory address and CPU speed
+- Demo is wrapped in a wrapper that has self-modifying code and ugly anti-debugger tricks
 Real hardware:
 - Toshiba Laptop 1997: Hangs at startup, does not run
 - COMP-Old486y91, GUS, PAS: It starts up, detects GUS, runs (something about 486SX/33MHz?), exits to DOS normally. Hm....
