@@ -1,6 +1,5 @@
-Why the demo failed the test:
-- The glitch graphics in one part call to question whether that is intentional or not. Will mark PASS if it occurs on real hardware.
-! PLEASE TEST ON REAL HARDWARE
+Notes:
+- The glitch graphics are either intentional or accidental, but not an emulation problem
 Real Hardware:
 - Toshiba Laptop 1997, Chips & Tech 65554, no GUS, OPL3-SAx (Sound Blaster Pro): Same glitch graphics
 - COMP-Old486y91, GUS, PAS, ET4000: Same glitch graphics
