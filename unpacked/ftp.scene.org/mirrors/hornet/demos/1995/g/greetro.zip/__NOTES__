@@ -1,5 +1,5 @@
-Why the demo failed the test:
-- Endless reboot cycle
+Notes:
+- Demo is wrapped in a wrapper that has self-modifying code and it is VERY PARTICULAR about memory address and CPU speed
 Real hardware:
 - Toshiba Laptop 1997: Hangs, crashes at startup
 - COMP-Old486y91, GUS, PAS: Runs, prompts for GUS, GUS music plays, runs normally, exits to DOS normally (something about 486SX/33MHz?). During testing, as prompted by the demo, I hit '3' to speed up the text. There's a lot of text...
