@@ -1,0 +1,2 @@
+Notes:
+- This demo seems to read INT 33h mouse position in units of half a pixel. "Mouse pointer integration" will cause guest cursor to sit at half the host cursor position
