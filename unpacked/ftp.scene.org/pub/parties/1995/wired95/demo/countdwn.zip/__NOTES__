@@ -1,2 +1,0 @@
-TODO:
-- This demo's initial screen seems to read mouse position as 1/2 the returned coordinates. This causes "int33 pointer integration" in DOSBox-X to put the cursor at half the x/y position it should be when moving the cursor on the host.
