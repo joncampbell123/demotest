@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- End credits rely on VGA 16-color planar 640x480 mode and 64KB wraparound,
+  or else credits scroll up to blankness before "popping" to the next screen.
