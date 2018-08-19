@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- SVN does not emulate S3 correctly, demo divides by zero
+- DOSBox SVN does not support 320x200x256 with S3 acceleration
