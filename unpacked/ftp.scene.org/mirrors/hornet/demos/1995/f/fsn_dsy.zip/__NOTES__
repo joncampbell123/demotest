@@ -1,5 +1,5 @@
-Why the demo failed the test:
-- GUS playback doesn't work (Demo is using ISA alias ports 524x,534x instead of 24x,34x)
+Notes:
+- GUS playback uses ISA alias ports 524x,534x instead of 24x,34x
 Real hardware:
 - Toshiba Laptop 1997, no GUS: Runs fine
 - COMP-Old486y91, GUS, PAS: GUS playback works IF you use IRQ 11, DMA 5, does nothing when IRQ 5, DMA 1
