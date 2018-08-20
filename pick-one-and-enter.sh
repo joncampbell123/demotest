@@ -25,14 +25,14 @@ fi
 
 if [[ "$what" == "qemu" ]]; then
     cmdopts="-soundhw sb16,adlib"
-    emu="/usr/bin/qemu-system-i386 $cmdopts"
+    emucap=emu="/usr/bin/qemu-system-i386 $cmdopts"
     gitcommit="unknown"
     echo "QEMU commit is $gitcommit"
     export gitcommit
 elif [[ "$what" == "svnbochs" ]]; then
     bochs_root="/mnt/main/src/bochs-svn"
 
-    emu="$bochs_root/bochs/bochs -q"
+    emucap=emu="$bochs_root/bochs/bochs -q"
     gitcommit_sh="`pwd`/dosbox-svn-git-commit-version.pl $bochs_root"
     gitcommit=`cd $x && $gitcommit_sh`
     echo "Bochs-SVN commit is $gitcommit"
@@ -44,7 +44,7 @@ elif [[ "$what" == "svn" || "$what" == "svndos" ]]; then
         dosbox_root="/usr/src/dosbox-svn"
     fi
 
-    emu="$dosbox_root/src/dosbox --debug"
+    emucap=emu="$dosbox_root/src/dosbox --debug"
     gitcommit_sh="`pwd`/dosbox-svn-git-commit-version.pl $dosbox_root"
     gitcommit=`cd $x && $gitcommit_sh`
     echo "DOSBox-SVN commit is $gitcommit"
@@ -57,6 +57,7 @@ else
         emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
 	gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
     fi
+    emucap="$emu --conf dosbox-capture.conf"
 
     if [ -x $gitcommit_sh ]; then
         x=`dirname $gitcommit_sh`
@@ -132,6 +133,10 @@ run() {
     $emu
 }
 
+capture() {
+    $emucap
+}
+
 download() {
     $downld
 }
@@ -140,6 +145,7 @@ PS1="\s-\v demo test$pext>> "
 
 export PS1
 export emu
+export emucap
 export downld
 export testroot
 export testpick
@@ -147,6 +153,7 @@ export -f run
 export -f pass
 export -f fail
 export -f commit
+export -f capture
 export -f windows
 export -f download
 
