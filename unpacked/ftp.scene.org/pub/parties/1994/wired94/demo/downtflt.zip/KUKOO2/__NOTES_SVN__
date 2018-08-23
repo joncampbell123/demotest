@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- SVN does not reset AC flip flop, bottom half judders

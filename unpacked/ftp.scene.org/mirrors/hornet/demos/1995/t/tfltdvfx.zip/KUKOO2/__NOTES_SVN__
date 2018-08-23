@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- DOSBox SVN does not implement Attribute Controller flip-flop reset fix needed to avoid judder in scroller on bottom half of the screen

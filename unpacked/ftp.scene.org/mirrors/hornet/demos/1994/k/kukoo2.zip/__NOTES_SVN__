@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- SVN does not reset attribute controller flip flop, neither does the demo, panning is jerky
