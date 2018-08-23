@@ -44,7 +44,8 @@ elif [[ "$what" == "svn" || "$what" == "svndos" ]]; then
         dosbox_root="/usr/src/dosbox-svn"
     fi
 
-    emucap=emu="$dosbox_root/src/dosbox --debug"
+    emu="$dosbox_root/src/dosbox --debug"
+    emucap="$emu"
     gitcommit_sh="`pwd`/dosbox-svn-git-commit-version.pl $dosbox_root"
     gitcommit=`cd $x && $gitcommit_sh`
     echo "DOSBox-SVN commit is $gitcommit"
