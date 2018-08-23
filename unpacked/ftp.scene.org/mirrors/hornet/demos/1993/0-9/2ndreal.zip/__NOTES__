@@ -1,2 +1,2 @@
-Why the demo failed the test:
+Notes:
 - VGA palette error between opening credits and animation (if cycles=20000)
