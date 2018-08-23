@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Attempts to talk to GUS assuming ISA bus aliasing at 0x5xxx, which is not yet emulated by DOSBox-X
