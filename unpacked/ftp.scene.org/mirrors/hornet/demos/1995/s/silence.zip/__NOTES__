@@ -1,5 +1,5 @@
-Why the demo failed the test:
-- Does not run
+Notes:
+- Will not run unless self-modifying code can trick the prefetch queue, which prevents running unless core=486_prefetch or on Pentium or higher.
 Real Hardware:
 - Toshiba Laptop 1997: Does not run
 - COMP-Old486y91, GUS, PAS: Runs fine, no sound
