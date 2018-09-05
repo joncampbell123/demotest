@@ -1,4 +1,4 @@
-Why the demo failed the test:
+Notes:
 - Demo does not exit to DOS, does not respond to keyboard on last screen
 Real Hardware:
 - Toshiba Laptop 1997: Same issue, does not exit, does not respond to keyboard
