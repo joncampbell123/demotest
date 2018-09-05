@@ -1,5 +1,6 @@
-Why the demo failed the test:
+Notes:
 - Demo does not exit to DOS (instead goes to an infinite loop aka JMP $)
+- However hitting a key before this point breaks to DOS
 Real hardware:
 - Toshiba 1997 laptop (Chips & Tech 65554 SVGA): Same behavior
 - COMP-Old486y91, GUS, PAS: Same behavior

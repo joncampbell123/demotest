@@ -1,5 +1,5 @@
 Why the demo failed the test:
-- NOMEANS.EXE "GUS_FIN" not found, fallback doesn't work
+- NOMEANS.EXE "GUS_FIN" not found, fallback doesn't work. "Illegal command EXEC"?
 Real hardware:
 - Toshiba Laptop 1997, Yamaha OPL3-SAx (Sound Blaster Pro compatible): Sound Blaster/Sound Blaster Pro playback Has trouble keeping playback going. Whether the IRQ is masked seems not to matter.
 - COMP-Old486y91, GUS, PAS: Does not support the GUS MAX in the 486SX/33MHz test system.
