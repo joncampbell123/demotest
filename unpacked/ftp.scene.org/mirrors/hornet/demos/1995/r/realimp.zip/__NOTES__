@@ -1,5 +1,3 @@
-Why the demo failed the test:
-- "E_Exit: Illegal descriptor type 0 for int D"
-Real Hardware:
+Real Hardware (TODO: Try tests AGAIN with EMM386.EXE loaded and active, machine in vm86 mode)
 - Toshiba Laptop 1997: Crashes, causes reboot
 - COMP-Old486y91, GUS, PAS: Crashes, causes reboot
