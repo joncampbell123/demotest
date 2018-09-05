@@ -1,4 +1,4 @@
-Why the demo failed the test:
+Notes:
 - Demo mis-detects the Sound Blaster card at really odd I/O base values
 - No audio playback means the demo is hung at startup
 Real hardware:
