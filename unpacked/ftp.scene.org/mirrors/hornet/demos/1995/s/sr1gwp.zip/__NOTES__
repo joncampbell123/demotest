@@ -3,3 +3,5 @@ Why the demo failed the test:
 Real Hardware:
 - Toshiba Laptop 1997: Runs fine with Sound Blaster. Demo got stuck endlessly repeating the closing credits.
 - COMP-Old486y91, GUS, PAS: 486SX/33MHz "This CPU is too late!!! (0110)"
+TODO:
+- Please re-test this demo on more hardware
