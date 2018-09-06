@@ -10,7 +10,7 @@ qemu-img convert -O raw $hddimg __hdd__ || exit 1
 
 # DEMO
 mmd -i __hdd__@@$prtofs demo || exit 1
-mcopy -i __hdd__@@$prtofs -b *.* ::demo || exit 1
+mcopy -i __hdd__@@$prtofs -b *.EXE ::demo || exit 1
 
 # mouse
 mcopy -i __hdd__@@$prtofs -b $hddimgdir/ctmouse.exe ::ctmouse.exe || exit 1
@@ -20,6 +20,7 @@ mdel -i __hdd__@@$prtofs ::autoexec.bat ::config.sys || exit 1
 # config.sys
 mcopy -i __hdd__@@$prtofs -t - ::config.sys <<_EOF
 DEVICE=C:\DOS\HIMEM.SYS
+DEVICE=C:\DOS\EMM386.EXE
 DOS=HIGH,UMB
 _EOF
 # autoexec.bat
