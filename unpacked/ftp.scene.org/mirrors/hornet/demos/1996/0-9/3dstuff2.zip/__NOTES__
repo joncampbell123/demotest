@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- SVGA mode is not page flipping, flickers badly unless cycle count is set high. Will mark PASS if demo behaves the same way on real hardware.

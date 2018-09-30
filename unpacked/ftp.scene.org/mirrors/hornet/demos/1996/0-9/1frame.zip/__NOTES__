@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo runs, though at one point, writes to the ROM BIOS area F0000-F7FFF
