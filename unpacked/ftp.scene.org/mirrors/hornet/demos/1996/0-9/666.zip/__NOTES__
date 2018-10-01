@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo gets stuck midway. Reducing available memory makes it run by causing one part to complain about lack of conventional memory.
