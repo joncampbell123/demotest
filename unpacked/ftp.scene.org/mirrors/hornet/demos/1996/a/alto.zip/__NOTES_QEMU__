@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Crashes after initial part
+- Causes QEMU's GUI to freeze

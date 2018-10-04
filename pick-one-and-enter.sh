@@ -24,15 +24,17 @@ if [[ -n "$2" ]]; then
 fi
 
 if [[ "$what" == "qemu" ]]; then
-    cmdopts="-soundhw sb16,adlib"
-    emucap=emu="/usr/bin/qemu-system-i386 $cmdopts"
+    cmdopts="-soundhw sb16,adlib -m 31"
+    emu="/usr/bin/qemu-system-i386 $cmdopts"
+    emucap="$emu"
     gitcommit="unknown"
     echo "QEMU commit is $gitcommit"
     export gitcommit
 elif [[ "$what" == "svnbochs" ]]; then
     bochs_root="/mnt/main/src/bochs-svn"
 
-    emucap=emu="$bochs_root/bochs/bochs -q"
+    emu="$bochs_root/bochs/bochs -q"
+    emucap="$emu"
     gitcommit_sh="`pwd`/dosbox-svn-git-commit-version.pl $bochs_root"
     gitcommit=`cd $x && $gitcommit_sh`
     echo "Bochs-SVN commit is $gitcommit"
