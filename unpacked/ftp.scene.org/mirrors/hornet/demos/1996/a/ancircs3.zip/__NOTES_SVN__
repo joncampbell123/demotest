@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo sets video resolution to 640x480 256-color but draws it's 320x200 display in the upper left hand corner
