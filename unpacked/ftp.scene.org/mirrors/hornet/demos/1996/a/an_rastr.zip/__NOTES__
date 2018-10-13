@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Renders effect with too many scanlines, flickers once per frame.
