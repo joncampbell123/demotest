@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Missing/disappearing text in intro
+- Missing/disappearing text in intro, apparently related to the cycle count when the demo starts up
