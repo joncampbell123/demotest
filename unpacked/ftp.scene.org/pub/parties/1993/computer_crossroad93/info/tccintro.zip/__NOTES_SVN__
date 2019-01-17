@@ -1,3 +1,3 @@
 Why the demo failed the test:
-- Missing/disappearing text in intro, apparently related to the cycle count when the demo starts up
+- Missing/disappearing text in intro, if cycle count is 6000 or higher. Based on getting it to work with DOSBox-X, video memory delay is required to prevent the issue, which DOSBox SVN lacks.
 - Sound Blaster playback is pure noise
