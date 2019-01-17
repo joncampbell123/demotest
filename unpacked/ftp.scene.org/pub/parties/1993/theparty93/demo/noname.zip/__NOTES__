@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- PC speaker output is broken in DOSBox-X with this demo. Demo uses write mode to only write LSB. Lots of messages about queue overrun, but no sound.
