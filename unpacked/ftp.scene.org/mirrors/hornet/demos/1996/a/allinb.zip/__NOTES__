@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- SB16 playback doesn't work (SBPRO works)
+Notes:
+- If you select SB16, the DMA channel must be 5 or higher (a 16-bit channel) or the sound will not work.

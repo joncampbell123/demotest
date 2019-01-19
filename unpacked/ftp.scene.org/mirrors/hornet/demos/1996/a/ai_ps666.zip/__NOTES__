@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Scribbles on unrelated memory address 1FFF0000 instead of VESA linear framebuffer (?)
