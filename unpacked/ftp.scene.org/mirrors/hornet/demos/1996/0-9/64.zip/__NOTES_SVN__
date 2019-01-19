@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo music slows down at any point when the demo cannot maintain full frame rate. PLEASE VERIFY ON REAL HARDWARE.
