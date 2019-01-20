@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- DOSBox SVN does not support 24bpp VESA BIOS modes
