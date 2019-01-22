@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- DOSBox SVN lacks the vmem delay to slow the fire effect down to prevent a crash

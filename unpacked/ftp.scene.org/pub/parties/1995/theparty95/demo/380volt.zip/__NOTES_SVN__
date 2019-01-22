@@ -1,3 +1,3 @@
 Why the demo failed the test:
-- Runs PKUNZIP to unpack itself, printout causes graphical glitches (lack of CTTY command)
-- Does not apply enough disk I/O delay to avoid demo bug that causes it to loop endlessly during the city scape part
+- If cycle count is above about 17000, then when beginning the looping animation, GUS music stops, and the demo never proceeds past the animation. The demo seems to require file I/O delay between changing video modes and starting the animation, or else it misses a vital cue.
+- Title screen glitches during unpack (SVN does not implement CTTY command, used by the demo to run PKUNZIP with STDOUT redirected to NUL)

@@ -1,5 +1,0 @@
-Why the demo failed the test:
-- Demo uses VGA active display hacks to open up playfield,
-  not properly handled by DOSBox-X.
-- hpel panning is not stable.
-

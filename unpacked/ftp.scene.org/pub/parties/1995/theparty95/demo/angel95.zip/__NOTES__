@@ -1,3 +1,0 @@
-- Sound Blaster 16 support appears to incorrectly program DMA and DSP block lengths and
-  the sound alternates between music and junk.
-
