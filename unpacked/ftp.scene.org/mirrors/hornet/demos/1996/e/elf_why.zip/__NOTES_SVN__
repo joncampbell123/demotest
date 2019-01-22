@@ -1,2 +1,3 @@
 Why the demo failed the test:
 - Demo has visual glitches and errors if you select Sound Blaster output. No such errors with GUS. PLEASE CHECK AGAINST REAL HARDWARE.
+- The ANSI portion appeared to have vertical alignment issues. PLEASE CHECK AGAINST REAL HARDWARE.
