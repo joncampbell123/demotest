@@ -1,5 +1,0 @@
-Why the demo failed the test:
-- Middle 3D animation section looks like something meant to display
-  as 320x200 or 320x240, but the scanlines are doubled, and therefore
-  you only see the top half of the animation.
-
