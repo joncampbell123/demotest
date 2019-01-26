@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Crashes during "Blue fire" because SVN does not have video memory rate limiting
