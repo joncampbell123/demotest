@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- 3D rasterization errors (overlong raster lines on 3D objects). Looks like some sort of problem with FPU emulation.
