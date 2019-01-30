@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Crashes, invalid opcode
+- 3D rasterization errors (overlong raster lines on 3D objects)
