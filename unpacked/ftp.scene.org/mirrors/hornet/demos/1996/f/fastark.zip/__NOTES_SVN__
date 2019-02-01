@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo will glitch and crash DOSBox-X with "no read handler for ffffxxxx" and cause a storm of "illegal reads" in DOSBox SVN if you select Sound Blaster output
