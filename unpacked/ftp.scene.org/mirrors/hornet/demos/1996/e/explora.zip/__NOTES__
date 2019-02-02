@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- 3D rasterization errors (overlong raster lines on 3D objects). Looks like some sort of problem with FPU emulation.
+Notes:
+- This demo's 3D rendering code requires the full 80-bit precision, which currently only the x86 FPU emulation provides. Non x86-targets will see glitches and errors in the rendering.
