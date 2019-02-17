@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo fails to unmask SB IRQ.
+- SVN does not support goldplay method
