@@ -1,2 +1,3 @@
-Why the demo failed the test:
-- Does not run
+Notes:
+- This demo uses IRQ0 in event timer mode (Mode 0), but it has a race condition shortly after calling INT 10h
+  where it briefly programs Mode 2 that can occur if IRQ signals are processed too fast by the system.
