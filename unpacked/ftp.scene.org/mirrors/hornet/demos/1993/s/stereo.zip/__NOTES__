@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Exits to DOS by zeroing it's code segment out from under itself????
+- One part terminates (INT 21h AH=4Ch) by zeroing it's code segment out from under itself, then
+  executing a MOV AH,4Ch + INT 21h from the prefetch queue.
