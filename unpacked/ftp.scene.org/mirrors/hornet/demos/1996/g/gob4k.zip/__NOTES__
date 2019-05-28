@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo gets stuck polling port 3C8h (??) as if port 3DAh
