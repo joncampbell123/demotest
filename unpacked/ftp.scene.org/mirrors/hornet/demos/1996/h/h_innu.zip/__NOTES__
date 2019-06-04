@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo hangs at startup, music runs but demo does not. May be related to charset conversion.
