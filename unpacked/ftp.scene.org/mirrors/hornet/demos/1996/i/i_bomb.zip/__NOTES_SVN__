@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo does not end on it's own. Either it does that on real hardware or DOSBox-X is mis-emulating something. CHECK.
