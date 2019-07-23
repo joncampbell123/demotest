@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Sound Blaster Pro selection doesn't work
+- Tunnel section runs too fast (needs vmem delay)
