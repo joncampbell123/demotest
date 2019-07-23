@@ -246,6 +246,9 @@ while ($line = <S>) {
         next if $x eq "";
     }
 
+    # stop going into subdirs
+    next if -f "$line/__IGNORE__";
+
     my $pass_dosbox_xdos = undef;
     my $pass_dosbox_xdos_rev = undef;
     my $pass_dosbox_xdos_url = undef;
