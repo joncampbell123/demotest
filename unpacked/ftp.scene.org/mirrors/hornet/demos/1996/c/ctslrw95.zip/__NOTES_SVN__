@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- DOSBox SVN cannot reliably run Windows 95
+- Windows 95 starts up in 16-color mode
+- Demo faults within the guest
