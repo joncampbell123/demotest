@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- DOSBox SVN fails to support the demo's DMA-based sample upload for Gravis Ultrasound GF1 music
