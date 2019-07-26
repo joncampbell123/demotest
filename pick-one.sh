@@ -15,7 +15,7 @@ if [[ "$1" == "svnbochs" ]]; then csuffix=".svnbochs"; suffix="svnbochs"; fi
 
 if [[ !( -f "pick-one$csuffix.cache" ) ]]; then ./yet-to-test.pl $suffix >/dev/null; fi
 
-mode=head
+mode=tail
 
 if [[ "$mode" == "head" ]]; then
     ./yet-to-test.pl $suffix | head -n $x | tail -n 1
