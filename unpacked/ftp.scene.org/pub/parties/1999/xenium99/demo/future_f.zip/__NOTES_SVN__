@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- DOSBox SVN is unable to convince this demo that cputype=pentium is a Pentium
