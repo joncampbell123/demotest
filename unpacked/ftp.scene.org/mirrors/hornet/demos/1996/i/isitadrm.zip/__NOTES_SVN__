@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo appears to have problems with Sound Blaster playback. SB Pro, SB16, and GUS works fine.
+- DOSBox SVN Sound Blaster emulation complains about use of undocumented DSP command 45h
