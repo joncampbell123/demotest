@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo only supports 24bpp VESA mode 0x10F, which DOSBox SVN does not provide.

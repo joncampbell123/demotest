@@ -1,0 +1,3 @@
+- Demo menu claims to support 32bpp, but does not. It does not actually query available
+  VESA modes but assumes mode numbers. 32bpp will always answer that it was not found.
+  24bpp will assume mode 0x10F which on most cards is 32bpp and will not display properly.
