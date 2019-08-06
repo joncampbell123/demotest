@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Not sure if demo loops infinitely or if there is an exit condition. Check on real hardware.
