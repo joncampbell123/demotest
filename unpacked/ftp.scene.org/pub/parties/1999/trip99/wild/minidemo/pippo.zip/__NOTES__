@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- 16bpp mode doesn't work (CHECK REAL HARDWARE)
+- It shouldn't take 5+ minutes to "precalc" the next part, demo assumed hung (cycles=250000)
