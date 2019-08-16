@@ -1,0 +1,3 @@
+CHECK ON REAL HARDWARE:
+- Gravis Ultrasound playback sounds like a cacophany of noise, understandable given the XM file is > 1MB
+- Gravis Ultrasound software mixing playback doesn't work (CHECK ON REAL HARDWARE TO CONFIRM). It's possible the democoder never tested on GUS.
