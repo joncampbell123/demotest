@@ -1,2 +1,1 @@
-Concerns to investiage:
-- Random I/O ports are being accessed during demo. The GUS music support routines have a known bug in the ISR that pops DS and then attempts to read the GUS base with whatever DS segment happened to exist.
+- Random I/O ports are being accessed during demo. The GUS music support routines have a known bug in the ISR that pops DS and then attempts to read the GUS base with whatever DS segment happened to exist. The way the ISR is written implies the same issue on real hardware.
