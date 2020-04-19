@@ -1,2 +1,3 @@
-Why the demo failed the test:
-- Some parts of the demo go by too fast (as far as I can tell). Pull out the Tandy and test on real hardware.
+NOTES:
+- Odd note fluctuations in the Tandy 3-voice music is apparently normal, according to test on real Tandy hardware.
+- On a Tandy 1000 TL/3 (286) some parts when drawing on screen cause the music to slow down.
