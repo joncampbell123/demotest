@@ -1,5 +1,3 @@
-Why the demo failed the test:
-- Demo leaves Sound Blaster playback running on exit to DOS. Will mark PASS if behavior occurs on REAL HARDWARE.
 Real hardware testing:
 - Toshiba 1997 laptop with SBPro compatible (OPL3-SAx): Crash on startup (two times, two tests)
 - COMP-Old486y91, GUS, PAS: Exits normally, stops Sound Blaster output. Note the "Sound Blaster" in this case is a Pro Audio Spectrum.
