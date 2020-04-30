@@ -1,4 +1,4 @@
-Why the demo failed the test:
-- Does not exit cleanly to DOS, leaves stuck notes. Will mark as PASS if same error occurs on REAL HARDWARE.
+Notes:
+- Does not exit cleanly to DOS, leaves stuck notes. However the music driver does not leave any interrupts hooked on exit. Perhaps this is how it would behave on real hardware.
 Real hardware:
 - COMP-Old486y91, GUS, PAS: Can't find ultrasound card for some reason (?)
