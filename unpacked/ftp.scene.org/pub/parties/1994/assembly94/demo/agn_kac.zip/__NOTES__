@@ -1,4 +1,4 @@
-Why the demo failed the test:
-- Exits to DOS, leaves keyboard unresponsive
+Notes:
+- Exits to DOS, leaves keyboard unresponsive. However real hardware testing shows the same, so it is a bug in the demo that is being emulated correctly.
 Real hardware test results:
 - TOSHIBA LAPTOP 1997 Yamaha OPL3-SAx: Left keyboard unresponsive, plus odd glitch artifacts in Sound Blaster (Pro?) output
