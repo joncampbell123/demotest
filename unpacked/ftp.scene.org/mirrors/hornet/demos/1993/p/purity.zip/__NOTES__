@@ -1,2 +1,4 @@
-Why the demo failed the test:
-- VGA color palette problems
+Notes:
+- Demo palette handling seems to require Paradise/Western digital VGA DAC behavior, or else VGA palette is all wrong.
+TODO:
+- Run the demo on various SVGA chipsets to see where it works and where it fails. Perhaps the DOSBox-X implemented behavior for machine=svga_paradise is more common than thought.
