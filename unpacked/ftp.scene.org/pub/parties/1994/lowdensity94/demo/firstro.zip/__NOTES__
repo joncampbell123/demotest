@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Demo gets stuck at a black screen
+Notes:
+- After the flag rendering, the demo sits at a black screen waiting for the synth drum to hit before showing "C A L L E D". It is not hung. Be patient or fast-forward the emulator.
