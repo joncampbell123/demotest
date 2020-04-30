@@ -1,10 +1,2 @@
 Why the demo failed the test:
-- Sound Blaster Pro support starts playback then leaves it to run through
-  garbage data in RAM, while hung at the sound card selection menu.
-  REAL HARDWARE shows that Sound Blaster Pro support works, at least against SBPro compatible hardware (see below)
-Notes:
-- If you select "Sound Blaster 16" you must specify the 16-bit DMA channel (usually 5)
-  or the demo will not play any music.
-Real hardware:
-- Toshiba 1997 Pentium with SBPro compatible OPL3-SAx: Sound Blaster Pro support works perfectly fine, does not hang as described above. However the 3D maze runs too fast, and exhibits Mode X tearlines.
-- COMP-Old486y91, GUS, PAS: GUS support works fine. SBPro selection detected the PAS and refused, properly.
+- Demo hangs if attempting to use Gravis Ultrasound
