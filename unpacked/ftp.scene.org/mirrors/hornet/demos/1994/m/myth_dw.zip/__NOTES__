@@ -1,6 +1,9 @@
 Notes:
 - Sound Blaster Pro support will hang, playing garbage data, if the demo also detected a Gravis Ultrasound,
   however at least it will also default to the Gravis Ultrasound if you hit enter.
+- Sound Blaster Pro support starts with a 1-byte DMA buffer, which falsely triggers DOSBox-X's goldplay mode,
+  and let that play until the demo is ready to run, but the demo will change the DMA base count to the final
+  length later when running.
 - If you select "Sound Blaster 16" you must specify the 16-bit DMA channel (usually 5)
   or the demo will not play any music.
 Real hardware:
