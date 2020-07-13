@@ -1,9 +1,4 @@
 Why the demo failed the test:
 - Demo runs, displays "guns" and rotating object, then crashes.
-- One likely reason the demo crashes is that it cannot load some of
-  it's files. Some files in the DATA directory do not fit into the
-  8.3 filename limit, suggesting that this DOS demo is intended
-  to run in a DOS box under Windows 95/98 since there does exist an
-  API to access "Long Filenames" from DOS within Windows 95/98.
-  Getting this demo to run may require implementation of Long
-  Filenames.
+  The reason is that DOSBox SVN does not emulate Long Filenames
+  and the demo cannot access it's data files without it.
