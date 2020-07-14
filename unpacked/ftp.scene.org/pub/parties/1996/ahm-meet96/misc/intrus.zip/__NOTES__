@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- MOD music does not play because of extended ASCII in filename

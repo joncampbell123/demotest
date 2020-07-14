@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Sound Blaster output renders half the audio per interrupt
+- Demo leaves music running when it exits
