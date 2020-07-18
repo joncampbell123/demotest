@@ -1,2 +1,1 @@
-Why the demo failed the test:
-- Hangs at startup, GUS support doesn't work
+- Check GUS music on real hardware. Sounds wrong without DOSBox-X hack.
