@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- DOSBox SVN does not support the 16 million (24bpp) mode
