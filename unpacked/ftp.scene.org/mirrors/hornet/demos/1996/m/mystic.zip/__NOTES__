@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Credits screen scribbles on VGA BIOS (C0000h) and beyond, causing corruption
+- After credits, crashes
+- One demopart fails to run unless you select Gravis Ultrasound music

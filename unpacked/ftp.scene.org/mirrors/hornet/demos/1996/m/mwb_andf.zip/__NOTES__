@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Crashes (JMPs to 0000:0000) on startup

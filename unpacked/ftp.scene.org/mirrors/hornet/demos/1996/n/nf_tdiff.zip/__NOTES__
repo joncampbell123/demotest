@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo may malfunction due to access to *.666 file with characters outside the code page
