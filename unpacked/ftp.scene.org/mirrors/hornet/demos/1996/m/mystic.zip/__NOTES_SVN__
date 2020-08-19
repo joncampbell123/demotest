@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Credits screen scribbles on VGA BIOS (C0000h) and beyond, causing corruption
+- After credits, crashes

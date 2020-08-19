@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- "Illegal read from 1000xxx" aka the 16MB mark. ?
