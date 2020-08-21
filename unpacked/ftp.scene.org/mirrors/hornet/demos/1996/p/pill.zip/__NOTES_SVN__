@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Broken SVGA support. Renders everything in the first 64KB without bank switching to draw on the rest of the screen because it's hardcoded to bank switch with Window B, which is not supported by DOSBox SVN. Furthermore the end credits are dependent on a VESA BIOS that lacks window number range checking to work, also not supported by DOSBox SVN.

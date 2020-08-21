@@ -1,0 +1,4 @@
+NOTES:
+- Demo uses 640x480 256-color SVGA mode with bank switching at some parts.
+- SVGA code is hard coded to bank switch with Window B. If Window B does not exist, all graphics are bunched up into the first 64KB. Clearly this demo was written against old buggy VESA BIOSes that ignored the window param.
+- SVGA code in the credits part is further broken in that it will call INT 10h AX=4F05h to bank switch to window number DX=FFFFh which is way out of range and correctly failed by DOSBox SVN/DOSBox-X). However that failure then causes the demo to misrender the scrolling credits. Clearly this demo was written against old buggy VESA BIOSes that did not range check the window number and blindly stuck it into the hardware registers.
