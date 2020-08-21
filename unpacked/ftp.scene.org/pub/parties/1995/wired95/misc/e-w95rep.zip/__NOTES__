@@ -1,9 +1,4 @@
-Why the demo failed the test:
-- Demo misrenders title, screen is garbled, bad bank switching support code.
-- Uses A0000 to C7FFF as if a linear framebuffer (???)
-- Calls VESA BIOS to set mode 0x101 non-linear framebuffer
-- Appears to draw to the screen as if a linear frame-buffer starting at A0000 (????!?)
-- Does not appear to pay attention to the Linear Framebuffer availabilitiy flag
-- Does not appear to support window/bank switching
-- Talks to VESA BIOS as if VBE1.1 (does not write VESA signature on query), allocated buffer is 256 bytes (512 byte struct would overrun adjacent text)
-! PLEASE RUN THIS ON REAL HARDWARE AND EXAMINE BEHAVIOR TO DETERMINE WHERE IT WORKS AND DOESN'T WORK
+NOTES:
+- Demo uses banked VESA BIOS 640x480 256-color mode, then uses segment limits and GP faults to emulate a linear framebuffer. The demo cannot draw on screen correctly without GP faults.
+- The demo seems to rely on a 64KB bank switching window at A0000h where the next 64KB is at B0000h (undocumented behavior). Without that, the demo can end up incompletely drawing some things.
+
