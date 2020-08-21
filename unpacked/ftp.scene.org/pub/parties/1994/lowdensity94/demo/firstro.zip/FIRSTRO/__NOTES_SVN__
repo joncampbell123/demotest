@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- SVN does not support Goldplay nor unmasks the IRQ for the demo
