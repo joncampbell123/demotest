@@ -1,5 +1,4 @@
 Why the demo failed the test:
-- Crashes on startup. Runs in a 16-bit DOS extender. Uses VESA BIOS extensions to set up 640x480x256 color mode. Crashes after modeset.
-- COMP-Old486y91, GUS, PAS: Program requires a mouse
+- VESA BIOS emulation seems to write to banked window as if a linear framebuffer and scribble on VGA BIOS (?)
 NOTES:
-- Attempts to run the demo with EMM386.EXE emulation enabled (vm86 mode) triggered a different error message about lack of Virtual DMA support
+- To avoid crashing, make sure there's nothing important in the UMB following the VGA BIOS area
