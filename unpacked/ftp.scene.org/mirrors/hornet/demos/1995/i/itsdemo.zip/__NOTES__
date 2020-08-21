@@ -1,4 +1,3 @@
-Why the demo failed the test:
-- VESA BIOS emulation seems to write to banked window as if a linear framebuffer and scribble on VGA BIOS (?)
 NOTES:
-- To avoid crashing, make sure there's nothing important in the UMB following the VGA BIOS area
+- Demo uses bank switched VESA BIOS modes, relies on segment limits and GP faults to fake a linear framebuffer from it.
+- To avoid crashing, make sure there's nothing important in the UMB following the VGA BIOS area.
