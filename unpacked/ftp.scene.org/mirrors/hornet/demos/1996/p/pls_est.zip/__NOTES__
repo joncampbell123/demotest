@@ -1,0 +1,5 @@
+Why the demo failed the test:
+- Demo does not run. Sits at black screen, then hitting enter reveals a "page fault" screen. CHECK ON REAL HARDWARE.
+NOTES:
+- Demo attempts to use VBE protected mode interface AX=4F0Ah
+- Demo will run with vesa_nolfb (Linear framebuffer problem?), but SVGA screens will not display anything meaningful and will require hitting ENTER to continue.
