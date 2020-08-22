@@ -1,2 +1,3 @@
 Why the demo failed the test:
-- Demo "setup" screen (VESA 640x480 16-bit color) does not display properly
+- The text mode copperbars at the start of the demo do not appear. DOSBox SVN only emulates per-scanline rendering if machine=vgaonly.
+- SIGMA65K.EXE uses 640x480 16-bit color does not display properly because the code uses wildly out of range window numbers when switching banks.

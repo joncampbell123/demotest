@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Demo "setup" screen (VESA 640x480 16-bit color) does not display properly
+NOTES:
+- SIGMA65K.EXE will fail to display properly unless you ask DOSBox-X to ignore window number. The window numbers given by the code are wildly out of range.
