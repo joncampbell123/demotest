@@ -1,5 +1,5 @@
 Why the demo failed the test:
-- Unable to run the demo (missing GO.EXE)
+- Unable to run the demo. Tries to exec A:\GO.EXE for some reason.
 Real hardware:
 - 1997 Toshiba laptop: Demo starts fine.
 - COMP-Old486y91, GUS, PAS: Demo detects GUS IRQ/DMA just as badly as it does in DOSBox-X (IRQ 2/DMA0???). GUS support does not support IRQ > 7 (unfortunately my setup puts the GUS on IRQ 11). Demo runs otherwise. Not compatible with PAS.

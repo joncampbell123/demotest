@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Sound Blaster Pro support has issues, including an extra slow sample rate
+- SB support code uses undocumented SB/SBPro DSP command alias 0x41 to set time constant. Will not work on SB16 cards. Not supported by SVN.

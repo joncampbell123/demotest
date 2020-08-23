@@ -1,5 +1,0 @@
-Why the demo failed the test:
-- Sound Blaster 16 support does not work. Will mark PASS if the problem exists on real hardware
-! PLEASE TEST ON REAL HARDWARE
-Real Hardware:
-- Toshiba Laptop 1997, Sound Blaster Pro: Sound Blaster playback doesn't work (looping garbage) unless you run with LOADFIX, just as in DOSBox-X.

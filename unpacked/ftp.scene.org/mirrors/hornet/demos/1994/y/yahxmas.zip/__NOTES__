@@ -1,6 +1,5 @@
-Why the demo failed the test:
-- Sound Blaster Pro support tries to use SB16 commands. Is the demo mis-detecting the DSP version? Will mark pass if the same happens on REAL HARDWARE.
-! PLEASE TEST THIS ON REAL HARDWARE
+NOTES:
+- Demo was written for Creative SB2/SBPro hardware where DSP command 0x41 happens to be an alias of 0x40 (set time constant). It does NOT support SB16 cards.
 Real Hardware:
 - Toshiba Laptop 1997 (Sound Blaster Pro compatible): Audio does not play (as if unable to process IRQ). Possibly same issues.
 - COMP-Old486y91, GUS, PAS: Sound Blaster Pro setting doesn't work (well, it is a Pro Audio Spectrum). 486SX/33MHz
