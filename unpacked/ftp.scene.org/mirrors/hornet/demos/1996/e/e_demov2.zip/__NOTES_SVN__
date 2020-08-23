@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Does nothing
+- Does nothing, because charset conversion gets in the way

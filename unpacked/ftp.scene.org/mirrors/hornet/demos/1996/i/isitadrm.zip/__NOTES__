@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Demo appears to have problems with Sound Blaster playback. SB Pro, SB16, and GUS works fine.
+NOTES:
+- Do not select "Sound Blaster" when sbtype=sb16, the demo is unaware of the requirement to acknowledge the IRQ on SB16 cards and audio will stop. "Sound Blaster Pro/etc" will work correctly with sbtype=sb16. Use sbtype=sbpro or sbtype=sb2 otherwise.
