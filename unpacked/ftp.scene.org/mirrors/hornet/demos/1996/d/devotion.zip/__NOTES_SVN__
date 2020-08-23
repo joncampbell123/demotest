@@ -1,2 +1,4 @@
-Why the demo failed the test:
-- Demo does nothing
+NOTES:
+- Demo requires a high cycle count (at least 75MHz?) or it will sit and do nothing
+CHECK:
+- Demo cannot detect 320x200 32bpp VESA BIOS mode in SVN?
