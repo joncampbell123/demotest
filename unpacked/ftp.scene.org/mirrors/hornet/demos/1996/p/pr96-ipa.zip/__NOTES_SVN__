@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Sound Blaster music fails to play
+NOTES:
+- This is not stated in the demo, but Sound Blaster support routines assume a SB16 card.
