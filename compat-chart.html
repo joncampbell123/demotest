@@ -641,14 +641,15 @@ TODO:
 - Sound Blaster popping and crackling</pre></td></tr>
 <tr><td class="passfail_PASS"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/12c1059466e10b49b2ccc8f31e0656eda2f87e6b">PASS</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4076/">FAIL</a></td><td class="passfail_NA">---</td><td class="passfail_NA">---</td><td class="passfail_NA">---</td><td class="passfail_NA">---</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/s/sbd.zip">mirrors/hornet/demos/1993/s/sbd.zip</a><br><br>DOSBox-SVN NOTES: <pre>Why the demo failed the test:
 - No sound</pre></td></tr>
-<tr><td class="passfail_FAIL"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/94ab12463ea3dc2b28b9b586b223e0a7ebef5881">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4252/">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/59d27964a81bbc251df40a1dd2a3830b518e59d2">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4092/">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/bochs/code/13489/">FAIL</a></td><td class="passfail_FAIL">FAIL</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/s/scifimag.zip">mirrors/hornet/demos/1993/s/scifimag.zip</a><br><br>DOSBox-X NOTES: <pre>Why the demo failed the test:
-- Uses protected mode. "Mapped vectors" are no fun when the code causes a storm of General Protection Faults and freezes.
+<tr><td class="passfail_FAIL"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/5be24587f1276cf4e5ec2ba469e1d02c1ec4e732">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4354/">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://github.com/joncampbell123/dosbox-x/commit/59d27964a81bbc251df40a1dd2a3830b518e59d2">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/dosbox/code-0/4092/">FAIL</a></td><td class="passfail_FAIL"><a target="_blank" href="https://sourceforge.net/p/bochs/code/13489/">FAIL</a></td><td class="passfail_FAIL">FAIL</td><td><a href="http://files.scene.org/get/mirrors/hornet/demos/1993/s/scifimag.zip">mirrors/hornet/demos/1993/s/scifimag.zip</a><br><br>DOSBox-X NOTES: <pre>Why the demo failed the test:
+- Uses protected mode. "Mapped vectors" eventually causes a divide by zero fault which is very poorly handled by the code.
 Real hardware test:
 - Toshiba Laptop, 1997, Pentium, MS-DOS 6.22: Crashed to DOS with an exception immediately
 - COMP-Old486y91, GUS, PAS: Runs normally, does not crash (Something to do with 486SX/33MHz?). No sound. Exits to DOS normally.</pre><br>DOSBox-SVN NOTES: <pre>Why the demo failed the test:
-- Uses protected mode. "Mapped vectors" are no fun when the code causes a storm of General Protection Faults and freezes.
+- Uses protected mode. "Mapped vectors" eventually causes a divide by zero fault which is very poorly handled by the code.
 Real hardware test:
-- Toshiba Laptop, 1997, Pentium, MS-DOS 6.22: Crashed to DOS with an exception immediately</pre><br>DOSBox-X-DOS NOTES: <pre>Why the demo failed the test:
+- Toshiba Laptop, 1997, Pentium, MS-DOS 6.22: Crashed to DOS with an exception immediately
+- COMP-Old486y91, GUS, PAS: Runs normally, does not crash (Something to do with 486SX/33MHz?). No sound. Exits to DOS normally.</pre><br>DOSBox-X-DOS NOTES: <pre>Why the demo failed the test:
 - Demo doesn't GPF rapidly, but stops and does not respond to the keyboard
 Real hardware test:
 - Toshiba Laptop, 1997, Pentium, MS-DOS 6.22: Crashed to DOS with an exception immediately</pre><br>DOSBox-SVN-DOS NOTES: <pre>Why the demo failed the test:

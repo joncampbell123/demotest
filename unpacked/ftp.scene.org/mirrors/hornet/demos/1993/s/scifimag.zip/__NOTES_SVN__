@@ -1,4 +1,5 @@
 Why the demo failed the test:
-- Uses protected mode. "Mapped vectors" are no fun when the code causes a storm of General Protection Faults and freezes.
+- Uses protected mode. "Mapped vectors" eventually causes a divide by zero fault which is very poorly handled by the code.
 Real hardware test:
 - Toshiba Laptop, 1997, Pentium, MS-DOS 6.22: Crashed to DOS with an exception immediately
+- COMP-Old486y91, GUS, PAS: Runs normally, does not crash (Something to do with 486SX/33MHz?). No sound. Exits to DOS normally.
