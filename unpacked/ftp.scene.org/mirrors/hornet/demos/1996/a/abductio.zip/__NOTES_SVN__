@@ -1,3 +1,2 @@
 Why the demo failed the test:
 - Failure to detect Gravis Ultrasound. PLEASE CHECK ON REAL HARDWARE.
-- Detects Sound Blaster but does not determine SB16 vs SBPro. PLEASE CHECK ON REAL HARDWARE.
