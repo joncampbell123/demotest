@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- DOSBox SVN does not emulate the v86 mode of EMM386.EXE required by the demo
