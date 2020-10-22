@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Gravis Ultrasound support doesn't work
+Todo:
+- Check GUS output on real hardware (instruments start loud momentarily then fade in at beginning)
