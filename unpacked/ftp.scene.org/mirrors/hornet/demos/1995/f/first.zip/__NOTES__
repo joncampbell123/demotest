@@ -1,3 +1,3 @@
 - Demo works, but tries to reset to text using "MODE" command with
-  parameters not recognized by DOS.
+  parameters not recognized by DOS. Appears to excute "MODE 0"
 
