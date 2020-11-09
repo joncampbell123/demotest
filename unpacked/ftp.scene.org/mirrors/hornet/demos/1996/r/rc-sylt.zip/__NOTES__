@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo shows nothing (blank screen) very soon after start.
+- Demo exits to DOS without unloading it's music routines. Loading another program causes a crash.
