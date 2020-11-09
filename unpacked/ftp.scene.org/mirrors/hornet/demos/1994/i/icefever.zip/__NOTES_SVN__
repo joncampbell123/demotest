@@ -1,1 +1,4 @@
-- Check GUS music on real hardware. Sounds wrong without DOSBox-X hack.
+Demo notes:
+- Requires GUS DMA on IRQ 1, or it does not work.
+- Music sounds awful, out of tune, off key, like there's something wrong with the tracker or the music data. It has been confirmed that the music sounds just as bad on real Gravis Ultrasound MAX hardware.
+- For some reason, it sounds even worse when run in DOSBox SVN.
