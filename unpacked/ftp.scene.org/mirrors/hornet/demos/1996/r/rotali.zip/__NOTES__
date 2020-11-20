@@ -1,0 +1,2 @@
+NOTES:
+- If the base VBE (100h-11Fh) truecolor modes are 32bpp, then even if higher mode numbers are 24bpp, the 24bpp selection will choose 32bpp anyway. If said modes are 24bpp, then the 24bpp selection will chose 24bpp but 32bpp will select a 32bpp mode.
