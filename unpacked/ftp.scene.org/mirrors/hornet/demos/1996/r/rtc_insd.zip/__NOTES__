@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- DOSBox-X code page conversion prevents demo from loading sound driver and module
