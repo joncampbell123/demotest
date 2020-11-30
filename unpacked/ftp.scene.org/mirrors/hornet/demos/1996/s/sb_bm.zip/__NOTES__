@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Gravis Ultrasound playback causes demo to page fault and crash
+- Sound Blaster playback works, but audio is choppy because the demo doesn't understand the concept of auto-init DMA playback
+- Demo does not progress past title in any case
