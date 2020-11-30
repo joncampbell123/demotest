@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- DOSBox SVN does not recognize VESA mode 155h, assumed by the demo.
