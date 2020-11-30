@@ -1,0 +1,3 @@
+- Demo will use 32bpp even if you chose 24bpp, it will just misrender to screen in that case.
+- The "18bpp linear VESA mode" does not work.
+- It's best to use 32bpp VESA.
