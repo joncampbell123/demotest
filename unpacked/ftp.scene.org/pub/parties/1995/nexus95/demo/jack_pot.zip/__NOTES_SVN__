@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Demo leaves music player running on exit
+TODO:
+- Check that the flashing cube and other effects are intentional, not emulation errors
