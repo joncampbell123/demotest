@@ -1,2 +1,2 @@
-TODO:
-- Check "jittery" tunnel effect on real hardware
+Why the demo failed the test:
+- Demo has timer/animation issues. 3D objects rotate slowly, tunnel/transform effects jitter badly
