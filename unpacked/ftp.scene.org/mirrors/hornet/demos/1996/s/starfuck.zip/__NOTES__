@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Demo hangs at exit to DOS, polling I/O port 0000h for some reason
