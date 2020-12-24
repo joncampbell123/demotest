@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- MIDAS cannot find files. Change to PASS if the demo has the same issue on real hardware.
