@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Demo has timer/animation issues. 3D objects rotate slowly, tunnel/transform effects jitter badly
+NOTES:
+- Uses BIOS data area (BIOS_TIMER) and BIOS IRQ0 handler, but programs timer to run faster
