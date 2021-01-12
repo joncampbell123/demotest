@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Did not reset GUS at shutdown? CHECK REAL HARDWARE
