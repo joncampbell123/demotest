@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Crashed on exit (invalid opcode). CHECK ON REAL HARDWARE.
+- Cursor continues blinking during demo. CHECK ON REAL HARDWARE.
