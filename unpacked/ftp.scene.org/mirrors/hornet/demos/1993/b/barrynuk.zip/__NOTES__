@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- LPT DAC output (not Disney Sound Source) is very low fidelity. PIT logging suggests the fidelity should be at least 10KHz, yet muffled by LPT DAC emulation.
+- Neither LPT DAC nor Disney Sound Source works.
