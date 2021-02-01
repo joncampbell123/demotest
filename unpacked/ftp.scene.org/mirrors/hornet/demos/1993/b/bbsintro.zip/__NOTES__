@@ -1,3 +1,4 @@
 Why the demo failed the test:
 - LPT DAC output does not work (Demo writes to I/O port 3BC?)
+- Disney Sound Source emulation does not work properly with port 3BC.
 
