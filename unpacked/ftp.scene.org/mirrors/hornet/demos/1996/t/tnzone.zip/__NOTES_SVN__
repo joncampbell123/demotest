@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- VGA display "wraps around" before completing the display (black bar at the bottom)
