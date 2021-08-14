@@ -1,0 +1,2 @@
+CHECK REAL HARDWARE:
+- Bouncing graphic is residual garbage in memory. Does that occur on real hardware?

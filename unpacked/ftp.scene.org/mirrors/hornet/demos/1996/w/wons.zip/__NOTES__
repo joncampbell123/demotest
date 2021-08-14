@@ -1,0 +1,2 @@
+NOTES:
+- Demo unpacks files including INTRO.EXE, runs INTRO.EXE, then deletes the files afterwards, except it fails to delete INTRO.EXE, and then it cannot run again unless you delete those yourself.
