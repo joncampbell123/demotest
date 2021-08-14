@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Hangs with black screen when it should prompt for GUS base port
