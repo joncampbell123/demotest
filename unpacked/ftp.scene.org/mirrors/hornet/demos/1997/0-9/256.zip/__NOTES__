@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- AND_256.COM flickers badly in DOSBox-X, as if trying to palette render too many scanlines.

@@ -1,0 +1,2 @@
+CHECK ON REAL HARDWARE:
+- Demo prompts for GUS base port, but makes no noise. Either it doesn't use the GUS or something is not being emulated properly.

@@ -1,0 +1,4 @@
+CHECK:
+- Blank band at top when drawing 3D wireframe polys
+Why the demo failed the test:
+- One poly has a vertex way out and away from the center, which suggests a math error occurred... unless that was intentional

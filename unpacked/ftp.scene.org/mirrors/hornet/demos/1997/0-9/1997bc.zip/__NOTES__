@@ -1,0 +1,3 @@
+NOTES:
+- Badly written video code scribbles on VGA BIOS and UMB areas. This can cause crashes under DOSBox-X if the private area appears at C400:0000. This can cause crashes with DOSBox SVN except that the private area is out far enough not to be affected by the demo.
+- Appears to sit for a long time at the "creditos" screen.

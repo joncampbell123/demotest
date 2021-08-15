@@ -1,0 +1,2 @@
+WARNING:
+- Demo executable causes DOSBox-X to hang solid if you do not run CWSDPMI.EXE first
