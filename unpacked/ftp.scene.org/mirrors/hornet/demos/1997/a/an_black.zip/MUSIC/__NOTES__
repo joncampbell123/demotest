@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- After the MIDAS configuration screen, text is supposed to be visible while the demo is loading. DOSBox SVN shows it, DOSBox-X does not.

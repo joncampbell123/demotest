@@ -1,0 +1,5 @@
+CHECK ON REAL HARDWARE:
+- "grayscale" 256-color VGA doesn't seem to work. DOSBox-X and DOSBox SVN.
+- Demo readme claims 15/16bpp support, but I am unable to trigger that. DOSBox-X and DOSBox SVN.
+- Demo supports 24bpp mode, does not seem to support 32bpp. This makes it incompatible with DOSBox SVN which does not implement 24bpp VESA modes.
+-  
