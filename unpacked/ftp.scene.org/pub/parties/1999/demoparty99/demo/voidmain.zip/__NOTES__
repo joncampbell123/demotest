@@ -1,2 +1,4 @@
 Why the demo failed the test:
 - Consistently crashes after the "starting lobotomy sequence" (attempts to execute MMX instruction PSHUFW aka 0Fh 70h which is not yet implemented by normal core)
+NOTES:
+- This demo has code to ensure the CPU has MMX extensions, however the test is flawed in that it does a (EDX & mask) != 0 test, the mask of which includes many unrelated features like whether CMPXCHG8B is present and whether a reserved bit is set, whether ACPI MSRs are present, but it does at least cover the MMX bit too. It does correctly detect that DOSBox SVN does not have MMX extensions, however the additional bits from DOSBox-X make it think MMX extensions are present even when cputype=pentium where MMX extensions are not present. Part of the test seems to be, if (EDX & mask) == 0, whether it can do the same test with CPUID 80000001h, which on 486/Pentium CPUs is a mirror of CPUID 00000001h
