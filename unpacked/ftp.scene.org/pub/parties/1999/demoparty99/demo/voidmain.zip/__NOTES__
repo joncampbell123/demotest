@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Consistently crashes after the "starting lobotomy sequence" (E_Exit: No byte handler for write to fffffffe)
+- Consistently crashes after the "starting lobotomy sequence" (attempts to execute MMX instruction PSHUFW aka 0Fh 70h which is not yet implemented by normal core)
