@@ -1,0 +1,4 @@
+NOTES:
+- Demo makes no attempt to detect MMX instructions, just blindly uses them
+- This demo is a great test case for MMX emulation
+- DOSBox SVN correctly throws #UD exceptions because it does not emulate MMX instructions
