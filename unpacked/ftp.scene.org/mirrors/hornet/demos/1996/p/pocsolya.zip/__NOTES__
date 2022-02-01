@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- "pmode error"
+NOTES:
+- Demo requires EMM386 and VCPI, else it gives a rather cryptic "pmode err!"
