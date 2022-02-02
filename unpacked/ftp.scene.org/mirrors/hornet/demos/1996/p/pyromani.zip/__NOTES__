@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo hangs midway
+- Demo hangs midway, some strange loop polling the timer in mode 0
