@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- GUS music sounds like samples are clipped, cut off, and played incorrectly, in a sometimes sudden and jarring way
+- Demo goes through title sequence and then immediately gets stuck in a loop playing a 3D model of a ship
+- 3D ship model has very poor framerate regardless of cycle count. A higher cycle count does not resolve the low frame rate.
