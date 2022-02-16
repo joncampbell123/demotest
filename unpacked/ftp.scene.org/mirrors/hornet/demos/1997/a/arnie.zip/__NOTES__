@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo unexpectedly aborts in the middle with a Runtime Error
+- Visible flickering on screen if cycle count lower than 30000
