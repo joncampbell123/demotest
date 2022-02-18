@@ -1,0 +1,2 @@
+NOTES:
+ - This demo uses 16-bit I/O to GF1 I/O ports normally intended for 8-bit I/O, in a way that failed to work with older DOSBox-X releases
