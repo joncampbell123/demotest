@@ -1,4 +1,2 @@
-Why the demo failed the test:
-- GUS support doesn't work
 Real hardware testing:
 - COMP-Old486y91, GUS, PAS: Detects GUS, crashes and causes reset (486SX/33MHz)
