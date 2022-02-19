@@ -1,0 +1,4 @@
+NOTES:
+- The menu is correctly showing what keys to press for each sound card, including the Gravis Ultrasound option which can only be selected by holding ALT and typing 0145 (æ).
+Why the demo failed the test:
+- Demo seems glitchy and broken, eventually music slows down, 3D animation slows down, and then gets stuck. How the hell did this win 9th place in a compo?

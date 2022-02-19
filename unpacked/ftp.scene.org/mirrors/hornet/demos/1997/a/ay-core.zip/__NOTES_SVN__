@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Main executable uses extended ASCII in it's filename
