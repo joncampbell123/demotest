@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Demo stops on last screen "BLOCC" and does not continue until you hit ESC to exit.
+! TEST ON REAL HARDWARE !

@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo runs for 10-15 seconds then stops, does nothing. It does respond to keyboard input to exit to DOS though.

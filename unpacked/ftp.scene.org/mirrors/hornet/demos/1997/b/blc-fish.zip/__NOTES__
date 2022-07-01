@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Pauses at startup, does not continue until you hit a key. Then it complains about failure to detect refresh rate. Then runs normally. Does not have this problem with DOSBox SVN.
+- Demo stops on last screen "BLOCC" and does not continue until you hit ESC to exit.
+! TEST ON REAL HARDWARE !
