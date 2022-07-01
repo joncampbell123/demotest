@@ -1,3 +1,9 @@
 Why the demo failed the test:
 - Demo has visual glitches and errors if you select Sound Blaster output. No such errors with GUS. PLEASE CHECK AGAINST REAL HARDWARE.
 - The ANSI portion appeared to have vertical alignment issues. PLEASE CHECK AGAINST REAL HARDWARE.
+- "ANSI.SYS not found" later on in the demo?
+Notes:
+- This demo runs entirely in real mode and uses EMM386.EXE to access memory beyond 640k. It may be using a real mode tracker that also uses expanded memory if Sound Blaster is involved.
+
+PLEASE TEST ON REAL HARDWARE
+
