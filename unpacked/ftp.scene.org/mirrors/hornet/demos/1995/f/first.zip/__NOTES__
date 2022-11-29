@@ -1,3 +1,2 @@
-- Demo works, but tries to reset to text using "MODE" command with
-  parameters not recognized by DOS. Appears to excute "MODE 0"
+BUG: Demo exits and attempts to reset text mode by executing "MODE 0" which is not valid.
 
