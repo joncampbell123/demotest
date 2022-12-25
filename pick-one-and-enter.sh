@@ -10,6 +10,7 @@ if [[ "$1" == "xdos" ]]; then what=xdos; pext=" xdos"; filesuffix="_XDOS"; fi
 if [[ "$1" == "qemu" ]]; then what=qemu; pext=" qemu"; filesuffix="_QEMU"; fi
 if [[ "$1" == "svndos" ]]; then what=svndos; pext=" svndos"; filesuffix="_SVNDOS"; fi
 if [[ "$1" == "svnbochs" ]]; then what=svnbochs; pext=" svnbochs"; filesuffix="_SVNBOCHS"; fi
+if [[ "$1" == "staging" ]]; then what=staging; pext=" staging"; filesuffix="_STAGING"; fi
 
 if [[ -z "$what" ]]; then
     echo Test env must be specified
@@ -52,13 +53,29 @@ elif [[ "$what" == "svn" || "$what" == "svndos" ]]; then
     gitcommit=`cd $x && $gitcommit_sh`
     echo "DOSBox-SVN commit is $gitcommit"
     export gitcommit
+elif [[ "$what" == "staging" ]]; then
+    if [ -x /home/jon/src/dosbox-staging/build/dosbox ]; then
+        dosbox_root="/home/jon/src/dosbox-staging"
+        gitcommit_sh="/home/jon/src/dosbox-x/git-commit-version.pl"
+    else
+        dosbox_root="/usr/src/dosbox-staging"
+        gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
+    fi
+
+    emu="$dosbox_root/build/dosbox --debug"
+
+    if [ -x $gitcommit_sh ]; then
+        gitcommit=`cd $dosbox_root && $gitcommit_sh`
+        echo "DOSBox-Staging commit is $gitcommit"
+        export gitcommit
+    fi
 else
     if [ -x /home/jon/src/dosbox-x/src/dosbox-x ]; then
         emu="/home/jon/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
-	gitcommit_sh="/home/jon/src/dosbox-x/git-commit-version.pl"
+        gitcommit_sh="/home/jon/src/dosbox-x/git-commit-version.pl"
     else
         emu="/usr/src/dosbox-x/src/dosbox-x --debug --showrt --showcycles"
-	gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
+        gitcommit_sh="/usr/src/dosbox-x/git-commit-version.pl"
     fi
     emucap="$emu --conf dosbox-capture.conf"
 

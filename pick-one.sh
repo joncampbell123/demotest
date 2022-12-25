@@ -12,6 +12,7 @@ if [[ "$1" == "xdos" ]]; then csuffix=".xdos"; suffix="xdos"; fi
 if [[ "$1" == "qemu" ]]; then csuffix=".qemu"; suffix="qemu"; fi
 if [[ "$1" == "svndos" ]]; then csuffix=".svndos"; suffix="svndos"; fi
 if [[ "$1" == "svnbochs" ]]; then csuffix=".svnbochs"; suffix="svnbochs"; fi
+if [[ "$1" == "staging" ]]; then csuffix=".staging"; suffix="staging"; fi
 
 if [[ !( -f "pick-one$csuffix.cache" ) ]]; then ./yet-to-test.pl $suffix >/dev/null; fi
 

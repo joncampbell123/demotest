@@ -27,6 +27,7 @@ print H "<br>\n";
 
 print H "DOSBox-X refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/\">DOSBox-X project</a><br>\n";
 print H "DOSBox-SVN refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a><br>\n";
+print H "DOSBox-Staging refers to the <a target=\"_blank\" href=\"https://dosbox-staging.github.io/\">DOSBox Staging project</a><br>\n";
 print H "DOSBox-X-DOS refers to the <a target=\"_blank\" href=\"http://dosbox-x.com/\">DOSBox-X project</a> booting an MS-DOS system.<br>\n";
 print H "DOSBox-SVN-DOS refers to the <a target=\"_blank\" href=\"https://www.dosbox.com/\">DOSBox project</a> booting an MS-DOS system.<br>\n";
 print H "Bochs-SVN refers to the <a target=\"_blank\" href=\"https://sourceforge.net/projects/bochs/\">Bochs project</a> booting an MS-DOS system disk.<br>\n";
@@ -63,6 +64,7 @@ print H "<thead class=\"testing_header\">\n";
 print H "<tr>\n";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-Staging</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
 print H "<td style=\"min-width: 8em; text-align: center;\">DOSBox-SVN-DOS</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">Bochs-SVN</td>";
@@ -83,12 +85,13 @@ my $totalcount = 0;
 my $tot_x = 0,$pass_x = 0;
 my $tot_svn = 0,$pass_svn = 0;
 my $tot_xdos = 0,$pass_xdos = 0;
+my $tot_staging = 0,$pass_staging = 0;
 my $tot_svndos = 0,$pass_svndos = 0;
 my $tot_bochs = 0,$pass_bochs = 0;
 my $tot_qemu = 0,$pass_qemu = 0;
 
 $count = 0;
-$list = "pick-one.cache  pick-one.qemu.cache  pick-one.svnbochs.cache  pick-one.svn.cache  pick-one.svndos.cache  pick-one.xdos.cache";
+$list = "pick-one.cache  pick-one.staging.cache  pick-one.qemu.cache  pick-one.svnbochs.cache  pick-one.svn.cache  pick-one.svndos.cache  pick-one.xdos.cache";
 #open(S,"find -type d | sort |") || die;
 open(S,"(find -type d; find -type l; cat $list) | sort | uniq |") || die;
 while ($line = <S>) {
@@ -488,6 +491,61 @@ while ($line = <S>) {
         $notes_dosbox_qemu = $res;
     }
 
+    my $pass_dosbox_staging = undef;
+    my $pass_dosbox_staging_rev = undef;
+    my $pass_dosbox_staging_rev_file = undef;
+
+    die unless !defined($pass_dosbox_staging);
+    die unless !defined($pass_dosbox_staging_rev);
+    die unless !defined($pass_dosbox_staging_rev_file);
+
+    if ( -f "$line/__PASS_STAGING__" ) {
+        $tot_staging++;
+        $pass_staging++;
+        $pass_dosbox_staging = "PASS";
+        $pass_dosbox_staging_rev_file = "$line/__PASS_STAGING__";
+    }
+    if ( -f "$line/__FAIL_STAGING__" ) {
+        $tot_staging++;
+        $pass_dosbox_staging = "FAIL";
+        $pass_dosbox_staging_rev_file = "$line/__FAIL_STAGING__";
+    }
+    if ( -f "$line/__WINDOWS_STAGING__" ) {
+        $pass_dosbox_staging = "WINDOWS";
+        $pass_dosbox_staging_rev_file = "$line/__WINDOWS_STAGING__";
+    }
+    if (defined($pass_dosbox_staging_rev_file) && -f $pass_dosbox_staging_rev_file ) {
+        open(R,"<",$pass_dosbox_staging_rev_file) || die;
+        $pass_dosbox_staging_rev = <R>;
+        chomp $pass_dosbox_staging_rev;
+        close(R);
+
+        my $x = $pass_dosbox_staging_rev;
+        if ($x =~ s/^\d+-\d+-//) {
+            $x =~ s/\-.*$//g;
+            $pass_dosbox_staging_url = "https://github.com/dosbox-staging/dosbox-staging/commit/".$x;
+        }
+    }
+
+    my $notes_dosbox_staging = undef;
+    if ( -f "$line/__NOTES_STAGING__" ) {
+        my $nline="",$pline,$res="",$ncount=0;
+
+        open(X,"<","$line/__NOTES_STAGING__") || die;
+        while ($nline = <X>) {
+            $pline = $nline;
+            chomp $nline;
+            $nline =~ s/^[ \t]+//;
+            $nline =~ s/[ \t]+$//;
+            next if $nline eq "";
+            $res .= "\n" if $ncount > 0;
+            $res .= "$nline";
+            $ncount++;
+        }
+        close(X);
+        $notes_dosbox_staging = $res;
+    }
+
     $count++;
     if ($count >= 24) {
         $count = 0;
@@ -498,6 +556,7 @@ while ($line = <S>) {
         print H "<tr>\n";
         print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X</td>";
         print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
+        print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-Staging</td>";
         print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
         print H "<td style=\"min-width: 8em; text-align: center;\">DOSBox-SVN-DOS</td>";
         print H "<td style=\"min-width: 6em; text-align: center;\">Bochs-SVN</td>";
@@ -529,6 +588,18 @@ while ($line = <S>) {
         }
         else {
             print H "<td class=\"passfail_$pass_dosbox_svn\">$pass_dosbox_svn</td>";
+        }
+    }
+    else {
+        print H "<td class=\"passfail_NA\">---</td>";
+    }
+
+    if (defined($pass_dosbox_staging)) {
+        if (defined($pass_dosbox_staging_url) && $pass_dosbox_staging_url ne "") {
+            print H "<td class=\"passfail_$pass_dosbox_staging\"><a target=\"_blank\" href=\"$pass_dosbox_staging_url\">$pass_dosbox_staging</a></td>";
+        }
+        else {
+            print H "<td class=\"passfail_$pass_dosbox_staging\">$pass_dosbox_staging</td>";
         }
     }
     else {
@@ -620,6 +691,17 @@ while ($line = <S>) {
         }
     }
 
+    if ($comb ne "NO" && defined($notes_dosbox_staging) && $notes_dosbox_staging ne "") {
+        if ($comb eq "" || $combnotes eq $notes_dosbox_staging) {
+            $comb .= " &amp; " if $comb ne "";
+            $comb .= "DOSBox-SVN";
+            $combnotes = $notes_dosbox_staging;
+        }
+        else {
+            $comb = "NO";
+        }
+    }
+
     if ($comb ne "NO" && defined($notes_dosbox_xdos) && $notes_dosbox_xdos ne "") {
         if ($comb eq "" || $combnotes eq $notes_dosbox_xdos) {
             $comb .= " &amp; " if $comb ne "";
@@ -675,6 +757,11 @@ while ($line = <S>) {
             $more .= "DOSBox-SVN NOTES: <pre>$notes_dosbox_svn</pre>";
         }
 
+        if (defined($notes_dosbox_staging) && $notes_dosbox_staging ne "") {
+            $more .= "<br>";
+            $more .= "DOSBox-Staging NOTES: <pre>$notes_dosbox_staging</pre>";
+        }
+
         if (defined($notes_dosbox_xdos) && $notes_dosbox_xdos ne "") {
             $more .= "<br>";
             $more .= "DOSBox-X-DOS NOTES: <pre>$notes_dosbox_xdos</pre>";
@@ -710,7 +797,7 @@ while ($line = <S>) {
 
     print H "</tr>\n";
 
-    if (!($pass_dosbox_x eq "WINDOWS" || $pass_dosbox_svn eq "WINDOWS")) {
+    if (!($pass_dosbox_x eq "WINDOWS" || $pass_dosbox_svn eq "WINDOWS" || $pass_dosbox_staging eq "WINDOWS")) {
         $totalcount++;
     }
 }
@@ -762,6 +849,7 @@ sub makestat($$$) {
 print H "<tr>\n";
 print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($totalcount,$tot_x,$pass_x)."</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($totalcount,$tot_svn,$pass_svn)."</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($totalcount,$tot_staging,$pass_staging)."</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($totalcount,$tot_xdos,$pass_xdos)."</td>";
 print H "<td style=\"min-width: 8em; text-align: center;\">".makestat($totalcount,$tot_svndos,$pass_svndos)."</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">".makestat($totalcount,$tot_bochs,$pass_bochs)."</td>";

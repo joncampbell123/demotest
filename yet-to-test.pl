@@ -24,6 +24,10 @@ elsif ($ARGV[0] eq "qemu") {
     $suffix=".qemu";
     $suffic="_QEMU";
 }
+elsif ($ARGV[0] eq "staging") {
+    $suffix=".staging";
+    $suffic="_STAGING";
+}
 
 if ( -f "pick-one$suffix.cache" ) {
     $writecache=0;
