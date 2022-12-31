@@ -1,0 +1,1 @@
+- Demo uses per-scanline palette changes mid-frame. There are two different palettes between the top logo and the bottom animation. Demo requires ET4000-specific hardware, therefore cannot use machine=vgaonly
