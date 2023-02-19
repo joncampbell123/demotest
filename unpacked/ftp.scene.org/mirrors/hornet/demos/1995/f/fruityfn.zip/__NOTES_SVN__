@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Cannot initialize sound driver
+NOTES:
+- Demo does not like DOSBox-X Gravis Ultrasound emulation

@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Code page conversion prevents access to file extracted from ZIP that is CP437 encoded
+NOTES:
+- Demo does not like DOSBox-X Gravis Ultrasound emulation
