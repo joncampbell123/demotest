@@ -1,0 +1,5 @@
+Demos and their status as edited video:
+
+./unpacked/ftp.scene.org/mirrors/hornet/demos/1989/sholiday.zip: EDIT IN PROGRESS
+./unpacked/ftp.scene.org/mirrors/hornet/demos/1990/megademo.zip: EDIT IN PROGRESS
+
