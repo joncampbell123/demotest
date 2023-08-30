@@ -1,0 +1,9 @@
+
+You can remove the "floaters" on top of the fake highcolor mode by
+entering the DOSBox debugger at the start of the demo and typing:
+
+SM 0008:E671 C3
+
+This patches the subroutine responsible for drawing them by placing
+a RET at the start.
+
