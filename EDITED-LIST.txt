@@ -2,4 +2,5 @@ Demos and their status as edited video:
 
 ./unpacked/ftp.scene.org/mirrors/hornet/demos/1989/sholiday.zip: DONE
 ./unpacked/ftp.scene.org/mirrors/hornet/demos/1990/megademo.zip: DONE
+./unpacked/ftp.scene.org/mirrors/hornet/demos/1995/c/cma_brw.zip: IN PROGRESS
 
