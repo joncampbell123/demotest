@@ -6,4 +6,5 @@ Demos and their status as edited video:
 ./unpacked/ftp.scene.org/mirrors/hornet/demos/1998/j/johnny_w.zip: DONE
 ./unpacked/ftp.scene.org/mirrors/hornet/demos/1995/j/juice11.zip: DONE
 ./unpacked/ftp.scene.org/mirrors/hornet/demos/1997/a/acme_303.zip: PREPARING
+./unpacked/ftp.scene.org/mirrors/hornet/demos/1998/t/tribes.zip: PREPARING
 
