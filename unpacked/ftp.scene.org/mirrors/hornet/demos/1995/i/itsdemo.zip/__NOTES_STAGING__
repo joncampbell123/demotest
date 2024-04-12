@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Crashes on startup. VESA BIOS linear framebuffer emulation from banked switching mode causes demo to scribble on VGA BIOS and UMB memory because DOSBox SVN does not check segment limits and throw GP faults if exceeded. The linear framebuffer emulation needs segment limit GP faults to work.
