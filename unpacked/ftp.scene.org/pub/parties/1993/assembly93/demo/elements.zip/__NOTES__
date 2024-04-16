@@ -1,8 +1,0 @@
-Why the demo failed the test:
-- This demo appears to unpack it's contents into a hidden temporary directory
-  and run the parts from there. It appears to rely on marking the files as
-  archive+system which doesn't work (of course) in DOSBox.
-
-  Not sure if the above has anything to do with the demo failing to run about
-  50% of it's parts.
-
