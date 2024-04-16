@@ -1,4 +1,3 @@
-Why the demo failed the test:
-- Demo exits to DOS, but then hitting a key causes a crash.
 Notes:
-- GUS music playback (or the demo itself?) seems to read and write random I/O ports during the demo. DOSLIB utility to patch out that bug is available.
+- GUS playback routine has the common bug that causes random I/O ports to be accessed during the demo. A patch is applied to the EXE to fix this.
+- The demo installs a keyboard ISR, but the ISR gets corrupted at some point, and the demo does not restore the original ISR on exit. A TSR is run to fix this.
