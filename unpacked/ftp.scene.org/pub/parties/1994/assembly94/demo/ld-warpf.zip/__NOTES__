@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo requires CONFIG.EXE to run, CONFIG.EXE hangs if run before WARP.EXE. CONFIG.EXE appears to be scanning the keyboard buffer for 0x0D (enter key) which does not happen, but with interrupts disabled??
+- Demo requires CONFIG.EXE to run, CONFIG.EXE hangs if run before WARP.EXE. CONFIG.EXE appears to be scanning the keyboard buffer for 0x0D (enter key) which does not happen, but with interrupts disabled?? If somehow you finangle CONFIG to actually show the interface, it does not save settings for the demo.
