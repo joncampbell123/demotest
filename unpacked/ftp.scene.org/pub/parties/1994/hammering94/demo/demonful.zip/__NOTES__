@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo does not emit music, gets stuck
+- GUS support does not work, does not play music, demo gets stuck
