@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Demo does not respond to keyboard at credits screen
+- Demo masks keyboard interrupt while running, does not unmask it, leaving SVN with no functional keyboard when it exits to DOS
