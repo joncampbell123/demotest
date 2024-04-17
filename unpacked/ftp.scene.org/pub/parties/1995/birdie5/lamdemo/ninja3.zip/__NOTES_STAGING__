@@ -1,2 +1,3 @@
 Notes:
 - Demo will reboot the system after the final crappily rendered credits. It's not a bug, it's intentional. If you want to avoid the reboot, edit DEMO.BAT and remove the "REBOOT" command from the end. REBOOT.COM reboots by jumping to the real-mode BIOS entry point.
+- In Staging, the VGA palette rendition is different from X and SVN.
