@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Does not respond to keyboard, or first keypress is stuck
+- Responds to keyboard properly except in the articles themselves where arrow keys require two presses and the scrolling does not stop.
