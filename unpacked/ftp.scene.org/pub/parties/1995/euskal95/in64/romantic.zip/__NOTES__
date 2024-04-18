@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Crashes with GPF at the end of the demo (according to screen)
+Notes:
+- This demo will always exit with an exception, whether it's a debug exception, GPF exception, or even an invalid opcode exception. DO CONFIRM ON REAL HARDWARE.

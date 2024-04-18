@@ -1,3 +1,3 @@
 Why the demo failed the test:
-- Demo works perfectly EXCEPT that mouse cursor does not respond to mouse
+- Demo works perfectly EXCEPT that mouse cursor does not respond to mouse, and the demo makes no attempt to initialize the mouse (except when exiting to DOS?). You can however navigate using the numeric keypad.
 
