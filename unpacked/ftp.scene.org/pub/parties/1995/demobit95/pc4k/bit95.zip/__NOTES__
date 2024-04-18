@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- At least one demo causes MCB chain corruption
+- 3DBINTRO.COM causes MCB chain corruption. Apparently does not fault on real MS-DOS.
