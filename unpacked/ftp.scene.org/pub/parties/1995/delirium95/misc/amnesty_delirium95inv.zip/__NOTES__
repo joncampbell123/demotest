@@ -1,3 +1,4 @@
-Why the demo failed the test:
-- GUS music does not play correctly (drum sounds like glitch audio). Will mark PASS if the same problem occurs on real hardware
-! PLEASE TEST THIS ON REAL HARDWARE
+Notes:
+- Demo ASSUMES flat real mode is active, without any attempt to set it up. It will crash if 64KB segment limits are enforced.
+Check:
+- Two of the music samples sound like glitch audio, is that intentional?

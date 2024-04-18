@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- "ABORT: Illegal GRP4 Call 2"
+Questions:
+- Why does Staging consider the lack of a volume label a reason not to mount a floppy disk image??
