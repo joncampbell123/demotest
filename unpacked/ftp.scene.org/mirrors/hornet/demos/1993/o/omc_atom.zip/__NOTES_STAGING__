@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo runs but keyboard input on the sound config menu triggers too much of the menu and sound configuration is impossible
