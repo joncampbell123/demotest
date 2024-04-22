@@ -193,7 +193,6 @@ else
     cp -v dosbox-pentium.conf dosbox-template.conf || exit 1
 fi
 
-
 if [[ "$what" == "qemu" ]]; then
     cp -vn qemu.conf-example "$x/qemu.conf" || exit 1
 elif [[ "$what" == "svnbochs" ]]; then
@@ -205,7 +204,7 @@ elif [[ "$what" == "xdos" || "$what" == "svndos" ]]; then
     fi
     cp -vn xdos-__build_hdd__.example.sh "$x/__build_hdd__.sh" || exit 1
 else
-    cp -vn dosbox-template.conf "$x/dosbox.conf" || exit 1
+    cp -vn dosbox-template.conf "$x/dosbox.conf"
 fi
 
 testpick="$x"
