@@ -1,0 +1,4 @@
+Why the demo failed the test:
+- Landscape portion pans to "file not found, press any key to continue" in German. Is that intentional? BPINT 21 3D in DOSBox debugger didn't hit anything when the demo complained about that.
+NOTES:
+- Staging does not support the Goldplay method of Sound Blaster playback
