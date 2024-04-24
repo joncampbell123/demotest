@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Sound Blaster support causes "Reboot requested" message
+- Demo pauses midway through because it tries to read a byte from STDERR (INT AH=3Fh BX(file handle)=2). Pressing a key will continue the demo, but that is a bug. TODO: What does MS-DOS do if you try to read from a CON handle opened as STDERR?

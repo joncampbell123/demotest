@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- GUS emulation failure: "MIDAS error: Sound device initialization failed". Use Sound Blaster, which allows the demo to run normally.
