@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Cannot find the desired screenmode (512x384 32bpp) even if VESAMOED is used to create one.
