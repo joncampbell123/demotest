@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- Gravis Ultrasound support doesn't work (stuck note), demo doesn't even install an ISR for it
+- Adlib, Covox, Beeper do not work
