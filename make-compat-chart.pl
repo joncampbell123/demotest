@@ -809,6 +809,7 @@ print H "<thead class=\"testing_header\">\n";
 print H "<tr>\n";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-SVN</td>";
+print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-Staging</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">DOSBox-X-DOS</td>";
 print H "<td style=\"min-width: 8em; text-align: center;\">DOSBox-SVN-DOS</td>";
 print H "<td style=\"min-width: 6em; text-align: center;\">Bochs-SVN</td>";
