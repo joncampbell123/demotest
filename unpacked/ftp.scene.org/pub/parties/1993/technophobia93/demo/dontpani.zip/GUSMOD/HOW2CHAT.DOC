@@ -1,0 +1,137 @@
+CheriChat Version 2.0 8/17/91
+a PCBoard 14.5 Door
+by Howard "Howeird" Stateman
+Sysop of the Anatomically Correct BBS
+(415) 8-Jovial
+Palo Alto, CA 
+
+Description
+HOW2CHAT is a program which pretends to "chat" with your callers, 
+originally written in MBASIC for CP/M to fool the folks calling my 
+single-line BBS into thinking someone else was actually online and 
+chatting with them. These have been rewritten, using the DOORSORC 
+libraries, to work under a single node of PCBoard 14.x (but it has only 
+been tested on 14.5). Version 2.0 features a separate data file which 
+lets you edit the keywords and responses, and entries in the config file 
+will let you choose the name of the computer chatter, and the name of 
+the file to which the chat sessions are logged.Also in this version is a 
+sophisticated mistake generator and keyboard delay table which is almost 
+impossible to tell from a real person typng...ooops, typing. 
+
+Disclaimer
+Howeird, Howard Stateman and the Anatomically Correct BBS make no claims 
+whatsoever and will accept no responsibility for your use of this 
+software. It is offered in good faith and contains no bugs, worms, 
+viruses, mold or mildew to the best of the author's knowledge. These 
+programs are rude, obnoxious and foul-mouthed, and will offend most of 
+your callers. They are not meant for minors, or the guardians of our 
+nation's morals. Knowing that, if you get complaints, letter bombs or 
+arrested for using this software, you're on your own.
+
+Licensing
+CheriChat, HOW2CHAT.BAS and HOWCHAT.BAS are Copyright 1991 by Howard 
+Stateman, all rights reserved. It is to be distributed for free, and no 
+fee may be charged for its use or distribution. Commercial BBS systems 
+may use it free of charge as long as no extra fee is charged the 
+customer to specifically access these doors.
+
+Source code has been provided, and may be modified as long as the 
+original author is credited, and a list of the modifications (and author 
+of them) is included in the source code's comment lines. Modified code 
+may not be sold for profit.
+
+If you enjoy the programs, and would like to express your gratitude in 
+monetary form, send what you think they are worth (or your current bank 
+balance, whichever is greater) to:
+Howard Stateman
+340 Ventura Ave. #30
+Palo Alto, CA 94306
+ 
+
+Files
+Included in this archive should be:
+HOW2CHAT.DOC	This document
+HOWCHAT.EXE	Needs BRUN45.EXE to run
+HOW2CHAT.EXE	Stand-Alone Door (no BRUN needed)
+HOW2CHAT.BAS	BASIC source code for HOW2CHAT & HOWCHAT
+BRUN45.EXE	Runtime BASIC needed to run the EXE files
+CHERI.CFG	Config file to chat with Cheri
+CHERI		Sample Door batch file to run CHERCHAT
+HOWEIRD		Sample Door batch file to run HOWCHAT
+CHERI.DAT	Data file (ASCII Text) to chat with Cheri (horny nymphette)
+HOWEIRD.DAT     Data file (ASCII Text) to chat with Howeird (rude Sysop)
+PCBOARD.SYS     Sample file to let non-PCBoard folks run the program
+TEST.CFG        Chat with Cheri using the PCBOARD.SYS provided here
+HOW2CHAT.BAT    Runs the program in test mode for local DOS users
+
+Setup
+Create a directory in your BBS (PCB) or DOORS area, and unzip these 
+files into it. Modify CHERI.CFG for your BBS:
+
+C:\pcb\Pcboard.sys  First Line=where your PCBoard.sys file resides
+The Anatomically Correct BBS	Second Line= Your BBS name
+Howeird				Third Line= Who we are chatting with
+!				Fourth Line= Sysop's name
+c:\cheri\cheri.dat              Fifth line = path & name of data file
+c:\bbs\chat.log			6th line = name of log file
+
+Modify the CHERI and HOWEIRD files for your BBS
+
+CHERI:
+Echo Off
+CD\PCB\DOORS\CHERI20
+How2chat cheri.cfg
+cd\pcb
+board
+
+HOWEIRD:
+Echo Off
+CD\PCB\DOORS\CHERI20
+Howchat howeird.cfg
+cd\pcb
+board
+
+
+The programs monitor the comm port for you, no need for Watchdog 
+programs.
+
+BRUN45.EXE is required to be in your LIB directory (use the DOS command 
+SET LIB= path) or in the same directory as the xxxChat.EXE files if you 
+are running HOWCHAT.EXE.
+
+Growing Your Own Chat:
+
+The DAT files are set up this way:
+
+"KEYWORD","#"
+"Response"
+"Response" 
+"Response"
+"KEYWORD","#"
+"Response"
+etc.
+
+The KEYWORD is the word in the sentence typed in by the caller which you want 
+the computer to respond to. The "#" is an integer between 1 and 10, which 
+tells how many responses there are for that keyword. The following lines 
+are for the responses for that keyword.
+
+CheriChat 2.0 requires exactly 40 keywords. Each keyword can have 
+between 1 and 10 responses. Keywords must be in UPPER CASE.
+
+If you use the wrong number of keywords or responses, the program will burp.
+Loudly.
+
+Following the last response, the DAT file expects 25 opening lines. The 
+program automatically sticks the caller's name at the end of each opening 
+line. Each time the program is run, it picks an opening line at random.
+
+If you want to change the source code and recompile, you will need 
+DOORSORC 3.2 libraries and Microsoft QBasic 4.5. DS32.ZIP is available 
+on many PCBoard BBSs, QBasic 4.5 can be bought wherever DOS software is 
+sold.
+
+If you make major improvements to the program or DAT files, please send 
+a courtesy copy to Howeird. 
+
+Enjoy!

@@ -1,0 +1,368 @@
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Gusmod 2.11 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                               GTSR 1.11                                     ³
+³                                                                             ³
+³                            By Joshua Jensen                                 ³
+³                      (CyberStrike of Renaissance)                           ³
+³                        Copyright (C) 1992,1993                              ³
+³                                                                             ³
+³                     Release Date: March 13, 1993                            ³
+ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+      "Gusmod" and "GTSR" are almost fully Protracker-compliant module players
+written to use the Gravis Ultrasound card from Advanced Gravis and Forte
+Technologies.  Most of the Protracker commands are implemented; most of them
+work under the new UltraClick Removal System.
+
+      It is HIGHLY recommended that Gravis UltraSound owners upgrade their
+cards to a meg.  This seems to be a major problem with modules greater than
+256k.  Besides, future games from Renaissance and other commercial companies
+will come to rely on that megabyte being there.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+Gusmod Setup: ³ The setup has NOT changed from v2.10.
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+Because of the Gusmod's and GTSR's capabilities, the setup of the player has
+become more complicated.  The end result makes a much nicer, easier to use
+system.
+
+Add the following line to your AUTOEXEC.BAT:
+
+SET GUSMOD=<PATH>
+
+A GUSMOD environment variable which will set the system to look for Gusmod's
+files in the directory C:\GUSMOD would look like:
+
+SET GUSMOD=C:\GUSMOD
+
+Change to Gusmod's directory and run SETUP.EXE.  At this point, configure
+your system setting and then exit.
+
+Gusmod requires four .INF files.  The first .INF file is named MUSIC.INF.
+These are the compressed, loadable music routines.  This particular version
+runs on a Gravis UltraSound only.  Future .INF files which replace the
+MUSIC.INF file will allow GUSMOD to work on a variety of soundcards.
+
+The second .INF file is named SCOPES.INF.  This file contains the graphics
+screen for the oscilloscopes in GUSMOD.
+
+The third .INF file is named GUSMOD.INF.  This is GUSMOD's configuration.
+This file is created and restored via the F1/F2 keys in Gusmod.
+
+The fourth .INF file is named GTSR.INF.  This is GTSR's configuration.
+This file is created and restored via the F3/F4 keys in Gusmod.
+
+Gusmod also requires a file called GSETUP.CFG, created with SETUP.EXE.
+
+WARNING:  THE MUSIC.INF AND GSETUP.CFG FILES MUST BE PRESENT FOR GUSMOD TO
+EXECUTE PROPERLY!
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+GTSR Information: ³
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+GTSR seems to only have a few minor bugs, of which none seem to do anything
+harmful to the system.
+
+To use GTSR, you type at the DOS prompt:
+
+d:\> GTSR module<.mod>
+
+The .mod extension is not required.
+
+The appropriate file will be loaded and played.  GTSR will exit to DOS.
+
+To stop the music, just type GTSR at the command line.  The memory will be
+freed, and it will exit to DOS.
+
+Example:
+
+GTSR BEYOND.MOD
+GTSR FLETCH.MOD                 < Turns off BEYOND.MOD and runs FLETCH.MOD >
+GTSR                            < Turns off FLETCH.MOD >
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+Gusmod Command Line Information: ³
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+To use Gusmod, you type at the DOS prompt:
+
+d:\> GUSMOD <module<.mod>>
+
+The .mod extension is not required.
+
+If you want to run Gusmod in interactive mode, that is, have a file selection
+window, then type "GUSMOD" by itself.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+The Grand Tour: ³
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+After running Gusmod, you'll see a screen, as described below.
+
+The first line indicates the version, release date, and memory used by the
+program.  The memory used is an approximation, and in almost all circumstances,
+there is more memory available.
+
+Following that are the tracking lines.  The center, highlighted line is the
+current line being played.
+
+The next section contains the following:  The current pattern/the number of
+patterns/the current sequence/the number of sequences/a local sequence list/
+the four available channels, toggled on or off/the max volume percentage.
+
+The last section shows the current instrument being played, a VU meter, the
+pan position, and percentage of the max volume that the voice is playing.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+How to use Gusmod: ³
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+The following keys are available for usage:
+
+        ESC         - Quits Gusmod and returns to DOS.
+        1           - Toggles voice one on/off.
+        2           - Toggles voice two on/off.
+        3           - Toggles voice three on/off.
+        4           - Toggles voice four on/off.
+        -           - Decreases max volume.
+        =           - Increases max volume.
+        TAB         - Switches between scopes and text.
+        PgUp        - Jumps to previous pattern.
+        PgDn        - Jumps to next pattern.
+        Space       - Module looping on/off.
+        Up Arrow    - Moves channel selector up.
+        Down Arrow  - Moves channel selector down.
+        Left Arrow  - Moves pan position for current channel to the left.
+        Right Arrow - Moves pan position for current channel to the right.
+        [           - Decreases channel volume percentage.
+        ]           - Increases channel volume percentage.
+        F1          - Save the current mode (text or scopes), the pan
+                      positions, the master volume, the channel volumes,
+                      and the loop state for Gusmod.
+        F2          - Retrieve the information saved with F1.
+        F3          - Save the current mode (text or scopes), the pan
+                      positions, the master volume, the channel volumes,
+                      and the loop state for GTSR.
+        F4          - Retrieve the information saved with F3.
+
+When a non-looping module is finished, pressing the space bar will restart
+it.  ESC will exit to DOS.
+
+
+ÄÄÄÄÄÄ¿
+Bugs: ³
+ÄÄÄÄÄÄÙ
+  ş Modules continuously loop even with looping off if there is a jump command
+    embedded.  This should be fixed later.
+  ş Gusmod seems to not function with Adaptec SCSI devices.  ???
+
+
+ÄÄÄÄÄÄÄÄÄ¿
+Updates: ³
+ÄÄÄÄÄÄÄÄÄÙ
+Version 2.01 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ February 13, 1993
+    ş Module looping toggled with the space bar key.
+    ş The "buzz" bug is toast!
+
+Version 2.02 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ February 14, 1993
+    ş The Number of patterns now displays correctly.
+    ş More infamous Ultraclicks removed.
+    ş Modules like Beyond Music play correctly.  Minor bug dealing with
+      "leftovers".
+    ş Fixed the bug where there was an instrument, but not a note.
+    ş Added configuration files.
+    ş Added the new environment variable techniques.
+    ş Added the ability to restart the module when not looping.
+
+Version 2.03 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ February 15, 1993
+    ş Tried to get even more clicking out.
+    ş Extra environment variable commands.
+    ş Fixed IRQ stuff.
+    ş Two config files, one for Gusmod, one for GTSR.
+    ş There were some hard coded 220h's in the code.  These aren't hard coded
+      anymore.  Sorry, everyone.  It should not hang anymore.
+
+GTSR 1.02 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ February 15, 1993
+    ş GTSR now properly frees itself from memory (I forgot to free the
+      environment block!).  Check it out!  Type MEM /C out the DOS prompt
+      before and after.
+
+Version 2.04 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ February 15, 1993
+    ş Finally, everything now works!  Stupid DMA In and Out!
+    ş The kill-those-darn-playing bugs release.
+    ş Looping now works properly.
+    ş Loop pops are history!
+    ş Hardly any pops (they're all sample now).
+    ş Things like the bassdrum in Axel F now play correctly.
+    ş Retrig Note works!
+    ş Note Cut works!
+    ş Note Delay works!
+    ş Added a new note table for more accurate frequencies.
+    ş The scopes now work correctly!
+
+Version 2.10 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ March 7, 1993
+    ş Looping really does work properly now. :)  (or so we think!)
+    ş Loop pops are now really history!  It was a bug on crossing DRAM page
+      bounds.
+    ş Still some interesting sample pops, but...
+    ş Retrig really does work now.
+    ş Gusmod now properly frees itself from the GF1 IRQ.
+    ş 15 and 31 instrument .MODs are supported.
+    ş Older versions of Gusmod (including 1.1) were allocating 4,096 bytes
+      for each pattern instead of the required 1,024 bytes.  This has been
+      remedied.
+    ş 16-channel support added!
+    ş 5-octaves supported!
+    ş Tuning for 5 octaves is approximate, but normally sounds pretty good.
+    ş Mods are now converted into a PS16 file format.  This format is the
+      packed 16-channel format for Protracker Studio 16 and Gusmod 2.10+.
+    ş Note frequency table deleted for a supposedly "working" algorithm.
+    ş Volumes that are 1 now work.
+    ş Volumes are now a bit more "linear."
+    ş GTSR now loops properly.
+
+Version 2.11 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ March 13, 1993
+    ş The "buzz" bug is toast (really!).
+    ş Self-induced divide overflow error fixed (stupid, stupid, stupid).
+    ş Final line 64 is gone.
+    ş Gusmod's and GTSR's memory allocation scheme changed.  Hopefully, this
+      will alleviate the problems.
+    ş Simple interactive mode added.  Tagging and other neat features come
+      later.
+    ş FLT4 support fixed.
+    ş New, improved setup program.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+Source Code Availability: ³
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+As of Gusmod 2.11, full source code is available to the playback routines
+under assembly, C, and Pascal calls.  This will not be available immediately,
+but it will be available within two weeks of release.
+
+The reason for the delay is that I want to verify that all of this is
+working properly before release.  To those who have contacted me thus far:
+I have your addresses and will get it to you as soon as possible.
+
+
+                                                Joshua Jensen
+                                                CyberStrike
+                                                cstrike@gompers.gompers.edu
+
+
+                          ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                          ³  Announcements:  ³
+                          ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+    Watch for two upcoming Renaissance games that will be published
+through Epic MegaGames.  These will be very good, have full Gravis digital
+support (and Soundblaster/Soundblaster Pro digital support), and be out
+within the month.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Zone 66 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    The first is Zone 66.  Zone 66 is a 360-degree smooth-scrolling full-
+screen overhead 256-color VGA shoot-em-up.  It has utterly intense digital
+music and effects going on constantly, all mixed at 22khz.  It also takes
+advantage of the Ultraclick Removal System.  NOTE: Zone 66 IS OUT as of
+this release.
+    The Zone 66 files are named:
+        $zone66            - Main game
+        $zone66g           - Gravis UltraSound files
+
+    Zone 66 may be obtained on the following FTP sites:
+        ftp.ulowell.edu               /msdos/Games/Epic
+        wuarchive.wustl.edu           /pub/MSDOS_UPLOADS/games
+
+    and on:
+        Software Creations BBS        (508) 365-2359        2400 baud
+                                      (508) 365-9825        9600 baud
+                                      (508) 365-9668       14400 baud
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ CyberStrike ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    The second is entitled CyberStrike, not after me... :)  It is similar
+to Smash TV.  Similar is the closest description to use.  The commercial
+version comes with 100 levels, with very fine detail in each one.  By using
+a new pattern-matching system, 180k of tiled graphics became 20.5k, never
+to be decompressed again.
+    Again, digital music and sound effects will accompany this one.
+CyberStrike will probably include the debut of the new music drivers that
+the Composer will use.  Virtually any sound card that supports digital output
+will be supported.
+    And, to top it all off, CyberStrike runs at a full 60 fps!
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Protracker Studio 16 ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Also, Renaissance will be releasing its 16-channel composer in the
+future.  The new format, which will hopefully become a standard, will be
+playable on a Gravis UltraSound, Soundblaster, Soundblaster Pro, and PAS-16.
+Except on the GUS, if all 16-channels are mixed at 22000hz, it takes
+approximately 20% of the system time of my 386-33.  4 channels take about 5%
+(this is about as fast as it gets, folks!).  The ability to port in MODs,
+STMs, 669s, and MIDs will be available.
+
+
+                            ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                            ³  Greetings:  ³
+                            ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+                       Raymond Bingham (wReam...)
+                    (Thanks for the grafix screen!)
+         (wReam Notes: Hi to all my buddies on alt.comics.lnh!)
+
+                       The Rest of Renaissance :)
+
+                              Future Crew
+           (Hey PSI, still got the UltraSound info for you.)
+
+                              UltraForce
+
+                                 Witan
+
+                             Twilight Zone
+  (Hey, guys, just use the actual player.  The last one had problems!)
+         (Contact me and I'll send you the source to this one!)
+          (Besides, this one doesn't use the timer interrupt!)
+
+                           The Phoney Coders
+             (Sorry I missed you guys last time.  Hi Zax!)
+
+                        The Electromotive Force
+           (Hey, guys, just picked up a copy of PowerPlayer.)
+            (Awesome player...let's get the GUS support in.)
+ (You contact me or another member of Renaissance, I'll get you the code.)
+
+                        Id Software - Jay Wilbur
+                                    - Paul Radek
+
+                             Epic MegaGames
+
+                               The Square
+                       (Yo, Otto, how ya doin'?)
+
+                                Cascada
+
+                                Yuri Lee
+
+                                  DCE
+
+                                 Triton
+
+                                 Sonic
+
+                               Space Pigs
+
+                              Codeblasters
+
+                             Access Denied
+
+                                 Skull
+
+                                 Epical
+
+                               Paranoids
+
+          All those who helped with the development of this...
+         (especially the Net people...you know who you are...)
+  (I'd like to list you all, but this doc would probably double in size!)
+                   (Thanks for all the beta testers!)

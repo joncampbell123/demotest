@@ -1,0 +1,6 @@
+echo off
+cd how2chat
+how2chat cheri.cfg
+cd \pcb
+board
+

@@ -1,0 +1,5 @@
+echo off
+cd how2chat
+how2chat howeird.cfg
+cd \pcb
+board
