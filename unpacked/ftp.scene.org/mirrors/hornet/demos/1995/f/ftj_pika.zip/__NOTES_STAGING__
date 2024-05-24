@@ -1,0 +1,3 @@
+Why the demo failed the test:
+- When running it's internal DPMI server, demo can crash to DOS at any arbitrary time
+- The demo can be made to run in it's entirety using the HDPMI32 DPMI server, but will still crash when exiting to DOS
