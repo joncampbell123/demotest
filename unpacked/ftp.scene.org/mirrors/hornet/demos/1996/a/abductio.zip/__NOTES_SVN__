@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Failure to detect Gravis Ultrasound. PLEASE CHECK ON REAL HARDWARE.
+NOTES:
+- Failure to detect Gravis Ultrasound. Will not talk to Gravis Ultrasound.
