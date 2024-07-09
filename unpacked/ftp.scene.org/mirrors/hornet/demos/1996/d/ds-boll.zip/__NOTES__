@@ -1,2 +1,2 @@
-Why the demo failed the test:
-- Demo does nothing, tries to run A:\GO.EXE
+Notes:
+- Demo runs A:\GO.EXE which is brought into existence through an INT 13h hook
