@@ -1,2 +1,2 @@
 Why the demo failed the test:
-- Does not run, tries to execute "GO.EXE"
+- Demo runs through GO.EXE, some parts don't show anything. Demo eventually hangs and the INT 13h hook appears to be stuck in a loop.
