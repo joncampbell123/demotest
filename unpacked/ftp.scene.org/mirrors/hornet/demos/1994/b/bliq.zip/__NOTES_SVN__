@@ -1,0 +1,6 @@
+Why the demo failed the test:
+- Last demo part shows nothing on the screen. Debugging functions show that the palette is completely black and it tried to open an endpart.pal.
+- When credits finish, screen remains blank, but you are at the DOS prompt.
+Real hardware:
+- Toshiba laptop 1997: Crashed, hung
+- COMP-Old486y91, GUS, PAS: Demo runs normally, then crashes/hangs (with audible beeps from the 486SX unit).
