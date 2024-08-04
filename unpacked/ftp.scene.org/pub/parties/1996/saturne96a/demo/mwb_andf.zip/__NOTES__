@@ -1,0 +1,6 @@
+Why the demo failed the test:
+- Fails to load music, loop spins endlessly in memory. Hacky code fails to load music anyway
+NOTES:
+- Demo uses Big Real Mode (32-bit B bit on code segment in real mode)
+- Failure to load music and data is caused by mismanagement of file handle. It stores it away and then fails to retrieve it properly when reading, so nothing reads.
+- Relies on loading an alternate IDTR table in real mode to effectively intercept all interrupts without touching the real mode interrupt vector table.
