@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- EXE name uses extended chars, DOSBox SVN does not support mounting ZIP files
