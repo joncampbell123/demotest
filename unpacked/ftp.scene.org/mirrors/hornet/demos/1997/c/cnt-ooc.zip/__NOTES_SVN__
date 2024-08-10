@@ -1,0 +1,2 @@
+Why the demo failed the test:
+- Demo cannot detect GUS, even if GUS is there and ULTRASND is there. DOSBox SVN does not emulate the quirks needed for this demo.

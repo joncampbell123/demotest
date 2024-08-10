@@ -1,2 +1,0 @@
-Why the demo failed the test:
-- Demo doesn't want to run. Demo doesn't see "sound card environment" even though ULTRASND is right there. Demo assumes port 220h and will hang if GUS not there (but it didn't detect environ so why is it trying?). Even if the GUS is there, it doesn't run. This demo's GUS support is Out of Control.
